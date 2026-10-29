@@ -1,0 +1,44 @@
+{
+  "checks": [
+    "Both-branch flow left a valid handoff checkpoint",
+    "Reloaded bridge resumes end screen without repeating intro",
+    "Corrupt JSON shows recovery UI",
+    "Reading a corrupt save does not erase it",
+    "Explicit backup recovery keeps the same run",
+    "Incompatible rejected-engine save is not silently loaded",
+    "Incompatible data remains available for export",
+    "Failed SAVE does not announce success or heal HP",
+    "Retry commits a real checkpoint and then heals HP",
+    "B at full HP does not consume cooldown",
+    "B heals four HP and begins a twelve-second cooldown",
+    "X remains active just before five seconds",
+    "Repeated X does not extend light",
+    "Two-second cooldown begins after light expires",
+    "X is ready after five plus two seconds",
+    "Healing cooldown pauses in menus",
+    "CELL exists as a gated menu category",
+    "Phone stays locked before the CH01 gift",
+    "Production page exposes no mutable QA controls",
+    "No alternate debug story-entry API exists",
+    "Entire 480x290 scenic plaza has walkable foot-collider space",
+    "Representative main corridors retain eighty-pixel clear width",
+    "Narrow viewport has no horizontal page overflow",
+    "No JavaScript runtime errors during guarded-state tests"
+  ],
+  "errors": [],
+  "shots": [
+    "output/playwright/ch00-save-error.png",
+    "output/playwright/ch00-mobile-stat.png"
+  ],
+  "measure": {
+    "blocked": 0,
+    "total": 8760,
+    "area": 139200
+  },
+  "pathMeasure": {
+    "forest_extension": 0,
+    "forest_old_trees": 0
+  },
+  "branch": "guardrails",
+  "testedAt": "2026-10-09T14:23:36.879Z"
+}

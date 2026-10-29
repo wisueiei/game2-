@@ -1,0 +1,830 @@
+{
+  "schemaVersion": 1,
+  "designBaseline": "UF-DESIGN-2026-10-09",
+  "layoutRevision": "UF-LAYOUT-2026-10-09",
+  "status": "construction-defaults-not-runtime-validated",
+  "viewport": {
+    "width": 400,
+    "height": 225,
+    "scale": "nearest-neighbor",
+    "camera": "follow-with-room-bounds",
+    "thaiTextRenderer": "DOM"
+  },
+  "units": "logical-pixels",
+  "geometry": {
+    "mainPath": {
+      "base": 64,
+      "target": 80,
+      "multiplier": 1.25
+    },
+    "bridge": {
+      "base": 96,
+      "target": 120,
+      "multiplier": 1.25
+    },
+    "scenicClearFloor": {
+      "base": {
+        "width": 400,
+        "height": 240,
+        "area": 96000
+      },
+      "target": {
+        "width": 480,
+        "height": 290,
+        "area": 139200
+      },
+      "areaMultiplier": 1.45
+    },
+    "doorClearWidth": 48,
+    "interiorAisleWidth": 64,
+    "optionalNookWidth": 40,
+    "puzzleSafeMargin": 48,
+    "puzzleCellSize": 20,
+    "staticColliderMeasurement": "subtract walls/water/fixed props; dynamic actors and effects excluded; verify after gates open"
+  },
+  "defaultRoom": {
+    "width": 400,
+    "height": 240,
+    "spawn": [
+      20,
+      120
+    ],
+    "exit": [
+      380,
+      120
+    ],
+    "legacy": [
+      320,
+      180
+    ]
+  },
+  "ch00Rooms": {
+    "forest_origin": {
+      "shape": "circle",
+      "radius": 430,
+      "spawn": [
+        0,
+        0
+      ],
+      "outwardPassage": {
+        "x": [
+          390,
+          430
+        ],
+        "y": [
+          -45,
+          45
+        ],
+        "openAfter": "bottlePicked && bottleTutorialDone"
+      },
+      "preserveWorldSeed": true,
+      "scenicGrowth": "expand traversable flower clearing within outer boundary; baseline and measured mask recorded during build"
+    },
+    "forest_extension": {
+      "width": 400,
+      "height": 325,
+      "spawn": [
+        45,
+        163
+      ],
+      "anchors": {
+        "save": [
+          88,
+          138
+        ],
+        "rootChest": [
+          113,
+          263
+        ],
+        "rootGate": [
+          363,
+          163
+        ],
+        "return": [
+          20,
+          163
+        ]
+      }
+    },
+    "forest_old_trees": {
+      "width": 700,
+      "height": 525,
+      "spawn": [
+        50,
+        263
+      ],
+      "anchors": {
+        "saveBeforeStranger": [
+          375,
+          200
+        ],
+        "hoodedStranger": [
+          488,
+          269
+        ],
+        "foxStone": [
+          600,
+          100
+        ],
+        "return": [
+          20,
+          263
+        ]
+      },
+      "strangerTrigger": {
+        "distance": 90,
+        "crossX": 413
+      },
+      "riftPosition": "dynamic behind player during branch-specific cutscene; not a fixed shortcut"
+    },
+    "sacred_grove": {
+      "width": 720,
+      "height": 480,
+      "spawn": [
+        64,
+        400
+      ],
+      "anchors": {
+        "ringChest": [
+          544,
+          96
+        ],
+        "waterfallInspect": [
+          400,
+          64
+        ],
+        "saveAfterN": [
+          128,
+          368
+        ],
+        "return": [
+          32,
+          400
+        ]
+      },
+      "scenicClearFloorTarget": {
+        "x": 176,
+        "y": 144,
+        "width": 480,
+        "height": 290
+      },
+      "access": "do_not_help + groveOpen; exit after ringPicked && nUnlocked"
+    },
+    "rift_bridge": {
+      "kind": "black-safe-handoff",
+      "resumeScene": "10.10",
+      "nextChapter": "ch01_pending"
+    }
+  },
+  "ch01Rooms": {
+    "default": {
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ]
+    },
+    "U00": {
+      "id": "flowers",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ]
+    },
+    "U02": {
+      "id": "ruins_entry",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "storyGate": "toriel_white_shoes_given_then_original_tutorial"
+    },
+    "U03": {
+      "id": "plates",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "plates": [
+          [
+            113,
+            69
+          ],
+          [
+            175,
+            69
+          ],
+          [
+            238,
+            69
+          ],
+          [
+            113,
+            131
+          ],
+          [
+            175,
+            131
+          ],
+          [
+            238,
+            131
+          ]
+        ],
+        "lever": [
+          313,
+          100
+        ]
+      },
+      "solutionPlateIds": [
+        1,
+        2,
+        3,
+        5
+      ]
+    },
+    "U04": {
+      "id": "switches",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "switches": [
+          [
+            113,
+            113
+          ],
+          [
+            200,
+            113
+          ],
+          [
+            288,
+            113
+          ]
+        ]
+      },
+      "solution": "left_and_right_in_any_order"
+    },
+    "U06": {
+      "id": "blueprint_and_spikes",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "grid": {
+        "origin": [
+          100,
+          44
+        ],
+        "columns": 5,
+        "rows": 5,
+        "cellSize": 20,
+        "safeCells": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            4,
+            2
+          ]
+        ]
+      },
+      "wrongStep": "safe-block-no-damage"
+    },
+    "U07": {
+      "id": "long_hall",
+      "width": 800,
+      "height": 150,
+      "spawn": [
+        40,
+        75
+      ],
+      "exit": [
+        780,
+        75
+      ],
+      "torielWait": [
+        713,
+        75
+      ],
+      "tutorialEndX": 713,
+      "clearPathWidth": 80
+    },
+    "U08": {
+      "id": "leaf_lobby",
+      "width": 544,
+      "height": 354,
+      "spawn": [
+        20,
+        177
+      ],
+      "exit": [
+        524,
+        177
+      ],
+      "anchors": {
+        "guideFroggit": [
+          113,
+          75
+        ],
+        "whimsunEncounter": [
+          275,
+          113
+        ],
+        "save": [
+          336,
+          288
+        ]
+      },
+      "scenicClearFloorTarget": {
+        "x": 32,
+        "y": 32,
+        "width": 480,
+        "height": 290
+      }
+    },
+    "U10": {
+      "id": "first_rock",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "rock": [
+          163,
+          113
+        ],
+        "plate": [
+          263,
+          113
+        ]
+      },
+      "pushes": 4,
+      "pushStep": 25
+    },
+    "U11": {
+      "id": "leaf_path",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "grid": {
+        "origin": [
+          113,
+          50
+        ],
+        "columns": 7,
+        "rows": 5,
+        "cellSize": 20,
+        "safeCells": [
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            2
+          ],
+          [
+            3,
+            3
+          ],
+          [
+            4,
+            3
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            6,
+            2
+          ]
+        ]
+      },
+      "wrongStep": "fall-to-corresponding-lower-room-no-damage"
+    },
+    "U12": {
+      "id": "talking_rocks",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "talkingRock": [
+          163,
+          113
+        ],
+        "plate": [
+          263,
+          113
+        ]
+      },
+      "solution": "ask-to-stay-after-first-return"
+    },
+    "U16": {
+      "id": "pits",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "holes": [
+          [
+            113,
+            100
+          ],
+          [
+            200,
+            100
+          ],
+          [
+            288,
+            100
+          ]
+        ]
+      },
+      "lowerRooms": "left-ribbon, center-button, right-spared-Nap; each ladder returns same pit"
+    },
+    "U17": {
+      "id": "color_west_south_east",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "switches": [
+          [
+            125,
+            113
+          ],
+          [
+            200,
+            113
+          ],
+          [
+            275,
+            113
+          ]
+        ]
+      },
+      "solutions": {
+        "west": "circle_blue",
+        "south": "triangle_red",
+        "east": "star_green"
+      },
+      "wrongStep": "return-to-same-color-room-no-damage"
+    },
+    "U20": {
+      "id": "toriel_home",
+      "visualSource": "design/maps/2026-10-08-v2/03-r01-toriel-home-and-exit-v1-reference.png",
+      "layout": "separate entry/living/kitchen/child rooms using defaultRoom, no puzzle gate for resting"
+    },
+    "U23": {
+      "id": "after_ruins_bridge",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "chapterStop": "before_sans_and_spellbook"
+    },
+    "U15B": {
+      "id": "spider_bakery",
+      "width": 400,
+      "height": 240,
+      "spawn": [
+        20,
+        120
+      ],
+      "exit": [
+        380,
+        120
+      ],
+      "legacy": [
+        320,
+        180
+      ],
+      "anchors": {
+        "shopkeeper": [
+          220,
+          80
+        ],
+        "return": [
+          20,
+          120
+        ]
+      },
+      "outsideReturnRoom": "U15",
+      "shopStockSource": "same_spider_shop_ledger",
+      "progressGate": false,
+      "storyLines": "existing D01-SPIDER-* only; no new quest"
+    }
+  },
+  "spriteDefaults": {
+    "player": {
+      "art": "R5",
+      "frameCanvas": [
+        24,
+        32
+      ],
+      "standingLogicalHeight": 32,
+      "slenderBodyWithinCanvas": true,
+      "collisionFootbox": [
+        12,
+        6
+      ],
+      "poses": [
+        "front-idle",
+        "front-walk",
+        "front-walk2",
+        "back-idle",
+        "back-walk",
+        "back-walk2",
+        "left-idle",
+        "left-walk",
+        "left-walk2",
+        "right-idle",
+        "right-walk",
+        "right-walk2",
+        "fall",
+        "lie",
+        "sit",
+        "rise",
+        "bottle-pickup"
+      ],
+      "exported": true,
+      "assetManifest": "../../assets/characters/player-r5/v1/manifest.json",
+      "storyFrameCanvas": [
+        40,
+        32
+      ],
+      "opaqueStandingHeightRange": [
+        29,
+        30
+      ],
+      "pixelRevision": "r2-shorter-narrower-legs",
+      "poseAliases": "use manifest.aliases for -walk/-walk2/bottle-pickup worksheet names",
+      "installedInGame": false,
+      "renderedInAssetPreview": true,
+      "chapterRuntimeValidated": false
+    },
+    "asrielNormal": {
+      "standingLogicalHeight": 32,
+      "role": "height-reference-for-future; not a living CH00/CH01 NPC"
+    },
+    "portrait": {
+      "authoringSource": "v1",
+      "logicalCanvasProposal": [
+        64,
+        64
+      ],
+      "exported": false
+    }
+  },
+  "dialogue": {
+    "portraitSlot": [
+      64,
+      64
+    ],
+    "portraitTextGap": 8,
+    "minPanelHeight": 88,
+    "normalPortrait": "neutral",
+    "unknownBeforeBottle": "none",
+    "bottleUnknown": "none-or-bottle-symbol",
+    "voidVoiceBeforeSX03": "no-portrait-no-silhouette-no-body",
+    "firstAlternateReveal": "SX03-after-entering-behind-tree",
+    "frameAndName": "dark panel, light pixel border, speaker name upper-right; Thai via DOM",
+    "mobile": "same logical viewport, touch controls outside text; accessible focus and scrolling pages"
+  },
+  "battle": {
+    "playerTurn": {
+      "monsterAnchor": [
+        200,
+        68
+      ],
+      "playerAnchor": [
+        200,
+        151
+      ],
+      "playerAppearance": "R5 full-body",
+      "heartVisible": false
+    },
+    "enemyTurn": {
+      "monsterAnchor": [
+        200,
+        68
+      ],
+      "playerBodyVisible": false,
+      "heartVisible": true,
+      "heartBox": {
+        "x": 76,
+        "y": 100,
+        "width": 248,
+        "height": 76
+      },
+      "heartSpeed": 65,
+      "heartCollisionRadius": 3
+    },
+    "menuLabels": [
+      "FIGHT",
+      "ACT",
+      "ITEM",
+      "X MERCY"
+    ],
+    "mercyXMeaning": "visual cross icon, not keyboard-X binding; keyboard X remains bottle light where permitted",
+    "attackPatternBase": {
+      "width": 200,
+      "height": 90
+    },
+    "patternRemap": "x'=x*248/200; y'=y*76/90; timing, damage and logical bullet sizes unchanged; normalize direction vectors after remap",
+    "torielPrototype": "mercy-only, FIGHT disabled; minor-monster FIGHT remains real",
+    "portraitPolicy": "portraits accompany actual dialogue only; don't overlay active dodge box"
+  },
+  "save": {
+    "schemaVersion": 1,
+    "contentVersion": "CH-2026-10-09",
+    "layoutVersion": "UF-LAYOUT-2026-10-09",
+    "designBaseline": "UF-DESIGN-2026-10-09",
+    "storageKey": "underfall.save.v1",
+    "migration": "recognize earlier layout; migrate only through known room/anchor mapping retaining inventory/outcomes/ringSpent; otherwise warn/export, never silently reset or delete",
+    "implemented": false
+  },
+  "validation": {
+    "walkableAreaMeasured": false,
+    "collisionTested": false,
+    "assetsInstalled": false,
+    "browserPlaythrough": false
+  }
+}

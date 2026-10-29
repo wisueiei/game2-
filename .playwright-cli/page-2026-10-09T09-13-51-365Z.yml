@@ -1,0 +1,108 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - heading "UNDERFALL · ทุกหน้าต่างของเรื่องเล่า" [level=1] [ref=e4]
+      - paragraph [ref=e5]:
+        - text: ภาพจากพรีวิวจริง 56 หน้า/สถานะ · เป็น UI ไม่ใช่หลักฐานว่าเกมสร้างแล้ว
+        - link "เปิดต้นแบบกดใช้งาน" [ref=e6] [cursor=pointer]:
+          - /url: preview.html
+        - text: ·
+        - link "คู่มือส่งต่อ" [ref=e7] [cursor=pointer]:
+          - /url: interface-handoff.md
+    - combobox "เลือกหมวดภาพ" [ref=e8]:
+      - option "หน้าสำคัญ" [selected]
+      - option "ทั้งหมด56หน้า"
+      - option "เริ่มและตอน"
+      - option "สำรวจและกระเป๋า"
+      - option "โทรศัพท์และบท"
+      - option "บันทึกและฟื้นตัว"
+      - option "ต่อสู้"
+      - option "ร้านและคลัง"
+      - option "บันทึกและอนาคต"
+      - option "ตั้งค่าและช่วยเหลือ"
+      - option "บทและการแจ้งเตือน"
+  - main [ref=e9]:
+    - figure "01 · หน้าต้อนรับ UI" [ref=e10]:
+      - link [ref=e11] [cursor=pointer]:
+        - /url: preview.html#title
+        - img "หน้าต้อนรับ" [ref=e12]
+      - generic [ref=e13]:
+        - generic [ref=e14]: 01 · หน้าต้อนรับ
+        - generic [ref=e15]: UI
+    - figure "02 · เล่นต่อจากจุดบันทึก UI" [ref=e16]:
+      - link [ref=e17] [cursor=pointer]:
+        - /url: preview.html#continue
+        - img "เล่นต่อจากจุดบันทึก" [ref=e18]
+      - generic [ref=e19]:
+        - generic [ref=e20]: 02 · เล่นต่อจากจุดบันทึก
+        - generic [ref=e21]: UI
+    - figure "04 · ตั้งชื่อผู้เล่น UI" [ref=e22]:
+      - link [ref=e23] [cursor=pointer]:
+        - /url: preview.html#name
+        - img "ตั้งชื่อผู้เล่น" [ref=e24]
+      - generic [ref=e25]:
+        - generic [ref=e26]: 04 · ตั้งชื่อผู้เล่น
+        - generic [ref=e27]: UI
+    - figure "06 · คลังตอนครบรอบ UI" [ref=e28]:
+      - link [ref=e29] [cursor=pointer]:
+        - /url: preview.html#history
+        - img "คลังตอนครบรอบ" [ref=e30]
+      - generic [ref=e31]:
+        - generic [ref=e32]: 06 · คลังตอนครบรอบ
+        - generic [ref=e33]: UI
+    - figure "11 · กระเป๋าไอเทม UI" [ref=e34]:
+      - link [ref=e35] [cursor=pointer]:
+        - /url: preview.html#inventory
+        - img "กระเป๋าไอเทม" [ref=e36]
+      - generic [ref=e37]:
+        - generic [ref=e38]: 11 · กระเป๋าไอเทม
+        - generic [ref=e39]: UI
+    - figure "16 · โทรศัพท์ UI" [ref=e40]:
+      - link [ref=e41] [cursor=pointer]:
+        - /url: preview.html#phone
+        - img "โทรศัพท์" [ref=e42]
+      - generic [ref=e43]:
+        - generic [ref=e44]: 16 · โทรศัพท์
+        - generic [ref=e45]: UI
+    - figure "20 · ดาวบันทึก UI" [ref=e46]:
+      - link [ref=e47] [cursor=pointer]:
+        - /url: preview.html#save
+        - img "ดาวบันทึก" [ref=e48]
+      - generic [ref=e49]:
+        - generic [ref=e50]: 20 · ดาวบันทึก
+        - generic [ref=e51]: UI
+    - figure "25 · เมนูต่อสู้ UI" [ref=e52]:
+      - link [ref=e53] [cursor=pointer]:
+        - /url: preview.html#battle
+        - img "เมนูต่อสู้" [ref=e54]
+      - generic [ref=e55]:
+        - generic [ref=e56]: 25 · เมนูต่อสู้
+        - generic [ref=e57]: UI
+    - figure "31 · หัวใจหลบโจมตี UI" [ref=e58]:
+      - link [ref=e59] [cursor=pointer]:
+        - /url: preview.html#dodge
+        - img "หัวใจหลบโจมตี" [ref=e60]
+      - generic [ref=e61]:
+        - generic [ref=e62]: 31 · หัวใจหลบโจมตี
+        - generic [ref=e63]: UI
+    - figure "33 · หน้าร้าน UI" [ref=e64]:
+      - link [ref=e65] [cursor=pointer]:
+        - /url: preview.html#shop
+        - img "หน้าร้าน" [ref=e66]
+      - generic [ref=e67]:
+        - generic [ref=e68]: 33 · หน้าร้าน
+        - generic [ref=e69]: UI
+    - figure "44 · ตั้งค่า UI" [ref=e70]:
+      - link [ref=e71] [cursor=pointer]:
+        - /url: preview.html#settings
+        - img "ตั้งค่า" [ref=e72]
+      - generic [ref=e73]:
+        - generic [ref=e74]: 44 · ตั้งค่า
+        - generic [ref=e75]: UI
+    - figure "49 · กล่องบท / เสียง ??? UI" [ref=e76]:
+      - link [ref=e77] [cursor=pointer]:
+        - /url: preview.html#dialogue
+        - img "กล่องบท / เสียง ???" [ref=e78]
+      - generic [ref=e79]:
+        - generic [ref=e80]: 49 · กล่องบท / เสียง ???
+        - generic [ref=e81]: UI

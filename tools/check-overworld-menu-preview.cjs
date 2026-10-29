@@ -1,0 +1,50 @@
+// UI-only checks for the reference-led ITEM/STAT/CELL/SOUL overlay.
+async (page) => {
+  await page.waitForFunction(()=>window.__UFInterface?.ready);
+  await page.setViewportSize({width:1440,height:1050});
+  await page.getByLabel('บริบทตัวอย่าง').selectOption('ruins');
+  await page.locator('#screen-nav [data-screen="world"]').click();
+  const before=await page.evaluate(()=>({player:{...window.__UFInterface.player},canvas:document.getElementById('world-bg').toDataURL()}));
+  await page.keyboard.press('Escape');
+  await page.waitForFunction(()=>window.__UFInterface.page==='pause');
+  const ui=page.locator('#screen');
+  if(await ui.locator('.overworld-tab').count()!==4)throw new Error('Missing four menu categories');
+  if(await ui.locator('.overworld-pane').count()!==0)throw new Error('Root menu opened a panel automatically');
+  await ui.getByRole('button',{name:'STAT · สถานะ',exact:true}).focus();
+  await page.locator('#game').screenshot({path:'output/playwright/interface/overworld-menu-root.png'});
+  await page.keyboard.press('ArrowDown');
+  const frozen=await page.evaluate(()=>({player:{...window.__UFInterface.player},canvas:document.getElementById('world-bg').toDataURL()}));
+  if(JSON.stringify(before.player)!==JSON.stringify(frozen.player)||before.canvas!==frozen.canvas)throw new Error('World changed while menu open');
+  await ui.getByRole('button',{name:'STAT · สถานะ',exact:true}).click();
+  const geometry=await page.evaluate(()=>{
+    const rail=document.querySelector('.overworld-rail').getBoundingClientRect(),pane=document.querySelector('.overworld-pane').getBoundingClientRect(),mini=document.querySelector('.overworld-mini');
+    return {rightOfRail:pane.left>rail.right,miniFits:mini.scrollHeight<=mini.clientHeight+1};
+  });
+  if(!geometry.rightOfRail||!geometry.miniFits)throw new Error('Invalid overlay layout '+JSON.stringify(geometry));
+  if(!(await ui.locator('.overworld-stats-hero').isVisible()))throw new Error('No approved player portrait');
+  await page.waitForFunction(()=>{const image=document.querySelector('.overworld-stats-hero');return image?.complete&&image.naturalWidth===64&&image.naturalHeight===112;});
+  await page.locator('#game').screenshot({path:'output/playwright/interface/overworld-stat-detail.png'});
+  await page.keyboard.press('Escape');
+  if(await page.evaluate(()=>window.__UFInterface.page)!=='pause')throw new Error('First Escape did not close detail only');
+  await page.keyboard.press('Escape');
+  if(await page.evaluate(()=>window.__UFInterface.page)!=='world')throw new Error('Second Escape did not resume world');
+  await page.keyboard.press('i');
+  if(await page.evaluate(()=>window.__UFInterface.page)!=='inventory')throw new Error('I shortcut failed');
+  await page.locator('#game').screenshot({path:'output/playwright/interface/overworld-item-detail.png'});
+  await ui.getByRole('button',{name:'CELL · โทรศัพท์',exact:true}).click();
+  if(await page.evaluate(()=>window.__UFInterface.page)!=='phone')throw new Error('CELL tab failed');
+  await ui.getByRole('button',{name:'SOUL · ขวดวิญญาณ',exact:true}).click();
+  if(await page.evaluate(()=>window.__UFInterface.page)!=='powers')throw new Error('SOUL tab failed');
+  await page.getByLabel('บริบทตัวอย่าง').selectOption('forest');
+  if(!(await ui.getByRole('button',{name:'CELL · โทรศัพท์',exact:true}).isDisabled()))throw new Error('CELL enabled before phone gift');
+  await page.getByLabel('บริบทตัวอย่าง').selectOption('ruins');
+  await page.setViewportSize({width:390,height:844});
+  await ui.getByRole('button',{name:'STAT · สถานะ',exact:true}).click();
+  const mobile=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,miniFits:document.querySelector('.overworld-mini').scrollHeight<=document.querySelector('.overworld-mini').clientHeight+1}));
+  if(mobile.width<mobile.scroll||!mobile.miniFits)throw new Error('Mobile overflow');
+  await page.screenshot({path:'output/playwright/interface/overworld-mobile-stat.png',fullPage:true});
+  await page.setViewportSize({width:1440,height:1050});
+  const report={status:'PASS',checks:['4-rail-buttons','root-only-before-confirm','frozen-world-canvas','right-detail-panel','compact-stats-fit','STAT-portrait-64x112','Escape-two-layers','I-shortcut','CELL-and-SOUL-tabs','phone-gift-guard','mobile-layout'],geometry,mobile,scope:'UI prototype only'};
+  await page.evaluate(report=>{window.__UFOverworldReport=report;},report);
+  return report;
+}

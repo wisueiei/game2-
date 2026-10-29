@@ -1,0 +1,41 @@
+- generic [active] [ref=f2e1]:
+  - banner [ref=f2e2]:
+    - generic [ref=f2e3]:
+      - text: UNDERFALL / INTERFACE ATELIER
+      - heading "หน้าต่างของเรื่องเล่า" [level=1] [ref=f2e4]
+    - generic [ref=f2e5]:
+      - text: 56 หน้า · พรีวิวเท่านั้น
+      - link "คู่มือส่งต่อ" [ref=f2e7] [cursor=pointer]:
+        - /url: interface-handoff.md
+  - generic [ref=f2e8]:
+    - complementary "เลือกหน้าอินเทอร์เฟซ" [ref=f2e9]:
+      - text: ค้นหาหน้า / ระบบ
+      - searchbox "ค้นหาหน้า / ระบบ" [ref=f2e10]
+      - navigation
+    - main [ref=f2e11]:
+      - generic [ref=f2e12]:
+        - generic [ref=f2e13]:
+          - text: 01 / 56
+          - heading "หน้าต้อนรับ" [level=2] [ref=f2e14]
+        - generic [ref=f2e15]:
+          - generic [ref=f2e16]: บริบทตัวอย่าง
+          - combobox "บริบทตัวอย่าง" [ref=f2e17]:
+            - option "รูน · มีโทรศัพท์" [selected]
+            - option "ป่า · ยังไม่มีโทรศัพท์"
+            - option "ไม่มีเซฟ"
+            - option "กระเป๋าว่าง"
+            - option "เงินไม่พอ"
+            - option "ศึกทอเรียล · ไว้ชีวิตเท่านั้น"
+      - generic "พรีวิวอินเทอร์เฟซเกม" [ref=f2e19]
+      - generic [ref=f2e22]:
+        - generic [ref=f2e23]: ↑↓ / WASD เลือก Z / Enter ยืนยัน Esc ย้อน I / P กระเป๋า / โทรศัพท์
+        - button "ขยายพรีวิว" [ref=f2e24] [cursor=pointer]
+      - generic [ref=f2e25]: ใช้ข้อมูลทดลองในพื้นที่แยก ไม่อ่านหรือเขียนเซฟเกมจริง · ไม่ปลดตอน/ตัวตนที่ยังไม่เปิดเผย
+      - region "ข้อมูลหน้าปัจจุบัน" [ref=f2e26]:
+        - generic [ref=f2e27]:
+          - heading "สถานะที่ลองได้" [level=3] [ref=f2e28]
+          - paragraph [ref=f2e29]: กำลังโหลด…
+        - generic [ref=f2e30]:
+          - heading "ภาษา UNDERFALL" [level=3] [ref=f2e31]
+          - paragraph [ref=f2e32]: กรอบพิกเซล · ขาวอุ่น / คราม / ชมพู · ฟ้าวิญญาณข้อความไทยเป็น DOM · ชื่อผู้พูดมุมขวา
+      - alert

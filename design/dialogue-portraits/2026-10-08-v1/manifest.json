@@ -1,0 +1,190 @@
+{
+  "documentation": {
+    "id": "20261009-portraits-v1-manifest",
+    "updated": "2026-10-09",
+    "status": "current-data",
+    "summary": "ปัจจุบัน: manifest.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+    "designBaseline": "UF-DESIGN-2026-10-09",
+    "currentDesignRef": "../../../design-current.md",
+    "layoutContractRef": "../../chapters/current-layout.json",
+    "indexRef": "../../../INDEX.md",
+    "recordScope": "original generation record plus current documentation links; image hashes and game code unchanged",
+    "runtimeValidated": false
+  },
+  "version": "UNDERFALL-DIALOGUE-PORTRAITS-2026-10-08-v1",
+  "tool": "built-in image_gen",
+  "selectedSheetCount": 11,
+  "portraitEntryCount": 55,
+  "statesPerEntry": 6,
+  "studyCellCount": 330,
+  "selectedFiles": [
+    {
+      "sheet": "01",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\01-core-cast-dialogue-faces-v1.png",
+      "sha256": "1B7BA4D3D8387EFD620278DBC9C8288B35EE1A081C307B9FD90FD3F32FE89AC9",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1939688
+    },
+    {
+      "sheet": "02",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\02-conflict-and-stage-dialogue-faces-v1.png",
+      "sha256": "547EC1092759C9E995D271AEC3B47F522250BE4607AFA45EA3ADA1510DD11DAF",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2129620
+    },
+    {
+      "sheet": "03",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\03-relationships-and-forms-dialogue-faces-v1.png",
+      "sha256": "90A3F3EBAB371873AA85988BCA70FB68FCFF8030A5AA6B3302E7BB9C81FAEB99",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2017376
+    },
+    {
+      "sheet": "04",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\04-mystery-masked-and-incomplete-faces-v1.png",
+      "sha256": "10DADBECC5BC4E7D3E6F7B0CA52DC4D12B5018735B7C97A0C6D3C4820F0564DF",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1935570
+    },
+    {
+      "sheet": "05",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\05-ruins-encounter-dialogue-faces-v1.png",
+      "sha256": "4E2A60484BE0678FA73C93CE283D11B782BA62584EAAFB761072D887E2150CF4",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1611450
+    },
+    {
+      "sheet": "06",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\06-ruins-rest-and-neighbors-faces-v1.png",
+      "sha256": "7290AE84A248D7BAEF354EDF13B2D3D2AFB9E1C3D5805A073B7A3E132C83930A",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1733957
+    },
+    {
+      "sheet": "07",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\07-community-and-vendors-faces-v1.png",
+      "sha256": "8470D3E3D62758C19B05B6102696E42B59DF4DF0C55542C0D76EDCB141AADAD4",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2017067
+    },
+    {
+      "sheet": "08",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sha256": "5812996A7471FE938F4A8BAB7B56C6F1AC53524BC3B7A6EC35FB68F998AED42B",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1879000
+    },
+    {
+      "sheet": "09",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "sha256": "5E31FFBDDEFB9EABF48E642EBCA5BAFF6ED5F1A6FF1A6303FF0D724AE8322DE2",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1872810
+    },
+    {
+      "sheet": "10",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "sha256": "CEA4A4530C7BEF1C6D7284BE60E4D8D885C418ED2879B78BD3B385DE2CC7C688",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1651520
+    },
+    {
+      "sheet": "11",
+      "kind": "selected",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\11-dialogue-box-emotion-preview-v1.png",
+      "sha256": "23DFB8E626A74FA815EB6417CF17EE1E0D724183630294F0FD00857864E73A88",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 1267283
+    }
+  ],
+  "otherFiles": [
+    {
+      "sheet": "04",
+      "kind": "draft",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\inputs\\04-mystery-before-mask-fix.png",
+      "sha256": "DD5094B9E3EEB9982E212159D13C628D0BF40C22A707851CDC353C6AB270050D",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2011502
+    },
+    {
+      "sheet": null,
+      "kind": "reference",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\references\\1-dialogue-reference-220326.png",
+      "sha256": "724D83F8DFE84A47F59DFCDF84669A6C3FE51556BDC8BAA03A29D220525D68F7",
+      "width": 865,
+      "height": 230,
+      "bytes": 125557
+    },
+    {
+      "sheet": null,
+      "kind": "reference",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\references\\2-dialogue-reference-220318.png",
+      "sha256": "5E93530A5C065BD76C3405E8E5157EBDF28E648CA53802E96B338C94FD617FEF",
+      "width": 882,
+      "height": 232,
+      "bytes": 131243
+    },
+    {
+      "sheet": null,
+      "kind": "reference",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\references\\3-dialogue-reference-220308.png",
+      "sha256": "59DBD47A11BD5F5CCD9314AF93B1CAFA7ED818A12CDCBCFAC2079C962708E12D",
+      "width": 867,
+      "height": 222,
+      "bytes": 128344
+    },
+    {
+      "sheet": null,
+      "kind": "reference",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\references\\4-dialogue-reference-220221.png",
+      "sha256": "4570DD9CF60C905EDFC893B44288C21F1BC763EEE4C045CEC8A06BA55C70AAD4",
+      "width": 856,
+      "height": 211,
+      "bytes": 112367
+    },
+    {
+      "sheet": null,
+      "kind": "reference",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\dialogue-portraits\\2026-10-08-v1\\references\\5-dialogue-reference-220204.png",
+      "sha256": "074BE561AC27DE85B0AFD289685231AF5CC0C4BDEFBFE9FC123B9A74A7AA2E79",
+      "width": 660,
+      "height": 216,
+      "bytes": 76178
+    }
+  ],
+  "readyToImport": false,
+  "gameEdited": false,
+  "otherCharactersOrStoryEdited": true,
+  "identityRuleUpdatedOn": "2026-10-09",
+  "imageFilesChangedByIdentityClarification": false,
+  "alphaExportsMade": false,
+  "notes": [
+    "Study boards, not calibrated sprite atlases.",
+    "55 includes forms, reserved or nonverbal entries; does not authorize new dialogue.",
+    "Sheet04 selected UNKNOWN uses bottle only; discard pre-correction draft.",
+    "See EXPRESSION_GUIDE.md for per-form spoiler guards.",
+    "On 2026-10-09 author confirmed Void voice and alternate Shiku are the same person; face/body first revealed when meeting behind the tree in SX03. Narrative authoring docs and portrait guards updated, not image files or game code."
+  ]
+}

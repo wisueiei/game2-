@@ -1,0 +1,416 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - heading "UNDERFALL · ทุกหน้าต่างของเรื่องเล่า" [level=1] [ref=e4]
+      - paragraph [ref=e5]:
+        - text: ภาพจากพรีวิวจริง 56 หน้า/สถานะ · เป็น UI ไม่ใช่หลักฐานว่าเกมสร้างแล้ว
+        - link "เปิดต้นแบบกดใช้งาน" [ref=e6] [cursor=pointer]:
+          - /url: preview.html
+        - text: ·
+        - link "คู่มือส่งต่อ" [ref=e7] [cursor=pointer]:
+          - /url: interface-handoff.md
+    - combobox "เลือกหมวดภาพ" [ref=e8]:
+      - option "หน้าสำคัญ"
+      - option "ทั้งหมด56หน้า" [selected]
+      - option "เริ่มและตอน"
+      - option "สำรวจและกระเป๋า"
+      - option "โทรศัพท์และบท"
+      - option "บันทึกและฟื้นตัว"
+      - option "ต่อสู้"
+      - option "ร้านและคลัง"
+      - option "บันทึกและอนาคต"
+      - option "ตั้งค่าและช่วยเหลือ"
+      - option "บทและการแจ้งเตือน"
+  - main [ref=e9]:
+    - figure "01 · หน้าต้อนรับ UI" [ref=e82]:
+      - link [ref=e83] [cursor=pointer]:
+        - /url: preview.html#title
+        - img "หน้าต้อนรับ" [ref=e84]
+      - generic [ref=e85]:
+        - generic [ref=e86]: 01 · หน้าต้อนรับ
+        - generic [ref=e87]: UI
+    - figure "02 · เล่นต่อจากจุดบันทึก UI" [ref=e88]:
+      - link [ref=e89] [cursor=pointer]:
+        - /url: preview.html#continue
+        - img "เล่นต่อจากจุดบันทึก" [ref=e90]
+      - generic [ref=e91]:
+        - generic [ref=e92]: 02 · เล่นต่อจากจุดบันทึก
+        - generic [ref=e93]: UI
+    - figure "03 · ยืนยันเริ่มใหม่ UI" [ref=e94]:
+      - link [ref=e95] [cursor=pointer]:
+        - /url: preview.html#reset
+        - img "ยืนยันเริ่มใหม่" [ref=e96]
+      - generic [ref=e97]:
+        - generic [ref=e98]: 03 · ยืนยันเริ่มใหม่
+        - generic [ref=e99]: UI
+    - figure "04 · ตั้งชื่อผู้เล่น UI" [ref=e100]:
+      - link [ref=e101] [cursor=pointer]:
+        - /url: preview.html#name
+        - img "ตั้งชื่อผู้เล่น" [ref=e102]
+      - generic [ref=e103]:
+        - generic [ref=e104]: 04 · ตั้งชื่อผู้เล่น
+        - generic [ref=e105]: UI
+    - figure "05 · ยืนยันชื่อ UI" [ref=e106]:
+      - link [ref=e107] [cursor=pointer]:
+        - /url: preview.html#name-confirm
+        - img "ยืนยันชื่อ" [ref=e108]
+      - generic [ref=e109]:
+        - generic [ref=e110]: 05 · ยืนยันชื่อ
+        - generic [ref=e111]: UI
+    - figure "06 · คลังตอนครบรอบ UI" [ref=e112]:
+      - link [ref=e113] [cursor=pointer]:
+        - /url: preview.html#history
+        - img "คลังตอนครบรอบ" [ref=e114]
+      - generic [ref=e115]:
+        - generic [ref=e116]: 06 · คลังตอนครบรอบ
+        - generic [ref=e117]: UI
+    - figure "07 · รายละเอียดตอน UI" [ref=e118]:
+      - link [ref=e119] [cursor=pointer]:
+        - /url: preview.html#episode
+        - img "รายละเอียดตอน" [ref=e120]
+      - generic [ref=e121]:
+        - generic [ref=e122]: 07 · รายละเอียดตอน
+        - generic [ref=e123]: UI
+    - figure "08 · จบตอน / ตอนถัดไป UI" [ref=e124]:
+      - link [ref=e125] [cursor=pointer]:
+        - /url: preview.html#chapter-end
+        - img "จบตอน / ตอนถัดไป" [ref=e126]
+      - generic [ref=e127]:
+        - generic [ref=e128]: 08 · จบตอน / ตอนถัดไป
+        - generic [ref=e129]: UI
+    - figure "09 · HUD ระหว่างเดิน UI" [ref=e130]:
+      - link [ref=e131] [cursor=pointer]:
+        - /url: preview.html#world
+        - img "HUD ระหว่างเดิน" [ref=e132]
+      - generic [ref=e133]:
+        - generic [ref=e134]: 09 · HUD ระหว่างเดิน
+        - generic [ref=e135]: UI
+    - figure "10 · เมนูพัก UI" [ref=e136]:
+      - link [ref=e137] [cursor=pointer]:
+        - /url: preview.html#pause
+        - img "เมนูพัก" [ref=e138]
+      - generic [ref=e139]:
+        - generic [ref=e140]: 10 · เมนูพัก
+        - generic [ref=e141]: UI
+    - figure "11 · กระเป๋าไอเทม UI" [ref=e142]:
+      - link [ref=e143] [cursor=pointer]:
+        - /url: preview.html#inventory
+        - img "กระเป๋าไอเทม" [ref=e144]
+      - generic [ref=e145]:
+        - generic [ref=e146]: 11 · กระเป๋าไอเทม
+        - generic [ref=e147]: UI
+    - figure "12 · รายละเอียดไอเทม UI" [ref=e148]:
+      - link [ref=e149] [cursor=pointer]:
+        - /url: preview.html#item
+        - img "รายละเอียดไอเทม" [ref=e150]
+      - generic [ref=e151]:
+        - generic [ref=e152]: 12 · รายละเอียดไอเทม
+        - generic [ref=e153]: UI
+    - figure "13 · อุปกรณ์ที่ใส่ UI" [ref=e154]:
+      - link [ref=e155] [cursor=pointer]:
+        - /url: preview.html#equipment
+        - img "อุปกรณ์ที่ใส่" [ref=e156]
+      - generic [ref=e157]:
+        - generic [ref=e158]: 13 · อุปกรณ์ที่ใส่
+        - generic [ref=e159]: UI
+    - figure "14 · สถานะผู้เล่น UI" [ref=e160]:
+      - link [ref=e161] [cursor=pointer]:
+        - /url: preview.html#stats
+        - img "สถานะผู้เล่น" [ref=e162]
+      - generic [ref=e163]:
+        - generic [ref=e164]: 14 · สถานะผู้เล่น
+        - generic [ref=e165]: UI
+    - figure "15 · ขวดไฟวิญญาณ UI" [ref=e166]:
+      - link [ref=e167] [cursor=pointer]:
+        - /url: preview.html#powers
+        - img "ขวดไฟวิญญาณ" [ref=e168]
+      - generic [ref=e169]:
+        - generic [ref=e170]: 15 · ขวดไฟวิญญาณ
+        - generic [ref=e171]: UI
+    - figure "16 · โทรศัพท์ UI" [ref=e172]:
+      - link [ref=e173] [cursor=pointer]:
+        - /url: preview.html#phone
+        - img "โทรศัพท์" [ref=e174]
+      - generic [ref=e175]:
+        - generic [ref=e176]: 16 · โทรศัพท์
+        - generic [ref=e177]: UI
+    - figure "17 · รายชื่อ / หัวข้อโทร UI" [ref=e178]:
+      - link [ref=e179] [cursor=pointer]:
+        - /url: preview.html#contacts
+        - img "รายชื่อ / หัวข้อโทร" [ref=e180]
+      - generic [ref=e181]:
+        - generic [ref=e182]: 17 · รายชื่อ / หัวข้อโทร
+        - generic [ref=e183]: UI
+    - figure "18 · บทสนทนาสายโทร UI" [ref=e184]:
+      - link [ref=e185] [cursor=pointer]:
+        - /url: preview.html#call
+        - img "บทสนทนาสายโทร" [ref=e186]
+      - generic [ref=e187]:
+        - generic [ref=e188]: 18 · บทสนทนาสายโทร
+        - generic [ref=e189]: UI
+    - figure "19 · สายเรียกเข้า UI" [ref=e190]:
+      - link [ref=e191] [cursor=pointer]:
+        - /url: preview.html#incoming
+        - img "สายเรียกเข้า" [ref=e192]
+      - generic [ref=e193]:
+        - generic [ref=e194]: 19 · สายเรียกเข้า
+        - generic [ref=e195]: UI
+    - figure "20 · ดาวบันทึก UI" [ref=e196]:
+      - link [ref=e197] [cursor=pointer]:
+        - /url: preview.html#save
+        - img "ดาวบันทึก" [ref=e198]
+      - generic [ref=e199]:
+        - generic [ref=e200]: 20 · ดาวบันทึก
+        - generic [ref=e201]: UI
+    - figure "21 · บันทึกสำเร็จ UI" [ref=e202]:
+      - link [ref=e203] [cursor=pointer]:
+        - /url: preview.html#saved
+        - img "บันทึกสำเร็จ" [ref=e204]
+      - generic [ref=e205]:
+        - generic [ref=e206]: 21 · บันทึกสำเร็จ
+        - generic [ref=e207]: UI
+    - figure "22 · บันทึกไม่สำเร็จ UI" [ref=e208]:
+      - link [ref=e209] [cursor=pointer]:
+        - /url: preview.html#save-error
+        - img "บันทึกไม่สำเร็จ" [ref=e210]
+      - generic [ref=e211]:
+        - generic [ref=e212]: 22 · บันทึกไม่สำเร็จ
+        - generic [ref=e213]: UI
+    - figure "23 · กู้ข้อมูล / ส่งออก UI" [ref=e214]:
+      - link [ref=e215] [cursor=pointer]:
+        - /url: preview.html#recovery
+        - img "กู้ข้อมูล / ส่งออก" [ref=e216]
+      - generic [ref=e217]:
+        - generic [ref=e218]: 23 · กู้ข้อมูล / ส่งออก
+        - generic [ref=e219]: UI
+    - figure "24 · เกมโอเวอร์ UI" [ref=e220]:
+      - link [ref=e221] [cursor=pointer]:
+        - /url: preview.html#gameover
+        - img "เกมโอเวอร์" [ref=e222]
+      - generic [ref=e223]:
+        - generic [ref=e224]: 24 · เกมโอเวอร์
+        - generic [ref=e225]: UI
+    - figure "25 · เมนูต่อสู้ UI" [ref=e226]:
+      - link [ref=e227] [cursor=pointer]:
+        - /url: preview.html#battle
+        - img "เมนูต่อสู้" [ref=e228]
+      - generic [ref=e229]:
+        - generic [ref=e230]: 25 · เมนูต่อสู้
+        - generic [ref=e231]: UI
+    - figure "26 · เลือกเป้าหมาย UI" [ref=e232]:
+      - link [ref=e233] [cursor=pointer]:
+        - /url: preview.html#target
+        - img "เลือกเป้าหมาย" [ref=e234]
+      - generic [ref=e235]:
+        - generic [ref=e236]: 26 · เลือกเป้าหมาย
+        - generic [ref=e237]: UI
+    - figure "27 · ACT / การตอบสนอง UI" [ref=e238]:
+      - link [ref=e239] [cursor=pointer]:
+        - /url: preview.html#act
+        - img "ACT / การตอบสนอง" [ref=e240]
+      - generic [ref=e241]:
+        - generic [ref=e242]: 27 · ACT / การตอบสนอง
+        - generic [ref=e243]: UI
+    - figure "28 · ITEM ในศึก UI" [ref=e244]:
+      - link [ref=e245] [cursor=pointer]:
+        - /url: preview.html#battle-items
+        - img "ITEM ในศึก" [ref=e246]
+      - generic [ref=e247]:
+        - generic [ref=e248]: 28 · ITEM ในศึก
+        - generic [ref=e249]: UI
+    - figure "29 · MERCY / SPARE UI" [ref=e250]:
+      - link [ref=e251] [cursor=pointer]:
+        - /url: preview.html#mercy
+        - img "MERCY / SPARE" [ref=e252]
+      - generic [ref=e253]:
+        - generic [ref=e254]: 29 · MERCY / SPARE
+        - generic [ref=e255]: UI
+    - figure "30 · FIGHT / แถบจังหวะ UI" [ref=e256]:
+      - link [ref=e257] [cursor=pointer]:
+        - /url: preview.html#fight
+        - img "FIGHT / แถบจังหวะ" [ref=e258]
+      - generic [ref=e259]:
+        - generic [ref=e260]: 30 · FIGHT / แถบจังหวะ
+        - generic [ref=e261]: UI
+    - figure "31 · หัวใจหลบโจมตี UI" [ref=e262]:
+      - link [ref=e263] [cursor=pointer]:
+        - /url: preview.html#dodge
+        - img "หัวใจหลบโจมตี" [ref=e264]
+      - generic [ref=e265]:
+        - generic [ref=e266]: 31 · หัวใจหลบโจมตี
+        - generic [ref=e267]: UI
+    - figure "32 · ผลหลังศึก UI" [ref=e268]:
+      - link [ref=e269] [cursor=pointer]:
+        - /url: preview.html#reward
+        - img "ผลหลังศึก" [ref=e270]
+      - generic [ref=e271]:
+        - generic [ref=e272]: 32 · ผลหลังศึก
+        - generic [ref=e273]: UI
+    - figure "33 · หน้าร้าน UI" [ref=e274]:
+      - link [ref=e275] [cursor=pointer]:
+        - /url: preview.html#shop
+        - img "หน้าร้าน" [ref=e276]
+      - generic [ref=e277]:
+        - generic [ref=e278]: 33 · หน้าร้าน
+        - generic [ref=e279]: UI
+    - figure "34 · รายการซื้อ UI" [ref=e280]:
+      - link [ref=e281] [cursor=pointer]:
+        - /url: preview.html#buy
+        - img "รายการซื้อ" [ref=e282]
+      - generic [ref=e283]:
+        - generic [ref=e284]: 34 · รายการซื้อ
+        - generic [ref=e285]: UI
+    - figure "35 · ร้านไม่รับซื้อ UI" [ref=e286]:
+      - link [ref=e287] [cursor=pointer]:
+        - /url: preview.html#sell
+        - img "ร้านไม่รับซื้อ" [ref=e288]
+      - generic [ref=e289]:
+        - generic [ref=e290]: 35 · ร้านไม่รับซื้อ
+        - generic [ref=e291]: UI
+    - figure "36 · หัวข้อคุยในร้าน UI" [ref=e292]:
+      - link [ref=e293] [cursor=pointer]:
+        - /url: preview.html#talk
+        - img "หัวข้อคุยในร้าน" [ref=e294]
+      - generic [ref=e295]:
+        - generic [ref=e296]: 36 · หัวข้อคุยในร้าน
+        - generic [ref=e297]: UI
+    - figure "37 · กล่องฝากของ ระบบอนาคต" [ref=e298]:
+      - link [ref=e299] [cursor=pointer]:
+        - /url: preview.html#box
+        - img "กล่องฝากของ" [ref=e300]
+      - generic [ref=e301]:
+        - generic [ref=e302]: 37 · กล่องฝากของ
+        - generic [ref=e303]: ระบบอนาคต
+    - figure "38 · บันทึกการเดินทาง UI" [ref=e304]:
+      - link [ref=e305] [cursor=pointer]:
+        - /url: preview.html#journal
+        - img "บันทึกการเดินทาง" [ref=e306]
+      - generic [ref=e307]:
+        - generic [ref=e308]: 38 · บันทึกการเดินทาง
+        - generic [ref=e309]: UI
+    - figure "39 · รายละเอียดภารกิจ ระบบอนาคต" [ref=e310]:
+      - link [ref=e311] [cursor=pointer]:
+        - /url: preview.html#quest
+        - img "รายละเอียดภารกิจ" [ref=e312]
+      - generic [ref=e313]:
+        - generic [ref=e314]: 39 · รายละเอียดภารกิจ
+        - generic [ref=e315]: ระบบอนาคต
+    - figure "40 · เศษความทรงจำ ระบบอนาคต" [ref=e316]:
+      - link [ref=e317] [cursor=pointer]:
+        - /url: preview.html#memories
+        - img "เศษความทรงจำ" [ref=e318]
+      - generic [ref=e319]:
+        - generic [ref=e320]: 40 · เศษความทรงจำ
+        - generic [ref=e321]: ระบบอนาคต
+    - figure "41 · ความทรงจำที่ยังว่าง ระบบอนาคต" [ref=e322]:
+      - link [ref=e323] [cursor=pointer]:
+        - /url: preview.html#memory
+        - img "ความทรงจำที่ยังว่าง" [ref=e324]
+      - generic [ref=e325]:
+        - generic [ref=e326]: 41 · ความทรงจำที่ยังว่าง
+        - generic [ref=e327]: ระบบอนาคต
+    - figure "42 · บ้านจากพลัง Void ระบบอนาคต" [ref=e328]:
+      - link [ref=e329] [cursor=pointer]:
+        - /url: preview.html#home
+        - img "บ้านจากพลัง Void" [ref=e330]
+      - generic [ref=e331]:
+        - generic [ref=e332]: 42 · บ้านจากพลัง Void
+        - generic [ref=e333]: ระบบอนาคต
+    - figure "43 · ดูแลสัตว์เลี้ยง ระบบอนาคต" [ref=e334]:
+      - link [ref=e335] [cursor=pointer]:
+        - /url: preview.html#pets
+        - img "ดูแลสัตว์เลี้ยง" [ref=e336]
+      - generic [ref=e337]:
+        - generic [ref=e338]: 43 · ดูแลสัตว์เลี้ยง
+        - generic [ref=e339]: ระบบอนาคต
+    - figure "44 · ตั้งค่า UI" [ref=e340]:
+      - link [ref=e341] [cursor=pointer]:
+        - /url: preview.html#settings
+        - img "ตั้งค่า" [ref=e342]
+      - generic [ref=e343]:
+        - generic [ref=e344]: 44 · ตั้งค่า
+        - generic [ref=e345]: UI
+    - figure "45 · เสียง / ทดสอบเสียง UI" [ref=e346]:
+      - link [ref=e347] [cursor=pointer]:
+        - /url: preview.html#audio
+        - img "เสียง / ทดสอบเสียง" [ref=e348]
+      - generic [ref=e349]:
+        - generic [ref=e350]: 45 · เสียง / ทดสอบเสียง
+        - generic [ref=e351]: UI
+    - figure "46 · คู่มือปุ่ม / ลองควบคุม UI" [ref=e352]:
+      - link [ref=e353] [cursor=pointer]:
+        - /url: preview.html#controls
+        - img "คู่มือปุ่ม / ลองควบคุม" [ref=e354]
+      - generic [ref=e355]:
+        - generic [ref=e356]: 46 · คู่มือปุ่ม / ลองควบคุม
+        - generic [ref=e357]: UI
+    - figure "47 · การอ่าน / ลดการเคลื่อนไหว UI" [ref=e358]:
+      - link [ref=e359] [cursor=pointer]:
+        - /url: preview.html#accessibility
+        - img "การอ่าน / ลดการเคลื่อนไหว" [ref=e360]
+      - generic [ref=e361]:
+        - generic [ref=e362]: 47 · การอ่าน / ลดการเคลื่อนไหว
+        - generic [ref=e363]: UI
+    - figure "48 · เครดิต / ที่มาแบบ UI" [ref=e364]:
+      - link [ref=e365] [cursor=pointer]:
+        - /url: preview.html#credits
+        - img "เครดิต / ที่มาแบบ" [ref=e366]
+      - generic [ref=e367]:
+        - generic [ref=e368]: 48 · เครดิต / ที่มาแบบ
+        - generic [ref=e369]: UI
+    - figure "49 · กล่องบท / เสียง ??? UI" [ref=e370]:
+      - link [ref=e371] [cursor=pointer]:
+        - /url: preview.html#dialogue
+        - img "กล่องบท / เสียง ???" [ref=e372]
+      - generic [ref=e373]:
+        - generic [ref=e374]: 49 · กล่องบท / เสียง ???
+        - generic [ref=e375]: UI
+    - figure "50 · ตัวเลือกในบท UI" [ref=e376]:
+      - link [ref=e377] [cursor=pointer]:
+        - /url: preview.html#choice
+        - img "ตัวเลือกในบท" [ref=e378]
+      - generic [ref=e379]:
+        - generic [ref=e380]: 50 · ตัวเลือกในบท
+        - generic [ref=e381]: UI
+    - figure "51 · แจ้งได้รับไอเทม UI" [ref=e382]:
+      - link [ref=e383] [cursor=pointer]:
+        - /url: preview.html#pickup
+        - img "แจ้งได้รับไอเทม" [ref=e384]
+      - generic [ref=e385]:
+        - generic [ref=e386]: 51 · แจ้งได้รับไอเทม
+        - generic [ref=e387]: UI
+    - figure "52 · ข้อความกลางจอ UI" [ref=e388]:
+      - link [ref=e389] [cursor=pointer]:
+        - /url: preview.html#narration
+        - img "ข้อความกลางจอ" [ref=e390]
+      - generic [ref=e391]:
+        - generic [ref=e392]: 52 · ข้อความกลางจอ
+        - generic [ref=e393]: UI
+    - figure "53 · หน้ากำลังโหลด UI" [ref=e394]:
+      - link [ref=e395] [cursor=pointer]:
+        - /url: preview.html#loading
+        - img "หน้ากำลังโหลด" [ref=e396]
+      - generic [ref=e397]:
+        - generic [ref=e398]: 53 · หน้ากำลังโหลด
+        - generic [ref=e399]: UI
+    - figure "54 · แจ้งการกระทำที่ใช้ไม่ได้ UI" [ref=e400]:
+      - link [ref=e401] [cursor=pointer]:
+        - /url: preview.html#blocked
+        - img "แจ้งการกระทำที่ใช้ไม่ได้" [ref=e402]
+      - generic [ref=e403]:
+        - generic [ref=e404]: 54 · แจ้งการกระทำที่ใช้ไม่ได้
+        - generic [ref=e405]: UI
+    - figure "55 · สรุปซีซัน / เส้นจบ ระบบอนาคต" [ref=e406]:
+      - link [ref=e407] [cursor=pointer]:
+        - /url: preview.html#season-summary
+        - img "สรุปซีซัน / เส้นจบ" [ref=e408]
+      - generic [ref=e409]:
+        - generic [ref=e410]: 55 · สรุปซีซัน / เส้นจบ
+        - generic [ref=e411]: ระบบอนาคต
+    - figure "56 · หนังสือเวทหลังแซน ระบบอนาคต" [ref=e412]:
+      - link [ref=e413] [cursor=pointer]:
+        - /url: preview.html#spellbook
+        - img "หนังสือเวทหลังแซน" [ref=e414]
+      - generic [ref=e415]:
+        - generic [ref=e416]: 56 · หนังสือเวทหลังแซน
+        - generic [ref=e417]: ระบบอนาคต

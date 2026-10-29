@@ -1,0 +1,16 @@
+- generic [active] [ref=e1]:
+  - main "UNDERFALL" [ref=e2]:
+    - generic [ref=e3]:
+      - generic "ป่าแห่งความทรงจำ" [ref=e4]
+      - dialog "เริ่มเรื่องใหม่อีกครั้ง?" [ref=e166]:
+        - heading "เริ่มเรื่องใหม่อีกครั้ง?" [level=3] [ref=e167]
+        - paragraph [ref=e168]: จุดบันทึกและของในรอบนี้จะเริ่มใหม่
+        - paragraph [ref=e169]: ตั้งค่าและประวัติตอนยังอยู่ข้อมูลเดิมจะเก็บไว้ในช่องสำรอง
+        - generic [ref=e170]:
+          - button "ยังไม่เริ่ม" [ref=e171] [cursor=pointer]
+          - button "ยืนยันเริ่มใหม่" [ref=e172] [cursor=pointer]
+  - contentinfo [ref=e161]:
+    - generic [ref=e162]: WASD / ↑↓←→ เดิน · Z / Enter ตรวจและอ่านต่อ · Esc เมนู
+    - generic [ref=e163]: 1 ปี 3 เดือน · CH00
+    - button "เต็มจอ" [ref=e164] [cursor=pointer]
+    - button "ปิดเสียง" [ref=e165] [cursor=pointer]

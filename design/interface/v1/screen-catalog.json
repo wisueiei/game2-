@@ -1,0 +1,516 @@
+{
+  "documentation": {
+    "id": "20261009-interface-v1-screen-catalog",
+    "updated": "2026-10-09",
+    "status": "interactive-design-not-game",
+    "summary": "ทะเบียน56หน้าและสถานะอินเทอร์เฟซพร้อมขอบเขตปัจจุบัน/ข้อเสนอ/อนาคต"
+  },
+  "version": "UF-INTERFACE-2026-10-09-v1",
+  "viewport": [
+    400,
+    225
+  ],
+  "screenCount": 56,
+  "liveGameModified": false,
+  "storageNamespace": "underfall.interface-preview.v1",
+  "neverReadOrWrite": "underfall.save.v1",
+  "screens": [
+    {
+      "number": 1,
+      "id": "title",
+      "title": "หน้าต้อนรับ",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": null
+    },
+    {
+      "number": 2,
+      "id": "continue",
+      "title": "เล่นต่อจากจุดบันทึก",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 3,
+      "id": "reset",
+      "title": "ยืนยันเริ่มใหม่",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 4,
+      "id": "name",
+      "title": "ตั้งชื่อผู้เล่น",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 5,
+      "id": "name-confirm",
+      "title": "ยืนยันชื่อ",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "name"
+    },
+    {
+      "number": 6,
+      "id": "history",
+      "title": "คลังตอนครบรอบ",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 7,
+      "id": "episode",
+      "title": "รายละเอียดตอน",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "history"
+    },
+    {
+      "number": 8,
+      "id": "chapter-end",
+      "title": "จบตอน / ตอนถัดไป",
+      "group": "เริ่มและตอน",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 9,
+      "id": "world",
+      "title": "HUD ระหว่างเดิน",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 10,
+      "id": "pause",
+      "title": "เมนูระหว่างเดิน",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "ui-proposal",
+      "parent": "world"
+    },
+    {
+      "number": 11,
+      "id": "inventory",
+      "title": "กระเป๋าไอเทม",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "current",
+      "parent": "pause"
+    },
+    {
+      "number": 12,
+      "id": "item",
+      "title": "รายละเอียดไอเทม",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "current",
+      "parent": "inventory"
+    },
+    {
+      "number": 13,
+      "id": "equipment",
+      "title": "อุปกรณ์ที่ใส่",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "current",
+      "parent": "inventory"
+    },
+    {
+      "number": 14,
+      "id": "stats",
+      "title": "สถานะผู้เล่น",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "current",
+      "parent": "pause"
+    },
+    {
+      "number": 15,
+      "id": "powers",
+      "title": "ขวดไฟวิญญาณ",
+      "group": "สำรวจและกระเป๋า",
+      "scope": "current",
+      "parent": "pause"
+    },
+    {
+      "number": 16,
+      "id": "phone",
+      "title": "โทรศัพท์",
+      "group": "โทรศัพท์และบท",
+      "scope": "current",
+      "parent": "pause"
+    },
+    {
+      "number": 17,
+      "id": "contacts",
+      "title": "รายชื่อ / หัวข้อโทร",
+      "group": "โทรศัพท์และบท",
+      "scope": "current",
+      "parent": "phone"
+    },
+    {
+      "number": 18,
+      "id": "call",
+      "title": "บทสนทนาสายโทร",
+      "group": "โทรศัพท์และบท",
+      "scope": "current",
+      "parent": "contacts"
+    },
+    {
+      "number": 19,
+      "id": "incoming",
+      "title": "สายเรียกเข้า",
+      "group": "โทรศัพท์และบท",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 20,
+      "id": "save",
+      "title": "ดาวบันทึก",
+      "group": "บันทึกและฟื้นตัว",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 21,
+      "id": "saved",
+      "title": "บันทึกสำเร็จ",
+      "group": "บันทึกและฟื้นตัว",
+      "scope": "current",
+      "parent": "save"
+    },
+    {
+      "number": 22,
+      "id": "save-error",
+      "title": "บันทึกไม่สำเร็จ",
+      "group": "บันทึกและฟื้นตัว",
+      "scope": "current",
+      "parent": "save"
+    },
+    {
+      "number": 23,
+      "id": "recovery",
+      "title": "กู้ข้อมูล / ส่งออก",
+      "group": "บันทึกและฟื้นตัว",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 24,
+      "id": "gameover",
+      "title": "เกมโอเวอร์",
+      "group": "บันทึกและฟื้นตัว",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 25,
+      "id": "battle",
+      "title": "เมนูต่อสู้",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 26,
+      "id": "target",
+      "title": "เลือกเป้าหมาย",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "battle"
+    },
+    {
+      "number": 27,
+      "id": "act",
+      "title": "ACT / การตอบสนอง",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "battle"
+    },
+    {
+      "number": 28,
+      "id": "battle-items",
+      "title": "ITEM ในศึก",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "battle"
+    },
+    {
+      "number": 29,
+      "id": "mercy",
+      "title": "MERCY / SPARE",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "battle"
+    },
+    {
+      "number": 30,
+      "id": "fight",
+      "title": "FIGHT / แถบจังหวะ",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "battle"
+    },
+    {
+      "number": 31,
+      "id": "dodge",
+      "title": "หัวใจหลบโจมตี",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "battle"
+    },
+    {
+      "number": 32,
+      "id": "reward",
+      "title": "ผลหลังศึก",
+      "group": "ต่อสู้",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 33,
+      "id": "shop",
+      "title": "หน้าร้าน",
+      "group": "ร้านและคลัง",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 34,
+      "id": "buy",
+      "title": "รายการซื้อ",
+      "group": "ร้านและคลัง",
+      "scope": "current",
+      "parent": "shop"
+    },
+    {
+      "number": 35,
+      "id": "sell",
+      "title": "ร้านไม่รับซื้อ",
+      "group": "ร้านและคลัง",
+      "scope": "reference-adaptation",
+      "parent": "shop"
+    },
+    {
+      "number": 36,
+      "id": "talk",
+      "title": "หัวข้อคุยในร้าน",
+      "group": "ร้านและคลัง",
+      "scope": "current",
+      "parent": "shop"
+    },
+    {
+      "number": 37,
+      "id": "box",
+      "title": "กล่องฝากของ",
+      "group": "ร้านและคลัง",
+      "scope": "future-ui",
+      "parent": "home"
+    },
+    {
+      "number": 38,
+      "id": "journal",
+      "title": "บันทึกการเดินทาง",
+      "group": "บันทึกและอนาคต",
+      "scope": "ui-proposal",
+      "parent": "world"
+    },
+    {
+      "number": 39,
+      "id": "quest",
+      "title": "รายละเอียดภารกิจ",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "journal"
+    },
+    {
+      "number": 40,
+      "id": "memories",
+      "title": "เศษความทรงจำ",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "journal"
+    },
+    {
+      "number": 41,
+      "id": "memory",
+      "title": "ความทรงจำที่ยังว่าง",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "memories"
+    },
+    {
+      "number": 42,
+      "id": "home",
+      "title": "บ้านจากพลัง Void",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "world"
+    },
+    {
+      "number": 43,
+      "id": "pets",
+      "title": "ดูแลสัตว์เลี้ยง",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "home"
+    },
+    {
+      "number": 44,
+      "id": "settings",
+      "title": "ตั้งค่า",
+      "group": "ตั้งค่าและช่วยเหลือ",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 45,
+      "id": "audio",
+      "title": "เสียง / ทดสอบเสียง",
+      "group": "ตั้งค่าและช่วยเหลือ",
+      "scope": "ui-proposal",
+      "parent": "settings"
+    },
+    {
+      "number": 46,
+      "id": "controls",
+      "title": "คู่มือปุ่ม / ลองควบคุม",
+      "group": "ตั้งค่าและช่วยเหลือ",
+      "scope": "current",
+      "parent": "settings"
+    },
+    {
+      "number": 47,
+      "id": "accessibility",
+      "title": "การอ่าน / ลดการเคลื่อนไหว",
+      "group": "ตั้งค่าและช่วยเหลือ",
+      "scope": "current",
+      "parent": "settings"
+    },
+    {
+      "number": 48,
+      "id": "credits",
+      "title": "เครดิต / ที่มาแบบ",
+      "group": "ตั้งค่าและช่วยเหลือ",
+      "scope": "ui-proposal",
+      "parent": "title"
+    },
+    {
+      "number": 49,
+      "id": "dialogue",
+      "title": "กล่องบท / เสียง ???",
+      "group": "บทและการแจ้งเตือน",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 50,
+      "id": "choice",
+      "title": "ตัวเลือกในบท",
+      "group": "บทและการแจ้งเตือน",
+      "scope": "current",
+      "parent": "dialogue"
+    },
+    {
+      "number": 51,
+      "id": "pickup",
+      "title": "แจ้งได้รับไอเทม",
+      "group": "บทและการแจ้งเตือน",
+      "scope": "current",
+      "parent": "inventory"
+    },
+    {
+      "number": 52,
+      "id": "narration",
+      "title": "ข้อความกลางจอ",
+      "group": "บทและการแจ้งเตือน",
+      "scope": "current",
+      "parent": "title"
+    },
+    {
+      "number": 53,
+      "id": "loading",
+      "title": "หน้ากำลังโหลด",
+      "group": "บทและการแจ้งเตือน",
+      "scope": "ui-proposal",
+      "parent": "title"
+    },
+    {
+      "number": 54,
+      "id": "blocked",
+      "title": "แจ้งการกระทำที่ใช้ไม่ได้",
+      "group": "บทและการแจ้งเตือน",
+      "scope": "current",
+      "parent": "world"
+    },
+    {
+      "number": 55,
+      "id": "season-summary",
+      "title": "สรุปซีซัน / เส้นจบ",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "chapter-end"
+    },
+    {
+      "number": 56,
+      "id": "spellbook",
+      "title": "หนังสือเวทหลังแซน",
+      "group": "บันทึกและอนาคต",
+      "scope": "future-ui",
+      "parent": "powers"
+    }
+  ],
+  "layoutRevision": "overworld-panels-r2",
+  "menuLayers": {
+    "root": "pause",
+    "panes": [
+      "inventory",
+      "stats",
+      "phone",
+      "powers"
+    ],
+    "leftRail": [
+      "ITEM",
+      "STAT",
+      "CELL",
+      "SOUL"
+    ],
+    "referenceRule": "FLWY adapted to bottle SOUL; do not add a Flowey companion system",
+    "worldVisible": true,
+    "menuPausesWorld": true
+  },
+  "statArtwork": {
+    "id": "player-stat-star-v1",
+    "path": "assets/characters/player-stat/v1/player-stat-star-64x112.png",
+    "scope": "STAT illustration only; does not alter world sprite or equipment",
+    "reference": "assets/characters/player-stat/v1/source/character-reference.png",
+    "source": "assets/characters/player-stat/v1/source/stat-generated.png",
+    "nativeCanvas": [
+      64,
+      112
+    ],
+    "opaqueBounds": [
+      14,
+      2,
+      49,
+      110
+    ],
+    "colors": 32,
+    "alphaValues": [
+      0,
+      255
+    ],
+    "installedInPrototype": true,
+    "installedInLiveGame": false,
+    "sourceHash": "e67591d8498e7c3f7766a0b083b014ac7efd2b78b0bb4926c77a81592c3bd2bb",
+    "referenceHash": "d4411805129507870985d3cc9038bc848c6fb382c6e46f23d66deccb2d4cad0d",
+    "nativeHash": "96d3fd36bf85859beb298d1e42d27747ee9a8a9b248e84f117e2eb7bd0490772",
+    "generator": "tools/make-player-stat-portrait.py",
+    "generationMode": "built-in imagegen plus owner-authorized deterministic pixel cleanup",
+    "prompt": "Use case: style-transfer / identity-preserve.\nAsset type: ONE full-body transparent 8-bit PIXEL ART character illustration for the UNDERFALL STAT screen, not a walking sprite and not a UI screenshot.\nInput image 1 is the character identity, clothing and pose reference. Recreate this SAME slim youthful heroine, recognizable chestnut-brown bob with loose strands, closed gentle eyes and small warm smile, narrow shoulders and natural human-like proportions. Keep the small navy collar and tiny golden closure, loose indigo/navy jacket with TWO coral-pink horizontal bands, dark shorts over fitted gray leggings, tall brown boots with purple-toned shadows, and the small thin violet ribbon hanging from the left hand. Her weight is on one foot, other knee gently bent as in the reference, arms resting beside her.\nAt the center of her chest preserve the luminous GOLDEN STAR from the reference. Make it a small sharply pixelated 8-point star with a few adjacent warm yellow pixels, not a giant smooth radial glow.\nStyle: authentic deliberately coarse 8-bit game pixel art, consistent aligned square-pixel grid, hard stair-step contours, flat limited color palette, 2-3 shades per material. Detailed enough for a STAT portrait around 64x96 to 80x128 logical pixels. NOT painted anime, smooth vectors, photorealism or a blurry filter. Do NOT enlarge the head into a chibi or turn legs into long bare legs. Preserve modest normal casual clothing. Hair / eyes / smile / outfit / pose are the same reference identity.\nComposition: a single centered full-body cutout, portrait orientation, from entire hair to both boots, no clipped toes or hands. TRUE TRANSPARENT RGBA empty background and transparent padding. No floor shadow, no haze, no halo ring behind the body, no rectangle, no checkerboard.\nNo game interface, words, labels, logos, border or second character. No flower on the head, no witch hat, no cape, no weapon, no new accessory. Do not draw or modify the STAT layout. This is only the character artwork to place inside it."
+  }
+}

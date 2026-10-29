@@ -1,0 +1,135 @@
+{
+  "version": "UF-R00-SURFACES-V2-2026-10-10",
+  "source": "design/maps/2026-10-08-v1/01-r00-forest-and-sacred-grove-v1b.png",
+  "sourceSha256": "1847f7131a5852919acd1e77eb7cc1d31728bde38e47b3b857321decee31faf4",
+  "method": "Select quiet 16px original material crops, excluding distinctive cyan objects; extract separate existing flowers with binary color mask",
+  "surfaces": {
+    "dirtWarm": {
+      "sourceRect": [
+        330,
+        554,
+        346,
+        570
+      ],
+      "atlasRect": [
+        0,
+        0,
+        16,
+        16
+      ],
+      "materialFraction": 1,
+      "rgbVariance": 0.7554423014322916,
+      "file": "dirtWarm.png",
+      "sourceRgbPreserved": true
+    },
+    "dirtGrove": {
+      "sourceRect": [
+        1153,
+        255,
+        1161,
+        263
+      ],
+      "atlasRect": [
+        32,
+        0,
+        16,
+        16
+      ],
+      "materialFraction": 1,
+      "rgbVariance": 3.8224283854166665,
+      "file": "dirtGrove.png",
+      "sourceRgbPreserved": true
+    },
+    "grassDark": {
+      "sourceRect": [
+        1154,
+        255,
+        1162,
+        263
+      ],
+      "atlasRect": [
+        64,
+        0,
+        16,
+        16
+      ],
+      "materialFraction": 1,
+      "rgbVariance": 3.7472330729166665,
+      "file": "grassDark.png",
+      "sourceRgbPreserved": true
+    },
+    "grassGrove": {
+      "sourceRect": [
+        1154,
+        255,
+        1162,
+        263
+      ],
+      "atlasRect": [
+        96,
+        0,
+        16,
+        16
+      ],
+      "materialFraction": 1,
+      "rgbVariance": 3.7472330729166665,
+      "file": "grassGrove.png",
+      "sourceRgbPreserved": true
+    }
+  },
+  "plants": {
+    "blueFlower": {
+      "file": "blueFlower.png",
+      "sourceRect": [
+        305,
+        445,
+        365,
+        501
+      ],
+      "nativeSize": [
+        60,
+        56
+      ],
+      "footPivot": [
+        30,
+        53
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "sourceRgbPreserved": true
+    },
+    "smallBlueFlowers": {
+      "file": "smallBlueFlowers.png",
+      "sourceRect": [
+        278,
+        493,
+        306,
+        517
+      ],
+      "nativeSize": [
+        28,
+        24
+      ],
+      "footPivot": [
+        14,
+        23
+      ],
+      "alphaValues": [
+        0,
+        255
+      ],
+      "sourceRgbPreserved": true
+    }
+  },
+  "atlas": "surface-atlas.png",
+  "layoutUnchanged": true,
+  "sourceUnchanged": true,
+  "documentation": {
+    "id": "20261010-r00-surface-manifest",
+    "updated": "2026-10-10",
+    "status": "current-runtime-data",
+    "summary": "rectหย่อมพื้นR00สีเงียบและดอกไม้จากv1b พร้อมแหล่งและขอบเขตการปรับโดยไม่เปลี่ยนผัง"
+  }
+}

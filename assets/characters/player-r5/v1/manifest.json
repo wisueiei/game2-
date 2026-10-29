@@ -1,0 +1,678 @@
+{
+  "documentation": {
+    "id": "20261009-player-r5-v1-manifest",
+    "updated": "2026-10-09",
+    "status": "installed-ch00",
+    "summary": "เฟรมผู้เล่นR5ขนาดจริง พิกัดatlas pivotและลำดับแอนิเมชัน ไม่เปลี่ยนเกมเดิม"
+  },
+  "schemaVersion": 1,
+  "assetId": "player-r5-v1",
+  "designBaseline": "UF-DESIGN-2026-10-09",
+  "pixelRevision": "r2-shorter-narrower-legs",
+  "walkProportions": {
+    "lowerSpanBefore": 9,
+    "lowerSpanAfter": 7,
+    "reduction": 0.2222222222222222,
+    "frontCalfSpacingBefore": 5,
+    "frontCalfSpacingAfter": 3,
+    "calfFillWidthBefore": 2,
+    "calfFillWidthAfter": 1,
+    "upperBodyPixelOffset": [
+      0,
+      2
+    ],
+    "storyPosesChanged": false
+  },
+  "designReference": "../../../../design/monsters/2026-10-08-revision-05/07-player-petite-shorts-r5.png",
+  "status": {
+    "exported": true,
+    "installedInGame": true,
+    "gameplayValidated": true,
+    "installationScope": "index_new.html CH00 only; original index.html unchanged"
+  },
+  "pixelFormat": "RGBA8",
+  "alphaValues": [
+    0,
+    255
+  ],
+  "palette": [
+    "#160f22",
+    "#542938",
+    "#753846",
+    "#984b47",
+    "#b65e49",
+    "#26253d",
+    "#373253",
+    "#494572",
+    "#5c5387",
+    "#b33767",
+    "#e25483",
+    "#f079a0",
+    "#382a37",
+    "#4b303d",
+    "#dfa079",
+    "#f3be90",
+    "#ffdeb0",
+    "#5a2e32",
+    "#793c33",
+    "#a0543b",
+    "#d5f9ff",
+    "#63d2ec",
+    "#377cff",
+    "#913ef3"
+  ],
+  "nativeUnits": "logical-pixels",
+  "imageSmoothingEnabled": false,
+  "worldCanvas": [
+    24,
+    32
+  ],
+  "storyCanvas": [
+    40,
+    32
+  ],
+  "aliases": {
+    "front-walk": "front-walk-a",
+    "back-walk": "back-walk-a",
+    "left-walk": "left-walk-a",
+    "right-walk": "right-walk-a",
+    "front-walk2": "front-walk-b",
+    "back-walk2": "back-walk-b",
+    "left-walk2": "left-walk-b",
+    "right-walk2": "right-walk-b",
+    "bottle-pickup": "pickup"
+  },
+  "footColliderDefault": {
+    "offsetFromPivot": [
+      -6,
+      -6
+    ],
+    "size": [
+      12,
+      6
+    ],
+    "runtimeValidated": true,
+    "validationScope": "CH00 movement and static collider checks"
+  },
+  "frames": {
+    "front-idle": {
+      "file": "frames/player-r5-front-idle.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        0,
+        0,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        3,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "front-walk-a": {
+      "file": "frames/player-r5-front-walk-a.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        24,
+        0,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        3,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "front-walk-b": {
+      "file": "frames/player-r5-front-walk-b.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        48,
+        0,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        3,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "back-idle": {
+      "file": "frames/player-r5-back-idle.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        0,
+        32,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        3,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "back-walk-a": {
+      "file": "frames/player-r5-back-walk-a.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        24,
+        32,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        3,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "back-walk-b": {
+      "file": "frames/player-r5-back-walk-b.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        48,
+        32,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        3,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "left-idle": {
+      "file": "frames/player-r5-left-idle.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        0,
+        64,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        2,
+        19,
+        32
+      ],
+      "role": "world"
+    },
+    "left-walk-a": {
+      "file": "frames/player-r5-left-walk-a.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        24,
+        64,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        2,
+        19,
+        32
+      ],
+      "role": "world"
+    },
+    "left-walk-b": {
+      "file": "frames/player-r5-left-walk-b.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        48,
+        64,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        2,
+        19,
+        32
+      ],
+      "role": "world"
+    },
+    "right-idle": {
+      "file": "frames/player-r5-right-idle.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        0,
+        96,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        2,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "right-walk-a": {
+      "file": "frames/player-r5-right-walk-a.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        24,
+        96,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        2,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "right-walk-b": {
+      "file": "frames/player-r5-right-walk-b.png",
+      "atlas": "player-r5-walk-atlas.png",
+      "rect": [
+        48,
+        96,
+        24,
+        32
+      ],
+      "pivot": [
+        12,
+        32
+      ],
+      "opaqueBounds": [
+        4,
+        2,
+        20,
+        32
+      ],
+      "role": "world"
+    },
+    "fall": {
+      "file": "frames/player-r5-fall.png",
+      "atlas": "player-r5-story-atlas.png",
+      "rect": [
+        0,
+        0,
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        32
+      ],
+      "opaqueBounds": [
+        6,
+        5,
+        33,
+        32
+      ],
+      "role": "cutscene"
+    },
+    "lie": {
+      "file": "frames/player-r5-lie.png",
+      "atlas": "player-r5-story-atlas.png",
+      "rect": [
+        40,
+        0,
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        32
+      ],
+      "opaqueBounds": [
+        2,
+        18,
+        37,
+        32
+      ],
+      "role": "cutscene"
+    },
+    "sit": {
+      "file": "frames/player-r5-sit.png",
+      "atlas": "player-r5-story-atlas.png",
+      "rect": [
+        80,
+        0,
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        32
+      ],
+      "opaqueBounds": [
+        8,
+        9,
+        31,
+        32
+      ],
+      "role": "cutscene"
+    },
+    "rise": {
+      "file": "frames/player-r5-rise.png",
+      "atlas": "player-r5-story-atlas.png",
+      "rect": [
+        0,
+        32,
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        32
+      ],
+      "opaqueBounds": [
+        9,
+        9,
+        31,
+        32
+      ],
+      "role": "cutscene"
+    },
+    "pickup": {
+      "file": "frames/player-r5-pickup.png",
+      "atlas": "player-r5-story-atlas.png",
+      "rect": [
+        40,
+        32,
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        32
+      ],
+      "opaqueBounds": [
+        10,
+        7,
+        29,
+        32
+      ],
+      "role": "cutscene"
+    },
+    "hold": {
+      "file": "frames/player-r5-hold.png",
+      "atlas": "player-r5-story-atlas.png",
+      "rect": [
+        80,
+        32,
+        40,
+        32
+      ],
+      "pivot": [
+        20,
+        32
+      ],
+      "opaqueBounds": [
+        12,
+        0,
+        27,
+        32
+      ],
+      "role": "cutscene"
+    }
+  },
+  "animations": {
+    "walk-front": {
+      "frames": [
+        "front-idle",
+        "front-walk-a",
+        "front-idle",
+        "front-walk-b"
+      ],
+      "frameDurationMs": 140,
+      "loop": true
+    },
+    "walk-back": {
+      "frames": [
+        "back-idle",
+        "back-walk-a",
+        "back-idle",
+        "back-walk-b"
+      ],
+      "frameDurationMs": 140,
+      "loop": true
+    },
+    "walk-left": {
+      "frames": [
+        "left-idle",
+        "left-walk-a",
+        "left-idle",
+        "left-walk-b"
+      ],
+      "frameDurationMs": 140,
+      "loop": true
+    },
+    "walk-right": {
+      "frames": [
+        "right-idle",
+        "right-walk-a",
+        "right-idle",
+        "right-walk-b"
+      ],
+      "frameDurationMs": 140,
+      "loop": true
+    },
+    "landing": {
+      "frames": [
+        "fall",
+        "lie",
+        "sit",
+        "rise",
+        "front-idle"
+      ],
+      "frameDurationsMs": [
+        650,
+        450,
+        550,
+        450,
+        500
+      ],
+      "loop": false,
+      "timing": "preview-default-only; actual scene controls timing"
+    },
+    "collect-bottle": {
+      "frames": [
+        "pickup",
+        "hold",
+        "front-idle"
+      ],
+      "frameDurationsMs": [
+        450,
+        650,
+        400
+      ],
+      "loop": false,
+      "timing": "preview-default-only; actual scene controls timing"
+    }
+  },
+  "provenance": {
+    "art": "built-in imagegen drafts, deterministic cleanup explicitly authorized by owner",
+    "generator": "../../../../tools/make-player-r5-sprites.py",
+    "sourceAlphaThreshold": 230,
+    "sourceRects": {
+      "walk": [
+        [
+          416,
+          20,
+          533,
+          255
+        ],
+        [
+          705,
+          20,
+          823,
+          255
+        ],
+        [
+          1001,
+          20,
+          1117,
+          255
+        ],
+        [
+          416,
+          269,
+          537,
+          505
+        ],
+        [
+          707,
+          269,
+          829,
+          505
+        ],
+        [
+          1001,
+          269,
+          1121,
+          505
+        ],
+        [
+          421,
+          517,
+          537,
+          754
+        ],
+        [
+          700,
+          517,
+          819,
+          753
+        ],
+        [
+          991,
+          517,
+          1113,
+          753
+        ],
+        [
+          405,
+          769,
+          527,
+          1009
+        ],
+        [
+          699,
+          769,
+          824,
+          1007
+        ],
+        [
+          992,
+          769,
+          1118,
+          1008
+        ]
+      ],
+      "story": [
+        [
+          101,
+          134,
+          466,
+          499
+        ],
+        [
+          560,
+          289,
+          1035,
+          477
+        ],
+        [
+          1141,
+          176,
+          1455,
+          492
+        ],
+        [
+          127,
+          598,
+          429,
+          920
+        ],
+        [
+          667,
+          581,
+          930,
+          922
+        ],
+        [
+          1170,
+          513,
+          1376,
+          953
+        ]
+      ]
+    },
+    "sourceHashes": {
+      "walk": "946c5e0003a303f481c190182fb4825189cfe964a8d7b11a94d174f1dc5b2fff",
+      "story": "5f4c0302e858eb828706495dd6b3129e84ceb23a3b8e41ea286582e14344c201"
+    },
+    "sourceScale": {
+      "walk": 0.13333333333333333,
+      "story": 0.07272727272727272
+    }
+  }
+}

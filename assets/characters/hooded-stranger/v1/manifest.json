@@ -1,0 +1,61 @@
+{
+  "assetId": "hooded-stranger-v1",
+  "nativeFrame": [
+    52,
+    40
+  ],
+  "pivot": [
+    26,
+    40
+  ],
+  "poses": [
+    "idle",
+    "limp",
+    "lunge",
+    "kick"
+  ],
+  "alphaValues": [
+    0,
+    255
+  ],
+  "sourceRects": [
+    [
+      65,
+      186,
+      450,
+      663
+    ],
+    [
+      479,
+      192,
+      901,
+      663
+    ],
+    [
+      905,
+      232,
+      1455,
+      663
+    ],
+    [
+      1508,
+      173,
+      1964,
+      663
+    ]
+  ],
+  "sourceScale": 0.07142857142857142,
+  "provenance": "Built-in imagegen; approved Fiw monster reference; owner-authorized native cleanup",
+  "sourceHash": "da9eb168f9bb1fb5d0d7d646c3640548169a457f9e711ea6ef8af31bf86f0115",
+  "documentation": {
+    "id": "20261009-hooded-stranger-v1-manifest",
+    "updated": "2026-10-09",
+    "status": "installed-ch00",
+    "summary": "atlasคนสวมหมวกสี่ท่า52×40 pivot26×40 alpha0/255 พร้อมแหล่งต้นฉบับและสถานะติดตั้งเฉพาะCH00"
+  },
+  "status": {
+    "installedInGame": true,
+    "scope": "CH00",
+    "finalSpriteArtApproved": false
+  }
+}

@@ -1,0 +1,2669 @@
+{
+  "documentation": {
+    "id": "20261009-portraits-v1-portrait-catalog",
+    "updated": "2026-10-09",
+    "status": "current-data",
+    "summary": "ปัจจุบัน: portrait-catalog.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+    "designBaseline": "UF-DESIGN-2026-10-09",
+    "currentDesignRef": "../../../design-current.md",
+    "layoutContractRef": "../../chapters/current-layout.json",
+    "indexRef": "../../../INDEX.md",
+    "recordScope": "original generation record plus current documentation links; image hashes and game code unchanged",
+    "runtimeValidated": false
+  },
+  "version": "UNDERFALL-DIALOGUE-PORTRAITS-2026-10-08-v1",
+  "mode": "art-design-study",
+  "logicalPortraitSizeProposal": [
+    64,
+    64
+  ],
+  "logicalPortraitsExported": false,
+  "entryCount": 55,
+  "statesPerEntry": 6,
+  "studyCellCount": 330,
+  "portraitEntries": [
+    {
+      "portraitId": "toriel",
+      "displayName": "ทอเรียล",
+      "authorLabel": "TORIEL",
+      "sheet": "01-core-cast-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/01-core-cast-dialogue-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "toriel.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "toriel.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "toriel.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "toriel.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "toriel.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "toriel.signature"
+        }
+      ],
+      "signature": "ปลอบโยน/โล่งใจ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "sans",
+      "displayName": "แซน",
+      "authorLabel": "SANS",
+      "sheet": "01-core-cast-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/01-core-cast-dialogue-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "sans.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "sans.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "sans.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "sans.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "sans.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "sans.signature"
+        }
+      ],
+      "signature": "หลับตายิ้ม/มุกกลบความเหนื่อย",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "papyrus",
+      "displayName": "ปาปิรัส",
+      "authorLabel": "PAPYRUS",
+      "sheet": "01-core-cast-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/01-core-cast-dialogue-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "papyrus.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "papyrus.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "papyrus.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "papyrus.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "papyrus.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "papyrus.signature"
+        }
+      ],
+      "signature": "ภูมิใจเต็มที่",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "undyne",
+      "displayName": "อันดาย",
+      "authorLabel": "UNDYNE",
+      "sheet": "01-core-cast-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/01-core-cast-dialogue-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "undyne.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "undyne.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "undyne.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "undyne.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "undyne.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "undyne.signature"
+        }
+      ],
+      "signature": "เขินแต่ปากแข็ง",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "alphys",
+      "displayName": "อัลฟี่",
+      "authorLabel": "ALPHYS",
+      "sheet": "01-core-cast-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/01-core-cast-dialogue-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "alphys.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "alphys.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "alphys.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "alphys.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "alphys.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "alphys.signature"
+        }
+      ],
+      "signature": "เขิน/ประหม่า",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "kin",
+      "displayName": "คิน",
+      "authorLabel": "KIN OWL",
+      "sheet": "01-core-cast-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/01-core-cast-dialogue-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "kin.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "kin.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "kin.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "kin.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "kin.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "kin.signature"
+        }
+      ],
+      "signature": "แอบจีบแต่เขิน",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "maria",
+      "displayName": "มาเรีย",
+      "authorLabel": "MARIA",
+      "sheet": "02-conflict-and-stage-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/02-conflict-and-stage-dialogue-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "maria.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "maria.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "maria.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "maria.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "maria.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "maria.signature"
+        }
+      ],
+      "signature": "ขอบคุณแบบไม่ยอมรับตรงๆ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "หน้าอ่อนโยน/ขอบคุณใช้เมื่อบทความสัมพันธ์อนุญาต",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "mettaton_box",
+      "displayName": "แมตตาตอนร่างกล่อง",
+      "authorLabel": "METTATON BOX",
+      "sheet": "02-conflict-and-stage-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/02-conflict-and-stage-dialogue-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "mettaton_box.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "mettaton_box.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "mettaton_box.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "mettaton_box.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "mettaton_box.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "mettaton_box.signature"
+        }
+      ],
+      "signature": "ไฟหน้าจอเป็นจังหวะโชว์แมน",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "mettaton_neo",
+      "displayName": "แมตตาตอน NEO",
+      "authorLabel": "METTATON NEO",
+      "sheet": "02-conflict-and-stage-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/02-conflict-and-stage-dialogue-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "mettaton_neo.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "mettaton_neo.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "mettaton_neo.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "mettaton_neo.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "mettaton_neo.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "mettaton_neo.signature"
+        }
+      ],
+      "signature": "ขยิบตาโชว์แมน",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "asgore",
+      "displayName": "แอสกอ",
+      "authorLabel": "ASGORE",
+      "sheet": "02-conflict-and-stage-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/02-conflict-and-stage-dialogue-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "asgore.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "asgore.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "asgore.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "asgore.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "asgore.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "asgore.signature"
+        }
+      ],
+      "signature": "รู้สึกผิด/อ่อนล้า",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "flowey",
+      "displayName": "ฟลาววี่",
+      "authorLabel": "FLOWEY",
+      "sheet": "02-conflict-and-stage-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/02-conflict-and-stage-dialogue-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "flowey.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "flowey.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "flowey.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "flowey.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "flowey.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "flowey.signature"
+        }
+      ],
+      "signature": "ยิ้มเจ้าเล่ห์",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "fiw",
+      "displayName": "ฟิว",
+      "authorLabel": "FIW RACCOON",
+      "sheet": "02-conflict-and-stage-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/02-conflict-and-stage-dialogue-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "fiw.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "fiw.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "fiw.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "fiw.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "fiw.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "fiw.signature"
+        }
+      ],
+      "signature": "มองข้างด้วยความอิจฉา",
+      "usage": "หน้าปกติใช้ช่วงตีสนิท; ความแค้นใช้หลังบทเปิดเผย",
+      "guard": "ก่อนหักหลังเลือก neutral/warm/sad ได้; หน้าความแค้นใช้เมื่อบทเปิดแล้ว",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "player",
+      "displayName": "ผู้เล่น",
+      "authorLabel": "PLAYER R5",
+      "sheet": "03-relationships-and-forms-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/03-relationships-and-forms-dialogue-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "player.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "player.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "player.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "player.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "player.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "player.signature"
+        }
+      ],
+      "signature": "เขิน/อบอุ่น",
+      "usage": "สำรองสำหรับบทผู้เล่นที่ยืนยัน ไม่เพิ่มบทพูดเอง",
+      "guard": "ภาพสำรองสำหรับบทผู้เล่น/ความคิดที่ยืนยันแล้ว ไม่เพิ่มบทพูดเพราะมี portrait",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-05/07-player-petite-shorts-r5.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "rin",
+      "displayName": "รินในอดีต",
+      "authorLabel": "RIN PAST",
+      "sheet": "03-relationships-and-forms-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/03-relationships-and-forms-dialogue-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "rin.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "rin.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "rin.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "rin.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "rin.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "rin.signature"
+        }
+      ],
+      "signature": "โหยหา/เจ็บจากอดีต",
+      "usage": "แฟลชแบ็กที่บทอนุญาต ไม่แทนชื่อผู้เล่น",
+      "guard": "แฟลชแบ็ก; ไม่ใช้รูป/ชื่อรินแทนผู้เล่นปัจจุบัน",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "asriel_child",
+      "displayName": "แอสเรียลร่างเด็ก",
+      "authorLabel": "ASRIEL CHILD",
+      "sheet": "03-relationships-and-forms-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/03-relationships-and-forms-dialogue-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "asriel_child.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "asriel_child.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "asriel_child.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "asriel_child.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "asriel_child.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "asriel_child.signature"
+        }
+      ],
+      "signature": "ยอมรับอย่างอ่อนโยน",
+      "usage": "แฟลชแบ็กหรือหลังคืนร่างตามเส้น Good",
+      "guard": "แฟลชแบ็กหรือหลังคืนร่างเด็กตามบท Good; ไม่เพิ่มว่าเป็น NPC มีชีวิตตั้งแต่เริ่ม",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "asriel_hyperdeath",
+      "displayName": "แอสเรียล Hyperdeath",
+      "authorLabel": "ASRIEL HYPER",
+      "sheet": "03-relationships-and-forms-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/03-relationships-and-forms-dialogue-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "asriel_hyperdeath.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "asriel_hyperdeath.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "asriel_hyperdeath.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "asriel_hyperdeath.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "asriel_hyperdeath.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "asriel_hyperdeath.signature"
+        }
+      ],
+      "signature": "ยึดติด/หวั่นไหว",
+      "usage": "หลังคืนร่างทรงพลังใน Good เท่านั้น",
+      "guard": "เมื่อฟลาววี่คืนร่างทรงพลังในเส้น Good ตามบท",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "shiku_fox",
+      "displayName": "ชิกุจิ้งจอก",
+      "authorLabel": "SHIKU FOX",
+      "sheet": "03-relationships-and-forms-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/03-relationships-and-forms-dialogue-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "shiku_fox.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "shiku_fox.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "shiku_fox.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "shiku_fox.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "shiku_fox.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "shiku_fox.signature"
+        }
+      ],
+      "signature": "อ้อน/ขี้เล่น",
+      "usage": "หลังขวดแตกและเผยร่างตามบท",
+      "guard": "หลังเผยร่างจิ้งจอกในฉากขวดแตก",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "yuan",
+      "displayName": "หยวน",
+      "authorLabel": "YUAN",
+      "sheet": "03-relationships-and-forms-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/03-relationships-and-forms-dialogue-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "yuan.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "yuan.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "yuan.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "yuan.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "yuan.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "yuan.signature"
+        }
+      ],
+      "signature": "อ้อน/เขิน",
+      "usage": "หลังบทอนุญาตเผยร่างมนุษย์; ห้ามใช้แทน ??? ก่อนเฉลย",
+      "guard": "หลังผู้เขียนเปิดร่างมนุษย์; ไม่แสดงตอนพูดผ่านขวดในชื่อ ???",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "unknown_bottle",
+      "displayName": "??? ผ่านขวด",
+      "authorLabel": "UNKNOWN",
+      "sheet": "04-mystery-masked-and-incomplete-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/04-mystery-masked-and-incomplete-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "unknown_bottle.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "unknown_bottle.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "unknown_bottle.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "unknown_bottle.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "unknown_bottle.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "unknown_bottle.signature"
+        }
+      ],
+      "signature": "สัญญาณไฟในขวด",
+      "usage": "คงไม่เห็นหน้าระหว่างปิดบังตัวตน; งานสร้างจริงเลือกไม่แสดงภาพได้",
+      "guard": "ชื่อ ???; ไม่มีรูปใบหน้า; ถ้ายังไม่มีขวดให้ไม่แสดง portrait",
+      "studyKind": "visual_state_or_reserved",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "shiku_alternate",
+      "displayName": "ชิกุอีกเส้นเวลา / เสียงจาก Void",
+      "authorLabel": "ALT SCIENTIST",
+      "sheet": "04-mystery-masked-and-incomplete-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/04-mystery-masked-and-incomplete-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "shiku_alternate.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "shiku_alternate.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "shiku_alternate.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "shiku_alternate.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "shiku_alternate.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "shiku_alternate.signature"
+        }
+      ],
+      "signature": "หมกมุ่นอยากรู้",
+      "usage": "เสียงจากVoidก่อนเปิดเผยตัว; หน้าและตัวเริ่มใช้เมื่อหลุดเข้าไปพบหลังต้นไม้ในSX03",
+      "guard": "ยืนยันเป็นเจ้าของเสียงแทรก10.1/ถามชื่อ10.11คนเดียวกับชิกุอีกเส้นเวลา ก่อนSX03ไม่มีportrait/เงาร่าง/sprite เปิดหน้าและตัวครั้งแรกตอนพบหลังต้นไม้ ชื่อจริงยังขึ้นกับบท ไม่รวมกับVOID ECHOหรือเสียงขวด",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "void_echo",
+      "displayName": "ตัวตนระหว่างการลบ",
+      "authorLabel": "VOID ECHO",
+      "sheet": "04-mystery-masked-and-incomplete-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/04-mystery-masked-and-incomplete-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "void_echo.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "void_echo.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "void_echo.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "void_echo.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "void_echo.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "void_echo.signature"
+        }
+      ],
+      "signature": "สถานะภาพไม่ใช่อารมณ์",
+      "usage": "สำรอง; บท/ตัวตนยังไม่ยืนยัน",
+      "guard": "สำรอง ยังไม่ยืนยันการพูด/ตัวตน ห้ามใช้เป็นอีกคนโดยอัตโนมัติ",
+      "studyKind": "visual_state_or_reserved",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "flowey_incomplete",
+      "displayName": "ฟลาววี่พลังไม่สมบูรณ์",
+      "authorLabel": "FLOWEY INCOMPLETE",
+      "sheet": "04-mystery-masked-and-incomplete-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/04-mystery-masked-and-incomplete-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "flowey_incomplete.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "flowey_incomplete.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "flowey_incomplete.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "flowey_incomplete.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "flowey_incomplete.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "flowey_incomplete.signature"
+        }
+      ],
+      "signature": "ทีวีบิดเบี้ยว",
+      "usage": "เฉพาะบอสเส้น Pacifist ของโปรเจกต์",
+      "guard": "บอสฟลาววี่พลังไม่สมบูรณ์เฉพาะเส้น Pacifist ของโปรเจกต์",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "froggit",
+      "displayName": "Froggit",
+      "authorLabel": "FROGGIT",
+      "sheet": "05-ruins-encounter-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/05-ruins-encounter-dialogue-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "froggit.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "froggit.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "froggit.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "froggit.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "froggit.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "froggit.signature"
+        }
+      ],
+      "signature": "โล่งใจ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "whimsun",
+      "displayName": "Whimsun",
+      "authorLabel": "WHIMSUN",
+      "sheet": "05-ruins-encounter-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/05-ruins-encounter-dialogue-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "whimsun.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "whimsun.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "whimsun.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "whimsun.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "whimsun.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "whimsun.signature"
+        }
+      ],
+      "signature": "ค่อยๆเชื่อใจ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "moldsmal",
+      "displayName": "Moldsmal",
+      "authorLabel": "MOLDSMAL",
+      "sheet": "05-ruins-encounter-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/05-ruins-encounter-dialogue-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "moldsmal.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "moldsmal.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "moldsmal.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "moldsmal.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "moldsmal.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "moldsmal.signature"
+        }
+      ],
+      "signature": "จังหวะกระเพื่อม",
+      "usage": "สื่อท่าทาง/ข้อความระบบ ไม่เพิ่มภาษาพูดคล่อง",
+      "guard": "สื่อจังหวะ/ข้อความระบบตามบท ไม่ทำให้วุ้นพูดคล่อง",
+      "studyKind": "visual_state_or_reserved",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "loox",
+      "displayName": "Loox",
+      "authorLabel": "LOOX",
+      "sheet": "05-ruins-encounter-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/05-ruins-encounter-dialogue-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "loox.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "loox.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "loox.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "loox.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "loox.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "loox.signature"
+        }
+      ],
+      "signature": "ไม่อยากถูกจ้อง/ล้อ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "vegetoid",
+      "displayName": "Vegetoid",
+      "authorLabel": "VEGETOID",
+      "sheet": "05-ruins-encounter-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/05-ruins-encounter-dialogue-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "vegetoid.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "vegetoid.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "vegetoid.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "vegetoid.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "vegetoid.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "vegetoid.signature"
+        }
+      ],
+      "signature": "ห่วงเรื่องดูแลตัวเอง",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "migosp",
+      "displayName": "Migosp",
+      "authorLabel": "MIGOSP",
+      "sheet": "05-ruins-encounter-dialogue-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/05-ruins-encounter-dialogue-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "migosp.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "migosp.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "migosp.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "migosp.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "migosp.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "migosp.signature"
+        }
+      ],
+      "signature": "ผ่อนคลายพร้อมเต้น",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "napstablook",
+      "displayName": "Napstablook",
+      "authorLabel": "NAPSTABLOOK",
+      "sheet": "06-ruins-rest-and-neighbors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/06-ruins-rest-and-neighbors-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "napstablook.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "napstablook.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "napstablook.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "napstablook.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "napstablook.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "napstablook.signature"
+        }
+      ],
+      "signature": "หมวกน้ำตา",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "dummy",
+      "displayName": "หุ่นฝึก",
+      "authorLabel": "DUMMY",
+      "sheet": "06-ruins-rest-and-neighbors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/06-ruins-rest-and-neighbors-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "dummy.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "dummy.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "dummy.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "dummy.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "dummy.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "dummy.signature"
+        }
+      ],
+      "signature": "หน้าหุ่น/ท่าเอียง",
+      "usage": "สำรองภาพตรวจหุ่น ไม่เพิ่มบทพูด",
+      "guard": "สำรองสำหรับตรวจหุ่น ไม่กลายเป็น Mad Dummy/ผู้พูดใหม่",
+      "studyKind": "visual_state_or_reserved",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "talking_rock",
+      "displayName": "ก้อนหินพูดได้",
+      "authorLabel": "TALKING ROCK",
+      "sheet": "06-ruins-rest-and-neighbors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/06-ruins-rest-and-neighbors-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "talking_rock.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "talking_rock.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "talking_rock.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "talking_rock.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "talking_rock.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "talking_rock.signature"
+        }
+      ],
+      "signature": "ดื้อแต่อยู่ตามที่ตกลง",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "spider_bakers",
+      "displayName": "ร้านแมงมุม",
+      "authorLabel": "SPIDER BAKERS",
+      "sheet": "06-ruins-rest-and-neighbors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/06-ruins-rest-and-neighbors-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "spider_bakers.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "spider_bakers.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "spider_bakers.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "spider_bakers.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "spider_bakers.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "spider_bakers.signature"
+        }
+      ],
+      "signature": "คุยกันเป็นกลุ่ม",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "jib",
+      "displayName": "จิบ",
+      "authorLabel": "JIB CUP",
+      "sheet": "06-ruins-rest-and-neighbors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/06-ruins-rest-and-neighbors-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "jib.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "jib.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "jib.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "jib.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "jib.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "jib.signature"
+        }
+      ],
+      "signature": "เกรงใจ/ขอโทษ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "song",
+      "displayName": "ซอง",
+      "authorLabel": "SONG LETTER",
+      "sheet": "06-ruins-rest-and-neighbors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/06-ruins-rest-and-neighbors-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "song.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "song.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "song.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "song.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "song.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "song.signature"
+        }
+      ],
+      "signature": "เขินเมื่อรู้ว่าจำผิด",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "lantern_fish",
+      "displayName": "ปลาโคมไฟ",
+      "authorLabel": "LANTERN FISH",
+      "sheet": "07-community-and-vendors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/07-community-and-vendors-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "lantern_fish.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "lantern_fish.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "lantern_fish.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "lantern_fish.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "lantern_fish.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "lantern_fish.signature"
+        }
+      ],
+      "signature": "กลัวส่งของผิด",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "snow_scarves",
+      "displayName": "ก้อนหิมะหลายผ้าพันคอ",
+      "authorLabel": "SNOW SCARVES",
+      "sheet": "07-community-and-vendors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/07-community-and-vendors-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "snow_scarves.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "snow_scarves.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "snow_scarves.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "snow_scarves.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "snow_scarves.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "snow_scarves.signature"
+        }
+      ],
+      "signature": "ดื้อว่าไม่หนาว",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "pillow_vendor",
+      "displayName": "มอนหมอน",
+      "authorLabel": "PILLOW",
+      "sheet": "07-community-and-vendors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/07-community-and-vendors-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "pillow_vendor.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "pillow_vendor.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "pillow_vendor.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "pillow_vendor.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "pillow_vendor.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "pillow_vendor.signature"
+        }
+      ],
+      "signature": "ง่วง/หลับ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "sound_collector",
+      "displayName": "นักเก็บเสียง",
+      "authorLabel": "SOUND COLLECTOR",
+      "sheet": "07-community-and-vendors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/07-community-and-vendors-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "sound_collector.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "sound_collector.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "sound_collector.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "sound_collector.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "sound_collector.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "sound_collector.signature"
+        }
+      ],
+      "signature": "ฟังอย่างตั้งใจ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "helper_bot",
+      "displayName": "หุ่นผู้ช่วย",
+      "authorLabel": "HELPER BOT",
+      "sheet": "07-community-and-vendors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/07-community-and-vendors-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "helper_bot.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "helper_bot.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "helper_bot.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "helper_bot.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "helper_bot.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "helper_bot.signature"
+        }
+      ],
+      "signature": "ภูมิใจที่ช่วยซ่อมได้",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "lantern_keeper",
+      "displayName": "คนจุดโคม",
+      "authorLabel": "LANTERN KEEPER",
+      "sheet": "07-community-and-vendors-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/07-community-and-vendors-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "lantern_keeper.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "lantern_keeper.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "lantern_keeper.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "lantern_keeper.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "lantern_keeper.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "lantern_keeper.signature"
+        }
+      ],
+      "signature": "สงบ/ปลอบ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "gardener",
+      "displayName": "คนดูแลสวน",
+      "authorLabel": "GARDENER",
+      "sheet": "08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/08-small-cast-experiments-and-grillby-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "gardener.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "gardener.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "gardener.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "gardener.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "gardener.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "gardener.signature"
+        }
+      ],
+      "signature": "ห่วงต้นไม้",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "tiny_frog",
+      "displayName": "กบจิ๋ว",
+      "authorLabel": "TINY FROG",
+      "sheet": "08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/08-small-cast-experiments-and-grillby-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "tiny_frog.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "tiny_frog.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "tiny_frog.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "tiny_frog.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "tiny_frog.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "tiny_frog.signature"
+        }
+      ],
+      "signature": "ตัวเล็กแต่มีเสียง",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "mouse",
+      "displayName": "หนู",
+      "authorLabel": "MOUSE",
+      "sheet": "08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/08-small-cast-experiments-and-grillby-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "mouse.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "mouse.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "mouse.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "mouse.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "mouse.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "mouse.signature"
+        }
+      ],
+      "signature": "กำลังรวบรวมความกล้า",
+      "usage": "ภาพท่าทางสำรอง ไม่เพิ่มบทพูดให้หนู",
+      "guard": "ภาพท่าทาง ไม่เพิ่มภาษาพูด",
+      "studyKind": "visual_state_or_reserved",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "spirit_deer",
+      "displayName": "กวางวิญญาณ",
+      "authorLabel": "SPIRIT DEER",
+      "sheet": "08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/08-small-cast-experiments-and-grillby-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "spirit_deer.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "spirit_deer.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "spirit_deer.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "spirit_deer.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "spirit_deer.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "spirit_deer.signature"
+        }
+      ],
+      "signature": "สงบ/เฝ้าดู",
+      "usage": "ภาพท่าทางสำรอง ไม่เพิ่มบทพูด",
+      "guard": "ภาพท่าทาง ไม่เพิ่มบทเฉลยหรือผู้บรรยาย",
+      "studyKind": "visual_state_or_reserved",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "living_amalgams",
+      "displayName": "มอนทดลอง",
+      "authorLabel": "LIVING AMALGAMS",
+      "sheet": "08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/08-small-cast-experiments-and-grillby-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "living_amalgams.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "living_amalgams.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "living_amalgams.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "living_amalgams.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "living_amalgams.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "living_amalgams.signature"
+        }
+      ],
+      "signature": "หวังว่าจะได้รับการช่วยเหลือ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "grillby",
+      "displayName": "กิวบี้",
+      "authorLabel": "GRILLBY",
+      "sheet": "08-small-cast-experiments-and-grillby-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/08-small-cast-experiments-and-grillby-faces-v1.png",
+      "rowIndex": 6,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "grillby.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "grillby.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "grillby.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "grillby.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "grillby.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "grillby.signature"
+        }
+      ],
+      "signature": "สัญญาณไฟ/บริการเงียบๆ",
+      "usage": "ภาพเจ้าของร้าน; บทพูดรอผู้เขียนกำหนด",
+      "guard": "รูปลักษณ์เจ้าของร้านเป็นแบบเสนอ บท/การพูดของกิวบี้ยังรอกำหนด",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/12-r02-homes-grillby-inn-shop-v2.png",
+      "sourceModelInImagegenInputs": false,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "muffet",
+      "displayName": "มัฟเฟต",
+      "authorLabel": "MUFFET",
+      "sheet": "09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "muffet.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "muffet.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "muffet.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "muffet.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "muffet.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "muffet.signature"
+        }
+      ],
+      "signature": "ยิ้มหวานเจ้าเล่ห์",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "temmie",
+      "displayName": "เทมมี่",
+      "authorLabel": "TEMMIE",
+      "sheet": "09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "temmie.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "temmie.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "temmie.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "temmie.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "temmie.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "temmie.signature"
+        }
+      ],
+      "signature": "ตื่นเต้นออกนอกหน้า",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "monster_kid",
+      "displayName": "มอนสเตอร์คิด",
+      "authorLabel": "MONSTER KID",
+      "sheet": "09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "monster_kid.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "monster_kid.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "monster_kid.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "monster_kid.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "monster_kid.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "monster_kid.signature"
+        }
+      ],
+      "signature": "ชื่นชมฮีโร่",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "snowdrake",
+      "displayName": "สโนว์เดรก",
+      "authorLabel": "SNOWDRAKE",
+      "sheet": "09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "snowdrake.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "snowdrake.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "snowdrake.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "snowdrake.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "snowdrake.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "snowdrake.signature"
+        }
+      ],
+      "signature": "เล่นมุกแล้วรอคนหัวเราะ",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "ice_cap",
+      "displayName": "ไอซ์แคป",
+      "authorLabel": "ICE CAP",
+      "sheet": "09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/09-supporting-muffet-temmie-kid-ice-faces-v1.png",
+      "rowIndex": 5,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "ice_cap.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "ice_cap.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "ice_cap.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "ice_cap.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "ice_cap.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "ice_cap.signature"
+        }
+      ],
+      "signature": "ภูมิใจหมวก",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "doggo",
+      "displayName": "ด็อกโก",
+      "authorLabel": "DOGGO",
+      "sheet": "10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "rowIndex": 1,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "doggo.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "doggo.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "doggo.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "doggo.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "doggo.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "doggo.signature"
+        }
+      ],
+      "signature": "ดมกลิ่น/พยายามมอง",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "dogamy",
+      "displayName": "โดกามี",
+      "authorLabel": "DOGAMY",
+      "sheet": "10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "rowIndex": 2,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "dogamy.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "dogamy.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "dogamy.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "dogamy.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "dogamy.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "dogamy.signature"
+        }
+      ],
+      "signature": "คลายระแวง",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "dogaressa",
+      "displayName": "โดกาเรสซา",
+      "authorLabel": "DOGARESSA",
+      "sheet": "10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "rowIndex": 3,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "dogaressa.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "dogaressa.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "dogaressa.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "dogaressa.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "dogaressa.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "dogaressa.signature"
+        }
+      ],
+      "signature": "เป็นห่วงคู่หู",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    },
+    {
+      "portraitId": "mad_dummy",
+      "displayName": "หุ่นโกรธ",
+      "authorLabel": "MAD DUMMY",
+      "sheet": "10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "sheetPath": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/dialogue-portraits/2026-10-08-v1/10-supporting-dog-guards-and-mad-dummy-faces-v1.png",
+      "rowIndex": 4,
+      "columns": [
+        {
+          "columnIndex": 1,
+          "emotionId": "neutral",
+          "referenceId": "mad_dummy.neutral"
+        },
+        {
+          "columnIndex": 2,
+          "emotionId": "warm",
+          "referenceId": "mad_dummy.warm"
+        },
+        {
+          "columnIndex": 3,
+          "emotionId": "sad",
+          "referenceId": "mad_dummy.sad"
+        },
+        {
+          "columnIndex": 4,
+          "emotionId": "firm",
+          "referenceId": "mad_dummy.firm"
+        },
+        {
+          "columnIndex": 5,
+          "emotionId": "surprise",
+          "referenceId": "mad_dummy.surprise"
+        },
+        {
+          "columnIndex": 6,
+          "emotionId": "signature",
+          "referenceId": "mad_dummy.signature"
+        }
+      ],
+      "signature": "บ่นรัวตอนหงุดหงิด",
+      "usage": "ตามบท/ความสัมพันธ์",
+      "guard": "ใช้ตามบท/สถานะตัวละครจริง; การมีรูปไม่ยืนยันเควสหรือฉากใหม่",
+      "studyKind": "expression",
+      "sourceModel": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "sourceModelInImagegenInputs": true,
+      "cropRectsCalibrated": false,
+      "readyToImport": false
+    }
+  ],
+  "voiceIdentityRule": {"confirmedOn":"2026-10-09","identity":"เสียงจาก Void = ชิกุอีกเส้นเวลา","portraitIdWhenRevealed":"shiku_alternate","hiddenVoiceScenes":["story:10.1","story:10.11","C00-02","C01-01"],"firstFaceAndBodyRevealScene":"SX03","firstMeetingLocation":"ผู้เล่นหลุดเข้าทางหลังต้นไม้แล้วพบชิกุอีกเส้นเวลา","beforeFirstMeeting":{"portrait":null,"worldSprite":null,"silhouette":null,"realNameHidden":true},"bottleVoice":"ชิกุตัวจริง/หยวน; แยกจากเสียงอีกเส้นเวลา","voidEcho":"ตัวตนระหว่างการลบยังเป็นปมแยก ไม่ได้รวมกับผู้พูดตามคำยืนยันนี้","runtimeImplemented":false},
+  "defaultExpression": "neutral",
+  "speakerRevealGatingImplemented": false
+}

@@ -1,0 +1,304 @@
+{
+  "documentation": {
+    "id": "20261009-maps-v2-manifest",
+    "updated": "2026-10-09",
+    "status": "current-data",
+    "summary": "ปัจจุบัน: manifest.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+    "designBaseline": "UF-DESIGN-2026-10-09",
+    "currentDesignRef": "../../../design-current.md",
+    "layoutContractRef": "../../chapters/current-layout.json",
+    "indexRef": "../../../INDEX.md",
+    "recordScope": "original generation record plus current documentation links; image hashes and game code unchanged",
+    "runtimeValidated": false
+  },
+  "version": "UNDERFALL-MAPS-2026-10-08-v2",
+  "mode": "design-preview-not-game-integration",
+  "requirements": {
+    "connecting_path_clear_width_multiplier": 1.25,
+    "selected_scenic_walkable_area_multiplier": 1.45,
+    "percentages_measured_in_runtime": false
+  },
+  "tool": "built-in image_gen",
+  "logical_viewport": {
+    "width": 400,
+    "height": 225
+  },
+  "game_and_story_edited": false,
+  "selected": [
+    {
+      "id": "00",
+      "file": "00-world-route-atlas-v1b-reference.png",
+      "title": "ภาพรวมเส้นทาง — ป่าถึงปราสาท",
+      "region": "ALL",
+      "status": "เส้นฐานเดิม; จุดแทรกR06/R07ยังเสนอ",
+      "selection": "unchanged-v1",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/00-world-route-atlas-v1b-reference.png",
+      "sha256": "AEF56E2CF99813EC6E5CBC007CADEE0BB2351F752AE356435F335E997C0C385B",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2467275
+    },
+    {
+      "id": "01",
+      "file": "01-r00-forest-and-sacred-grove-v2.png",
+      "title": "ป่าต้นเรื่อง",
+      "region": "R00",
+      "status": "แกนฉากCH00ยืนยัน; ทางขยาย/จุดซ่อนใหม่เป็นภาพเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/01-r00-forest-and-sacred-grove-v2.png",
+      "sha256": "4A4F1CC500569C1BA519B91933FD9F447F5DA2E640060C30683D3F9C9596C566",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2891815
+    },
+    {
+      "id": "02",
+      "file": "02-r01-expanded-ruins-v2.png",
+      "title": "รูน",
+      "region": "R01",
+      "status": "ลำดับCH01เดิม; ผังขยายเป็นแบบเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/02-r01-expanded-ruins-v2.png",
+      "sha256": "705FC43729B67560FA28A480957E103F87557A172779DB4BEA38DF849991ED67",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2456578
+    },
+    {
+      "id": "03",
+      "file": "03-r01-toriel-home-and-exit-v1-reference.png",
+      "title": "บ้านทอเรียล สวน และโถงทางออก",
+      "region": "R01-HOME",
+      "status": "แกนบ้าน/จากลาเดิม; พื้นที่ซ่อนเป็นภาพเสนอ",
+      "selection": "unchanged-v1",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/03-r01-toriel-home-and-exit-v1-reference.png",
+      "sha256": "4A93810569B6F438D62D1A29FD5B48A15762A806931D4E7F38DE9BD00419536A",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2551777
+    },
+    {
+      "id": "04",
+      "file": "04-r02-snowdin-expanded-v2.png",
+      "title": "เมืองหิมะ",
+      "region": "R02",
+      "status": "เมืองหลักเดิม; ทางวนและจุดซ่อนเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/04-r02-snowdin-expanded-v2.png",
+      "sha256": "7674750BD8445EFCAF05A7C398BB08C969334857E7FD415F7497B7BF92952C27",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2833419
+    },
+    {
+      "id": "05",
+      "file": "05-r06-lantern-meadow-v2.png",
+      "title": "ทุ่งโคมลอย",
+      "region": "R06",
+      "status": "ชื่อและตำแหน่งหลังหิมะยังเป็นข้อเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/05-r06-lantern-meadow-v2.png",
+      "sha256": "A2158324B2CC95281517484C6EED1DA7E1D28ACC4E2E271FFE4B8CB8AEE1EF1B",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2657139
+    },
+    {
+      "id": "06",
+      "file": "06-r03-waterfall-and-guard-paths-v2.png",
+      "title": "น้ำตก",
+      "region": "R03",
+      "status": "เมืองหลักเดิม; ผังชุมชน/ทางไล่เสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/06-r03-waterfall-and-guard-paths-v2.png",
+      "sha256": "0C01E67134174B44BD7B0C4FF7A0D0737923F9577407C667CA4DF514649B2C88",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2690675
+    },
+    {
+      "id": "07",
+      "file": "07-r04-laboratory-industrial-stage-v2.png",
+      "title": "เขตทดลอง",
+      "region": "R04",
+      "status": "เขตทดลองเดิม; โรงงาน/ภูมิทัศน์เพิ่มเป็นแบบเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/07-r04-laboratory-industrial-stage-v2.png",
+      "sha256": "BAC5A0162BFDEF27208F3FCA5D7286AADA8C6539CE30A4C4AED95F44ED6256B9",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2318514
+    },
+    {
+      "id": "08",
+      "file": "08-r07-forgotten-station-v2.png",
+      "title": "สถานีลืมเวลา",
+      "region": "R07",
+      "status": "ชื่อและตำแหน่งหลังเขตทดลองยังเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/08-r07-forgotten-station-v2.png",
+      "sha256": "5B2B20035519F8884DDFD1E2DFEAD77380822D229D8A7D66B230FB8D0B013D19",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2779691
+    },
+    {
+      "id": "09",
+      "file": "09-r05-royal-town-castle-approach-v2.png",
+      "title": "เมืองหน้าปราสาท",
+      "region": "R05-TOWN",
+      "status": "เมืองใกล้วังเดิม; ถนน/สวน/ร้านเป็นภาพเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/09-r05-royal-town-castle-approach-v2.png",
+      "sha256": "10759DFAD4A8A1EA1BE804688A9AB8AD67C5B4465B3A2D12125769B7E9E775E7",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2947540
+    },
+    {
+      "id": "10",
+      "file": "10-r05-royal-castle-interior-v2.png",
+      "title": "ภายในปราสาท",
+      "region": "R05-PALACE",
+      "status": "ปลายเส้นเดิม; ห้อง/สนามท้ายยังเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/10-r05-royal-castle-interior-v2.png",
+      "sha256": "A9A41652AF1E443CC19FE8F5E477C68B40DDDE8AF03248B1D3D2044F699CA592",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2569131
+    },
+    {
+      "id": "11",
+      "file": "11-overlap-paths-to-alternate-shiku-v1-reference.png",
+      "title": "แผนที่ทับซ้อนและทางไปหาชิกุอีกเส้นเวลา",
+      "region": "SX03/SX04",
+      "status": "การพบอีกคนยืนยัน; ประตู/ทาง/ลำดับในภาพเป็นข้อเสนอ",
+      "selection": "unchanged-v1",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/11-overlap-paths-to-alternate-shiku-v1-reference.png",
+      "sha256": "E84674E3E30B993E4D57488B1CF43AE8F4C8EF8381B5FCD707ABD78E4C4ED166",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2489732
+    },
+    {
+      "id": "12",
+      "file": "12-r02-homes-grillby-inn-shop-v2.png",
+      "title": "ภายในบ้านแซน–ปาปิรัส ร้านกิวบี้ โรงแรม และร้านหิมะ",
+      "region": "R02-INTERIORS",
+      "status": "การเข้าอาคารยืนยัน; ผัง/เงื่อนไขบ้านเป็นแบบเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/12-r02-homes-grillby-inn-shop-v2.png",
+      "sha256": "E34263FE322B236C7C54382A19AB4CAC8AD733D3136CC7567CC7D7339FB0EB83",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2110269
+    },
+    {
+      "id": "13",
+      "file": "13-r03-undyne-home-and-river-shop-v2.png",
+      "title": "ภายในบ้านอันดาย ครัว ลานริมน้ำ และร้านน้ำตก",
+      "region": "R03-INTERIORS",
+      "status": "บ้าน/ร้านเข้าได้ยืนยัน; ผังและช่วงเชิญเข้ายังเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/13-r03-undyne-home-and-river-shop-v2.png",
+      "sha256": "F7DA66A24882E07B67E6DFDBC8740B9F48D160CF1ECA324CFAAAA75D242285CB",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2265430
+    },
+    {
+      "id": "14",
+      "file": "14-community-cafes-shops-library-v2.png",
+      "title": "ภายในร้านชา คาเฟ่ ของเก่า พัสดุ ห้องสมุด และร้านอะไหล่",
+      "region": "COMMUNITY-INTERIORS",
+      "status": "ร้านเข้าได้ยืนยัน; ห้องย่อยเป็นแบบเสนอ",
+      "selection": "new",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/maps/2026-10-08-v2/14-community-cafes-shops-library-v2.png",
+      "sha256": "4E1498DB4491FF53544CABCEFB4AB2001A8A20221BD9D0475B4BE5E87D963197",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2282102
+    }
+  ],
+  "baseline_inputs": [
+    {
+      "id": "01",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\01-r00-forest-and-sacred-grove-pass-a.png",
+      "sha256": "6A6ADCEDAD355AA9C7D8FC1397EC479F59329CC11DE773C0CB822F6E9A0086D8",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2955644
+    },
+    {
+      "id": "02",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\02-r01-expanded-ruins-pass-a.png",
+      "sha256": "1E358F555F1D8BE01240CC9EDBB00ADBDA83951F1C4D6DE67D8BD8101C159477",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2525318
+    },
+    {
+      "id": "04",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\04-r02-snowdin-expanded-pass-a.png",
+      "sha256": "B14807A10151D54475AC2F33042B5E187BBA6B112A2E54FC9A3BB91B079D7F55",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2799712
+    },
+    {
+      "id": "05",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\05-r06-lantern-meadow-pass-a.png",
+      "sha256": "41B2ECE76B14BE2B42890C56E0CF989BCC46CE7E7686208A90B75E77DB0BFFC7",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2664773
+    },
+    {
+      "id": "06",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\06-r03-waterfall-and-guard-paths-pass-a.png",
+      "sha256": "794D1E9863097E95641EE582EB4C0073931D49C10495AE768A644E6C15BD7DA2",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2700892
+    },
+    {
+      "id": "07",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\07-r04-laboratory-industrial-stage-pass-a.png",
+      "sha256": "878CAFAACF1AD8118E5AE6650C112BE5162FE6753E60A5D0111B53DA54D445F3",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2311778
+    },
+    {
+      "id": "08",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\08-r07-forgotten-station-pass-a.png",
+      "sha256": "E3EB9A5614998D3A2D7B4FA0FBFCC8A74CFFA66AB116588E15B5B093CFEA5F88",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 2590647
+    },
+    {
+      "id": "09",
+      "kind": "baseline-input",
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\maps\\2026-10-08-v2\\inputs\\pass-a\\09-r05-royal-town-castle-approach-pass-a.png",
+      "sha256": "817B269E28A27753BB809DDD25D0A3E33D35164565CF01B059BF4B0E86618371",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 3078254
+    }
+  ],
+  "notes": [
+    "AI images are approximate layouts, not validated collision maps.",
+    "See LEVEL_LAYOUT.md for story gates, room portals and pending decisions.",
+    "Original v1 assets retained unchanged.",
+    "CH01 coordinates unchanged; widening requires coordinated room/actor placement during implementation."
+  ]
+}

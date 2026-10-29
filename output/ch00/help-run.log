@@ -1,0 +1,82 @@
+### Result
+{"checks":["Hurt branch heals, stands and releases WASD","No naming before CH01","Bottle hint triggered through real walking, after deer","Bottle collected with tutorial and usable powers","Wide east passage enters the extension","Real SAVE accepted a safe checkpoint","X starts a five-second light pulse","Light cooldown pauses in menu","Chest roots burn separately from gate","Muffin used once, heals three and adds four DF","Forward C removes the real root gate","Gate connects to old-tree forest","Help choice takes the direct ambush branch","Direct branch ends at rift, not legend or naming","Direct branch does not award grove ring or hands","Existing items and hidden identity persist","End screen remains above black world","No JavaScript runtime errors"],"shots":["output/playwright/ch00-forest-start.png","output/playwright/ch00-bottle.png","output/playwright/ch00-stat.png","output/playwright/ch00-root-gate-open.png","output/playwright/ch00-end-help.png"],"transcript":["ยินดีต้องรับคุณแฟนอิอิ",". . .","เข้ามาถึงที่นี่แล้วหรอเนี่ยไวจัง","ง้าาา เจ้าหนูสุขสันวันครบรอบ","1ปี3เดือนนะครับ","เราอยู่ด้วยกันมาได้อีกเดือนแย้วนะเนี่ยย","เธอรู้สึกคุ้นๆกับฉากนี้มั้ยนะ","ทำไมเค้ารู้สึกเหมือน. . .","เราเคยผ่านมันมารอบนึงแล้วเยยหละ. . .","เค้าว่าเรา. .อาจจะโดนเข้ามาแทรกแทรงกับ อึกก!!","✋︎⧫︎ ♓︎⬧︎ ⬧︎□︎ ♎︎♋︎❒︎🙵 ♒︎♏︎❒︎♏︎📬︎","👎︎♋︎❒︎🙵♏︎❒︎ ⬧︎⧫︎♓︎●︎●︎📬︎","✌︎■︎♎︎ ♎︎♋︎❒︎🙵♏︎❒︎ ⍓︎♏︎⧫︎📬︎","☟︎□︎⬥︎ ♓︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📬︎","✌︎❒︎♏︎ ⍓︎□︎◆︎ ♋︎ ♒︎◆︎❍︎♋︎■︎ ⬥︎♒︎□︎ ♐︎♏︎●︎●︎ ♎︎□︎⬥︎■︎ ♒︎♏︎❒︎♏︎✍︎","✡︎□︎◆︎ ♒︎♋︎❖︎♏︎ ♓︎⧫︎◻︎⧫︎♒︎♏︎ ⧫︎♒︎♓︎■︎♑︎ ⧫︎♒︎♋︎⧫︎ ⬥︎♓︎●︎●︎","♏︎■︎♋︎♌︎●︎♏︎ ❍︎⍓︎ ❒︎♏︎⧫︎◆︎❒︎■︎📬︎ ✋︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📪︎ ❖︎♏︎❒︎⍓︎ ♓︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📬︎","อื่มม . . .","อาจจะไม่ได้มีอะไรมากแต่ว่า","เดี๋ยวมารอดูนะครับ คิคิ","หื้ออ บีบี๋เธอมาที่นี่แล้วหรอ. . .","ตะไมมาช้าจางง","เธอเจ็บขามั้ยตกมาซะสูงเลย","เดี๋ยวเราจะเดินไปที่ของเค้ากัน. . . ที่เดิม","ที่เราค่อยอยู่","555555","เธออาจจะนึกภาพมันไม่ออกหรอก ผ่านมานานมากแล้ว","อื่มม. . . .","นานแล้วแหละ","แต่เธอเจ็บขามั้ยนะเค้าถามแล้วก็ลืมเลย","โอเคงั้นอยู่นิ่งๆนะ","โอเคน่าจะดีขึ้นแล้วนะ","เอ้า เค้าจะบอกวิธีเดินให้นะ","w  คือเดินหน้า","a  คือไปทางซ้าย","s  คือถอยหลัง","d  คือไปทางขวา","ค่อยๆเดินมานะ อย่ารีบ. . . เค้ารอเธออยู่","เธอมองเห็นทางมั้ย","เหมือนตรงนั้นมีอะไรซักอย่างทำให้เค้าเข้าไปไม่ได้เลย","เธอเอ่อ. . .","เค้าจะลองใช้พลังสร้างอะไรซักอย่างดู","ให้เธอลองเดินไปรอบๆ","เธอจะเห็นขวดแก้วนึงที่มีไฟวิญญาณสีฟ้าม่วงลอยอยู่","เก็บมันขึ้นมาเลย แล้วแสงมันจะสว่างพอที่จะนำทางเธอได้อยู่นิดหน่อย","เธอคงเจอขวดแก้วของเค้าแย้วใช่มั้ย","เอาหละเธอคงเห็น. . .ที่นี่มันมืดมาก","ใช่มั้ยละ อื่มมหรือเค้าตาไม่ดีหรอไม่ใช่หรอก","เอาหละนี่คือวิธีใช้งาน","X — ส่องแสงนำทาง 5วิ คูดาล์ว2วิ","C — เผาสิ่งที่กีดขวาง","V — เรียก ??? ออกมาช่วย","B — ฟื้นฟูเลือดของเธอเอง","โอเคเค้าว่าเค้าคงต้องสอนเธอนะ","น่าจะมีโอกาสได้ลองใช้ดู","อื่มมม . . .","เค้าอาจจะไม่ได้เห็นทุกเหตุการณ์ตลอด","ถ้าเธอต้องการกดปุ่มพวกนั้นเพื่อดึงพลังของเค้าไปใช้นะะ","โอ้ เค้าว่านี่แหละจุดที่เธอน่าจะต้องลองมัน","เอ่ออ.. . .แปลกจังทำไมเค้าใช้พลังไม่ได้ละ","อื่มม เธอลองใช้ดูเองได้มั้ย","และคุณก็ลองใช้มัน","นี่ไงได้แล้วๆ!!","เป็นไงล้าา ของที่เค้าให้ ไม่แย่เลยใช่มั้ยล้า","ตอนนี้ก็ได้เวลาไปต่อแล้วหละ","มันคือมัฟฟิ้น มันกำลังอุ่นๆเลยด้วยเหตุผลบ้างอย่าง ฟื้นฟู3hp เพิ่ม4df","ยังอุ่นอยู่หรอ","งื่มๆๆ เค้าไม่ได้แอบอุ่นมันนะ","แต่ถ้าเธอหิวก็กินได้เลย","ค่อยๆกินด้วย เค้ายังไม่มีน้ำให้เธอเยย","เป็นไงบ้างเธอจำอะไรแถวนี้ได้บ้างรึยัง","ยังงั้นหรอ งั้นลองเดินไปเรื่อยๆก่อนละกัน","อื่มม มันน่าจะไม่อันตรายนะครั้งล่าสุดที่เค้ามา","มันก็ซักพักแล้ว เธอก็ด้วยครั้งนั้นมันอื่ม . . .","หมายความว่าไงหนะ","ที่นี่ไม่น่ามีใครนิ เหมือนเขาจะบาดเจ็บด้วย","เธอละจะเข้าไปช่วยมั้ย"],"branch":"help","save":{"schemaVersion":1,"engineRevision":"UF-CH00-2026-10-09-r1","contentVersion":"CH-2026-10-09","layoutVersion":"UF-LAYOUT-2026-10-09","designBaseline":"UF-DESIGN-2026-10-09","runId":"462a8141-a7fb-4685-9f64-3f7a320de2e2","checkpoint":{"runId":"462a8141-a7fb-4685-9f64-3f7a320de2e2","chapter":"ch01_pending","resumeScene":"10.10","room":"rift_bridge","spawn":[0,0],"worldSeed":3652181269,"bottlePosition":[-178,-169],"name":null,"hp":20,"maxHP":20,"baseDF":0,"foodDF":4,"gold":0,"equipment":{"weapon":null,"armor":null},"inventory":{"soul_bottle":1,"warm_muffin":0},"bottle":true,"phone":false,"nUnlocked":false,"ringCharge":0,"helpChoice":"help","memoryChoice":"vague","legAnswer":"hurt","worldFlags":{"landingDone":true,"deerSeen":true,"bottleSpawned":true,"bottleTutorialDone":true,"rootLessonDone":true,"rootChestBurned":true,"firstBurnDone":true,"chestTaken":true,"usedMuffin":true,"rootGateBurned":true,"memoryAsked":true,"strangerSeen":true,"riftEntered":true},"puzzleFlags":{},"dialogueSeen":{"muffinPickup":true,"muffinTalk":true},"callSeen":{},"pendingCalls":[],"monsterOutcomes":{},"killCount":0,"spareCount":0,"rewardLedger":{},"activityFlags":{},"questFlags":{},"chapterComplete":{"ch00":true},"cooldowns":{"xActive":0,"x":0,"c":0,"b":0},"walkDistance":2496.339999999938,"playTime":38.927999999998676},"meta":{"ringSpent":["old_fox_ring:cbc4187f-6a43-4058-ba5f-c414538cdcdd","old_fox_ring:965dd61f-d0b5-49b6-8a11-b8199e9a67dc","old_fox_ring:ed80c5b5-2b89-4439-8400-e8e3b037dbb6"],"history":["legacy","ch00"]}},"errors":[]}
+### Ran Playwright code
+```js
+await (async (page) => {
+  await page.clock.install();
+  await page.goto('http://127.0.0.1:4188/index_new.html?qa=1');
+  await page.waitForFunction(()=>window.UF_QA);
+  const checks=[],shots=[],transcript=[],errors=[];
+  page.on('pageerror',e=>errors.push(String(e)));
+  const get=()=>page.evaluate(()=>UF_QA.snapshot());
+  const assert=(ok,msg)=>{if(!ok)throw Error(msg);checks.push(msg);};
+  async function drain(answer='ไม่เจ็บ'){
+    for(let n=0;n<240;n++){
+      const s=await get();
+      if(s.mode==='walk'||s.mode==='end'||s.mode==='menu'&&!s.busy)return s;
+      if(s.mode==='choice'){let label=s.choice.some(x=>x[0]===answer)?answer:s.choice[0][0];await page.getByRole('button',{name:label,exact:true}).click();}
+      else if(s.mode==='dialogue'){if(s.typing&&!transcript.includes(s.typing.text))transcript.push(s.typing.text);await page.keyboard.press('Enter');}
+      await page.clock.runFor(25);
+    }
+    throw Error('Scene did not release input: '+JSON.stringify(await get()));
+  }
+  async function move(x,y){
+    const startRoom=(await get()).state.room;
+    let previous=null,stuck=0;
+    for(let n=0;n<450;n++){
+      let s=await get();if(s.busy){await drain('ช่วย');s=await get();}
+      if(s.state.room!==startRoom){for(const k of ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'])await page.keyboard.up(k);return;}
+      const p=s.state.spawn,dx=x-p[0],dy=y-p[1];
+      if(Math.hypot(dx,dy)<4){for(const k of ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'])await page.keyboard.up(k);return;}
+      if(previous&&Math.hypot(p[0]-previous[0],p[1]-previous[1])<.15)stuck++;else stuck=0;
+      if(stuck>20)throw Error('Collision/path stuck at '+p+' -> '+[x,y]);previous=p;
+      const want=[];if(Math.abs(dx)>2)want.push(dx>0?'ArrowRight':'ArrowLeft');if(Math.abs(dy)>2)want.push(dy>0?'ArrowDown':'ArrowUp');
+      for(const k of ['ArrowUp','ArrowDown','ArrowLeft','ArrowRight']){await page.keyboard.up(k);if(want.includes(k))await page.keyboard.down(k);}
+      await page.clock.runFor(Math.min(80,Math.max(20,Math.hypot(dx,dy)/70*700)));
+    }
+    throw Error('Movement budget exceeded');
+  }
+  async function shot(label){const file='output/playwright/ch00-'+label+'.png';await page.screenshot({path:file});shots.push(file);}
+  const initial=await get();
+  if(initial.page==='new')await page.getByRole('button',{name:'ยืนยันเริ่มใหม่',exact:true}).click();
+  else {await page.getByRole('button',{name:'เริ่มใหม่',exact:true}).click();await page.getByRole('button',{name:'ยืนยันเริ่มใหม่',exact:true}).click();}
+  await page.evaluate(()=>UF_QA.setSpeed(50));await drain('เจ็บ');
+  assert((await get()).state.legAnswer==='hurt','Hurt branch heals, stands and releases WASD');
+  assert((await get()).state.name===null,'No naming before CH01');
+  await shot('forest-start');
+  await move(330,0);await move(0,0);await drain();
+  assert((await get()).state.worldFlags.bottleSpawned,'Bottle hint triggered through real walking, after deer');
+  const bp=(await get()).state.bottlePosition;
+  await move(bp[0],bp[1]+19);await page.keyboard.press('ArrowUp');await page.keyboard.press('Enter');await drain();
+  assert((await get()).state.bottle&&!!(await get()).state.inventory.soul_bottle,'Bottle collected with tutorial and usable powers');
+  await shot('bottle');
+  await page.keyboard.press('Escape');await page.getByRole('button',{name:'STAT · สถานะ',exact:true}).click();await shot('stat');
+  await page.keyboard.press('Escape');await page.keyboard.press('Escape');
+  await move(0,0);await move(413,0); // Cross the room boundary with actual walking.
+  await page.keyboard.down('ArrowRight');await page.clock.runFor(140);await page.keyboard.up('ArrowRight');
+  assert((await get()).state.room==='forest_extension','Wide east passage enters the extension');
+  await move(88,158);await page.keyboard.press('ArrowUp');await page.keyboard.press('Enter');
+  await page.getByRole('button',{name:'บันทึก',exact:true}).click();assert((await get()).page==='saved','Real SAVE accepted a safe checkpoint');await page.getByRole('button',{name:'กลับไปเดิน',exact:true}).click();
+  const saved=(await get()).state;await page.evaluate(()=>UF_QA.damage(5));await page.keyboard.press('x');
+  assert((await get()).state.cooldowns.xActive>0,'X starts a five-second light pulse');await page.keyboard.press('Escape');const pauseX=(await get()).state.cooldowns.xActive;await page.clock.runFor(500);assert(Math.abs((await get()).state.cooldowns.xActive-pauseX)<.001,'Light cooldown pauses in menu');await page.keyboard.press('Escape');
+  await move(113,244);await drain();await page.keyboard.press('ArrowDown');await page.keyboard.press('c');await drain();
+  assert((await get()).state.worldFlags.rootChestBurned&&!((await get()).state.worldFlags.rootGateBurned),'Chest roots burn separately from gate');
+  await page.keyboard.press('Enter');await drain();await page.keyboard.press('i');await page.getByRole('button',{name:'มัฟฟิ้นอุ่นๆ ×1',exact:false}).click();await page.getByRole('button',{name:'กินมัฟฟิ้น',exact:true}).click();await drain();
+  assert((await get()).state.foodDF===4&&(await get()).state.hp>=18&&!((await get()).state.inventory.warm_muffin),'Muffin used once, heals three and adds four DF');
+  // Item dialogue returns to the item pane, not an unintended free walk.
+  await page.keyboard.press('Escape');await page.keyboard.press('Escape');await page.keyboard.press('Escape');
+  await move(113,163);await move(340,163);await page.keyboard.press('ArrowRight');await page.keyboard.press('c');await drain();
+  assert((await get()).state.worldFlags.rootGateBurned,'Forward C removes the real root gate');await shot('root-gate-open');
+  await move(394,163);await drain();assert((await get()).state.room==='forest_old_trees','Gate connects to old-tree forest');
+  await move(375,263);await move(375,218);await page.keyboard.press('ArrowUp');await page.keyboard.press('Enter');await page.getByRole('button',{name:'บันทึก',exact:true}).click();await page.getByRole('button',{name:'กลับไปเดิน',exact:true}).click();
+  await move(420,263);await drain('ช่วย');const end=await get();
+  assert(end.state.helpChoice==='help','Help choice takes the direct ambush branch');
+  assert(end.state.room==='rift_bridge'&&end.state.resumeScene==='10.10','Direct branch ends at rift, not legend or naming');
+  assert(!end.state.nUnlocked&&!end.state.ringCharge&&!end.state.inventory.old_fox_ring&&!end.state.worldFlags.groveOpen,'Direct branch does not award grove ring or hands');
+  assert(end.state.name===null&&end.state.phone===false&&end.state.foodDF===4,'Existing items and hidden identity persist');
+  assert(end.mode==='end'&&end.page==='end','End screen remains above black world');
+  await shot('end-help');assert(errors.length===0,'No JavaScript runtime errors');
+  return {checks,shots,transcript,branch:'help',save:await page.evaluate(()=>UF_QA.storage.read().parsed),errors};
+}
+)(page);
+```

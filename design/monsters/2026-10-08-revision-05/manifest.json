@@ -1,0 +1,89 @@
+{
+  "documentation": {
+    "id": "20261009-characters-r5-manifest",
+    "updated": "2026-10-09",
+    "status": "current-data",
+    "summary": "ปัจจุบัน: manifest.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+    "designBaseline": "UF-DESIGN-2026-10-09",
+    "currentDesignRef": "../../../design-current.md",
+    "layoutContractRef": "../../chapters/current-layout.json",
+    "indexRef": "../../../INDEX.md",
+    "recordScope": "original generation record plus current documentation links; image hashes and game code unchanged",
+    "runtimeValidated": false
+  },
+  "version": "UNDERFALL-PLAYER-2026-10-08-r5",
+  "mode": "design-preview",
+  "tool": "built-in image_gen",
+  "selected": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-05/07-player-petite-shorts-r5.png",
+  "inputs": [
+    {
+      "id": "01",
+      "title": "ตัวหลัก — คินเป็นมอนสเตอร์",
+      "version": "R2",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/01-main-cast-r2.png"
+    },
+    {
+      "id": "02",
+      "title": "แอสกอ ฟิว และแอสเรียลร่างเด็ก",
+      "version": "R2",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png"
+    },
+    {
+      "id": "03",
+      "title": "ชิกุ/หยวน/ร่างพิเศษ — แอสเรียล Hyperdeath",
+      "version": "R4",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png"
+    },
+    {
+      "id": "04",
+      "title": "มอนรูน",
+      "version": "R2",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png"
+    },
+    {
+      "id": "05",
+      "title": "มอนชุมชน",
+      "version": "R2",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png"
+    },
+    {
+      "id": "06",
+      "title": "ตัวประกอบและมอนทดลอง",
+      "version": "R2",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png"
+    },
+    {
+      "id": "07",
+      "title": "ผู้เล่น — ตัวเล็กผอม กางเกงสั้น ขาเรียว",
+      "version": "R5",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-05/07-player-petite-shorts-r5.png"
+    },
+    {
+      "id": "08",
+      "title": "มอนรอง Undertale เพิ่ม",
+      "version": "R2",
+      "path": "C:/Users/wisu/Desktop/โปรเจคครบรอบ + 2ปี/design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png"
+    }
+  ],
+  "files": [
+    {
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\monsters\\2026-10-08-revision-05\\07-player-petite-shorts-r5.png",
+      "sha256": "6A064BC60A09F994650EF87A4F3B41D6E026D1080156769651927A505AE8158B",
+      "bytes": 1513715
+    },
+    {
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\monsters\\2026-10-08-revision-05\\inputs\\07-player-r5-draft.png",
+      "sha256": "EF7622403FB030D85347A52A24328D5A41C6E839725C3A544BF5F10923EA23AF",
+      "bytes": 1531012
+    },
+    {
+      "path": "C:\\Users\\wisu\\Desktop\\โปรเจคครบรอบ + 2ปี\\design\\monsters\\2026-10-08-revision-05\\references\\player-body-reference.jpg",
+      "sha256": "17389879B15875BD8E8EFE350C888ABB2FF89B58B733F5E9A45C125B9E805C78",
+      "bytes": 62660
+    }
+  ],
+  "heightTarget": "player = normal child Asriel at same world scale and baseline",
+  "heightMeasuredInEngine": false,
+  "gameAssetsInstalled": false,
+  "otherCharacterSheetsEdited": false
+}

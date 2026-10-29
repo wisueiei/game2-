@@ -1,0 +1,13 @@
+- main "UNDERFALL" [ref=f2e2]:
+  - generic "พื้นที่เล่น" [ref=f2e3]
+  - generic [ref=f2e4]:
+    - generic [aria-hidden] [ref=f2e5]: ♥
+    - heading "UNDERFALL" [level=1] [ref=f2e6]
+    - heading "ครบรอบ 1 ปี 3 เดือน" [level=2] [ref=f2e7]
+    - generic [ref=f2e8]:
+      - button "เริ่มใหม่" [active] [ref=f2e9] [cursor=pointer]
+      - button "เล่นต่อ" [ref=f2e10] [cursor=pointer]
+      - button "ประวัติ" [ref=f2e11] [cursor=pointer]
+      - button "ตั้งค่า / จัดการเซฟ" [ref=f2e12] [cursor=pointer]
+      - button "DEV · เลือกจุดทดสอบ" [ref=f2e13] [cursor=pointer]
+    - paragraph [ref=f2e14]: WASD / ลูกศร เดิน · Z / Enter อ่านและตรวจ · I กระเป๋า

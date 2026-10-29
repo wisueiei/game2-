@@ -1,0 +1,10 @@
+### Browser `underfall-r00-guards` opened with pid 50440.
+### Ran Playwright code
+```js
+await page.goto('http://127.0.0.1:4188/index_new.html?qa=1');
+```
+### Page
+- Page URL: http://127.0.0.1:4188/index_new.html?qa=1
+- Page Title: UNDERFALL · 1 ปี 3 เดือน
+### Snapshot
+- [Snapshot](.playwright-cli\page-2026-10-10T02-30-44-452Z.yml)

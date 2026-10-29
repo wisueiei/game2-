@@ -1,0 +1,611 @@
+{
+  "version": "UF-R00-DETAILS-V1-2026-10-10",
+  "source": "design/maps/2026-10-08-v1/01-r00-forest-and-sacred-grove-v1b.png",
+  "sourceSha256": "1847f7131a5852919acd1e77eb7cc1d31728bde38e47b3b857321decee31faf4",
+  "objects": {
+    "landing-bed": {
+      "file": "landing-bed.png",
+      "sourceRect": [
+        256,
+        440,
+        414,
+        526
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        158,
+        86
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "west-crystal": {
+      "file": "west-crystal.png",
+      "sourceRect": [
+        144,
+        386,
+        190,
+        435
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        46,
+        49
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "landing-south": {
+      "file": "landing-south.png",
+      "sourceRect": [
+        197,
+        553,
+        235,
+        596
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        38,
+        43
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "landing-east": {
+      "file": "landing-east.png",
+      "sourceRect": [
+        409,
+        536,
+        450,
+        564
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        41,
+        28
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "origin-north": {
+      "file": "origin-north.png",
+      "sourceRect": [
+        297,
+        364,
+        348,
+        406
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        51,
+        42
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "origin-east": {
+      "file": "origin-east.png",
+      "sourceRect": [
+        387,
+        380,
+        427,
+        413
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        40,
+        33
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "origin-south": {
+      "file": "origin-south.png",
+      "sourceRect": [
+        222,
+        653,
+        278,
+        689
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        56,
+        36
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "left-loop": {
+      "file": "left-loop.png",
+      "sourceRect": [
+        141,
+        730,
+        171,
+        758
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        30,
+        28
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "left-loop-east": {
+      "file": "left-loop-east.png",
+      "sourceRect": [
+        261,
+        751,
+        305,
+        802
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        44,
+        51
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "hollow-left": {
+      "file": "hollow-left.png",
+      "sourceRect": [
+        624,
+        392,
+        653,
+        432
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        29,
+        40
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "hollow-right": {
+      "file": "hollow-right.png",
+      "sourceRect": [
+        731,
+        390,
+        777,
+        432
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        46,
+        42
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "stone-crystal": {
+      "file": "stone-crystal.png",
+      "sourceRect": [
+        1018,
+        424,
+        1067,
+        469
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        49,
+        45
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "stone-west": {
+      "file": "stone-west.png",
+      "sourceRect": [
+        843,
+        471,
+        882,
+        512
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        39,
+        41
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-left": {
+      "file": "grove-left.png",
+      "sourceRect": [
+        823,
+        194,
+        865,
+        225
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        42,
+        31
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-bed": {
+      "file": "grove-bed.png",
+      "sourceRect": [
+        1025,
+        193,
+        1059,
+        240
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        34,
+        47
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-chest-right": {
+      "file": "grove-chest-right.png",
+      "sourceRect": [
+        1090,
+        191,
+        1128,
+        244
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        38,
+        53
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-east": {
+      "file": "grove-east.png",
+      "sourceRect": [
+        1131,
+        244,
+        1185,
+        273
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        54,
+        29
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-central": {
+      "file": "grove-central.png",
+      "sourceRect": [
+        951,
+        165,
+        1016,
+        211
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        65,
+        46
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-stairs": {
+      "file": "grove-stairs.png",
+      "sourceRect": [
+        969,
+        303,
+        1000,
+        332
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        31,
+        29
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "lower-stone": {
+      "file": "lower-stone.png",
+      "sourceRect": [
+        888,
+        547,
+        925,
+        587
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        37,
+        40
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "lower-lantern": {
+      "file": "lower-lantern.png",
+      "sourceRect": [
+        1026,
+        544,
+        1068,
+        580
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        42,
+        36
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "rift-west": {
+      "file": "rift-west.png",
+      "sourceRect": [
+        1323,
+        579,
+        1375,
+        620
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        52,
+        41
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "rift-south": {
+      "file": "rift-south.png",
+      "sourceRect": [
+        1407,
+        570,
+        1465,
+        613
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        58,
+        43
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "landing-bench": {
+      "file": "landing-bench.png",
+      "sourceRect": [
+        229,
+        553,
+        280,
+        589
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        51,
+        36
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "north-bench": {
+      "file": "north-bench.png",
+      "sourceRect": [
+        312,
+        391,
+        365,
+        419
+      ],
+      "layer": "ground-detail",
+      "nativeSize": [
+        53,
+        28
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true
+    },
+    "grove-cave": {
+      "file": "grove-cave.png",
+      "sourceRect": [
+        1028,
+        75,
+        1101,
+        158
+      ],
+      "layer": "landmark",
+      "nativeSize": [
+        73,
+        83
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true,
+      "sourcePolygon": [
+        [
+          1034,
+          100
+        ],
+        [
+          1048,
+          81
+        ],
+        [
+          1071,
+          77
+        ],
+        [
+          1090,
+          91
+        ],
+        [
+          1096,
+          121
+        ],
+        [
+          1099,
+          144
+        ],
+        [
+          1087,
+          154
+        ],
+        [
+          1066,
+          155
+        ],
+        [
+          1047,
+          146
+        ],
+        [
+          1030,
+          144
+        ]
+      ]
+    },
+    "grove-twin-stones": {
+      "file": "grove-twin-stones.png",
+      "sourceRect": [
+        837,
+        72,
+        969,
+        204
+      ],
+      "layer": "landmark",
+      "nativeSize": [
+        132,
+        132
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true,
+      "sourcePolygon": [
+        [
+          843,
+          137
+        ],
+        [
+          862,
+          107
+        ],
+        [
+          887,
+          86
+        ],
+        [
+          901,
+          84
+        ],
+        [
+          901,
+          166
+        ],
+        [
+          911,
+          176
+        ],
+        [
+          914,
+          118
+        ],
+        [
+          915,
+          78
+        ],
+        [
+          934,
+          86
+        ],
+        [
+          945,
+          109
+        ],
+        [
+          952,
+          144
+        ],
+        [
+          965,
+          180
+        ],
+        [
+          960,
+          195
+        ],
+        [
+          929,
+          201
+        ],
+        [
+          909,
+          192
+        ],
+        [
+          888,
+          202
+        ],
+        [
+          856,
+          196
+        ],
+        [
+          839,
+          173
+        ]
+      ]
+    },
+    "memory-crystal": {
+      "file": "memory-crystal.png",
+      "sourceRect": [
+        1401,
+        188,
+        1435,
+        241
+      ],
+      "layer": "landmark",
+      "nativeSize": [
+        34,
+        53
+      ],
+      "sourceRgbPreserved": true,
+      "binaryAlpha": true,
+      "sourcePolygon": [
+        [
+          1408,
+          212
+        ],
+        [
+          1417,
+          192
+        ],
+        [
+          1425,
+          204
+        ],
+        [
+          1428,
+          218
+        ],
+        [
+          1432,
+          226
+        ],
+        [
+          1432,
+          235
+        ],
+        [
+          1419,
+          240
+        ],
+        [
+          1404,
+          237
+        ],
+        [
+          1403,
+          222
+        ]
+      ]
+    }
+  },
+  "layoutUnchanged": true,
+  "method": "Native source cutouts, material mask, removal of isolated extraction speckles; not full-map backdrop. Invisible original pixels are not reconstructed."
+}

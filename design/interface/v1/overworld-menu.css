@@ -1,0 +1,68 @@
+/* Reference-led overworld menu. Geometry is in the existing 400x225 space. */
+#screen.overworld-active::before{content:'';position:absolute;inset:0;background:#02060c55;z-index:-1}
+.overworld-rail{position:absolute;left:18px;top:62px;width:86px;height:103px;border:2px solid #eee6d6;box-shadow:0 0 0 1px #101725,2px 2px 0 #02060c;background:#030811de;padding:8px 7px;display:flex;flex-direction:column;gap:1px}
+.overworld-tab{display:flex;align-items:center;justify-content:flex-start;gap:6px;width:100%;height:20px;min-height:20px;padding:2px 1px;border:0;background:transparent;color:#eee6d6;position:relative}
+.overworld-tab .pixel-heart{width:9px;height:8px;opacity:0;flex:none}
+.overworld-tab.is-current .pixel-heart,.overworld-tab:focus-visible .pixel-heart{opacity:1}
+.overworld-tab:focus-visible{outline:1px solid #efc681;outline-offset:0}
+.overworld-tab:hover{background:#ed86a213}
+.overworld-tab:disabled{opacity:.35}
+.overworld-tab-label{height:11px;width:auto;overflow:visible;flex:none}
+.overworld-tab.is-current .overworld-tab-label{filter:drop-shadow(1px 0 #91dfea44)}
+.overworld-mini{position:absolute;left:18px;top:170px;width:86px;height:52px;border:2px solid #eee6d6;box-shadow:0 0 0 1px #101725,2px 2px 0 #02060c;background:#030811de;padding:3px 7px;color:#eee6d6;font:8px/1.15 Consolas,'Courier New',monospace}
+.overworld-mini-name{font:10px/1.2 Tahoma,sans-serif;font-weight:bold;color:#efc681;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;margin-bottom:1px}
+.overworld-mini .mini-line{display:flex;justify-content:space-between;gap:4px}
+.overworld-tools{position:absolute;left:18px;right:17px;top:12px;display:flex;justify-content:space-between;align-items:start;pointer-events:none}
+.overworld-tools>*{pointer-events:auto}
+.overworld-tools .game-button{font-size:8px;padding:3px 6px;min-height:17px;background:#060c16b3;border-color:#9ca7b966}
+.overworld-root-hint{position:absolute;left:119px;top:55px;font-size:8px;color:#b7c0ce;line-height:1.7;padding:7px;background:#080f1999;border-left:1px solid #91dfea66;max-width:148px}
+.overworld-pane{position:absolute;left:111px;right:16px;top:12px;bottom:8px;border:2px solid #eee6d6;box-shadow:0 0 0 1px #101725,2px 2px 0 #02060c;background:#030811ed;padding:10px;min-width:0}
+.overworld-pane-head{height:21px;display:flex;align-items:start;justify-content:space-between;gap:8px}
+.overworld-pane-head h3{font-size:12px;margin:0;font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;min-width:0}
+.overworld-pane-head .code{font:8px/1.5 Consolas,monospace;letter-spacing:.08em;color:#91dfea;flex:none}
+.stats-pane .overworld-pane-head{position:absolute;right:10px;top:6px;height:auto}.stats-pane .overworld-pane-head h3{display:none}.stats-pane .overworld-pane-body{top:14px;overflow-x:hidden}
+.overworld-pane-body{position:absolute;left:10px;right:10px;top:34px;bottom:28px;overflow:auto;scrollbar-width:thin;scrollbar-color:#63768a #050a13;min-width:0}
+.overworld-pane-foot{position:absolute;left:8px;right:8px;bottom:5px;display:flex;justify-content:space-between;align-items:center;gap:4px;min-height:18px}
+.overworld-pane-foot .hint{display:none}
+.overworld-pane-foot .game-button{font-size:8px;padding:3px 5px;min-height:17px}
+.overworld-pane-foot .button-row{gap:4px}
+.overworld-pane .pixel-panel,.overworld-pane .soft-panel{box-shadow:none}
+.overworld-pane-body>.pixel-panel{border:0;padding:0;background:transparent;height:auto}
+.overworld-pane-body>.pixel-panel::before,.overworld-pane-body>.pixel-panel::after{display:none}
+.overworld-pane-body>.split{height:100%;grid-template-columns:1fr 1.1fr;gap:6px}
+.overworld-pane-body .description{font-size:9px;line-height:1.7}
+.overworld-pane-body .list-item{font-size:10px;padding:5px 4px;line-height:1.5}
+.overworld-item-list{display:flex;flex-direction:column;gap:2px}
+.overworld-item-note{font-size:8px;color:#a5a6bd;margin:3px 0 6px}
+.overworld-stats-main{position:relative;min-height:96px;padding:4px 79px 0 1px}
+.overworld-stats-name{font-size:14px;line-height:1.4;color:#eee6d6;font-weight:bold;margin-bottom:6px;max-width:163px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.overworld-stat-primary{font:12px/1.5 Consolas,monospace;margin:2px 0;color:#eee6d6}
+.overworld-stat-chapter{font-size:8px;color:#a5a6bd;margin-bottom:6px}
+.overworld-stats-hero{position:absolute;right:1px;top:0;width:72px;height:96px;image-rendering:pixelated;object-fit:contain}
+.overworld-stats-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px 11px;font:10px/1.25 Consolas,monospace;margin:2px 0 4px}
+.overworld-stats-grid div{display:flex;justify-content:space-between;gap:5px;white-space:nowrap}
+.overworld-stats-grid .unavailable{color:#818ca3}
+.overworld-stat-gear{font:9px/1.2 Consolas,monospace;display:flex;gap:6px;margin-top:2px;min-width:0}
+.overworld-stat-gear span:last-child{font-family:Tahoma,sans-serif;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.overworld-status-note{font-size:7px;color:#818ca3;margin-top:4px}
+.overworld-active .confirm-overlay{z-index:20}
+@media(max-width:720px){
+ .overworld-rail{left:10px;top:129px;width:104px;height:158px;padding:12px 7px;gap:4px}
+ .overworld-tab{height:28px;min-height:28px;gap:7px;padding:3px 0}
+ .overworld-tab-label{height:15px}.overworld-tab .pixel-heart{width:11px;height:10px}
+ .overworld-mini{left:10px;top:294px;width:104px;height:102px;padding:9px 8px;font-size:11px;line-height:1.6}
+ .overworld-mini-name{font-size:14px;line-height:1.5;margin-bottom:6px}
+ .overworld-tools{left:10px;right:10px;top:10px}.overworld-tools .game-button{font-size:11px;padding:6px;min-height:28px}
+ .overworld-root-hint{left:128px;top:90px;font-size:11px;max-width:160px;padding:10px}
+ .overworld-pane{left:123px;right:10px;top:10px;bottom:12px;padding:9px}
+ .overworld-pane-head{height:37px;flex-direction:column;gap:0}.overworld-pane-head h3{font-size:14px;max-width:100%}.overworld-pane-head .code{font-size:9px}
+ .overworld-pane-body{left:8px;right:8px;top:55px;bottom:76px}
+ .overworld-pane-foot{left:8px;right:8px;bottom:7px;min-height:57px;flex-wrap:wrap;align-content:end;gap:5px}
+ .overworld-pane-foot .game-button{font-size:11px;padding:6px 7px;min-height:29px}.overworld-pane-foot .button-row{flex-wrap:wrap}
+ .overworld-pane-body .description{font-size:12px}.overworld-pane-body .list-item{font-size:12px;padding:7px 3px}.overworld-item-note{font-size:10px}
+ .overworld-pane-body>.split{display:flex;flex-direction:column;gap:8px;height:auto}.overworld-pane-body>.split>*{min-height:fit-content;overflow:visible}
+ .overworld-stats-main{padding:1px 0 0;min-height:149px}.overworld-stats-name{font-size:15px;padding-right:0;margin-bottom:4px;max-width:100%}
+ .overworld-stat-chapter{font-size:10px;max-width:93px}.overworld-stat-primary{font-size:12px;max-width:90px}
+ .overworld-stats-hero{right:0;top:33px;width:60px;height:80px}
+ .overworld-stats-grid{grid-template-columns:1fr;gap:4px;font-size:11px;margin-top:0}.overworld-stat-gear{font-size:10px;display:block;margin-top:7px}.overworld-stat-gear span{display:block}.overworld-status-note{font-size:9px}
+}

@@ -1,0 +1,1441 @@
+{
+  "ok": true,
+  "mapVersion": "UF-R00-V1B-2026-10-09",
+  "branches": [
+    {
+      "branch": "do_not_help",
+      "injury": "ไม่เจ็บ",
+      "endState": {
+        "runId": "ad9f90da-587f-4f7e-8b9e-c1f897b171ef",
+        "chapter": "ch01_pending",
+        "resumeScene": "10.10",
+        "room": "rift_bridge",
+        "spawn": [
+          1790,
+          595
+        ],
+        "worldSeed": 4134474074,
+        "bottlePosition": [
+          398.75,
+          580
+        ],
+        "name": null,
+        "hp": 20,
+        "maxHP": 20,
+        "baseDF": 0,
+        "foodDF": 4,
+        "gold": 0,
+        "equipment": {
+          "weapon": null,
+          "armor": null
+        },
+        "inventory": {
+          "soul_bottle": 1,
+          "warm_muffin": 0,
+          "old_fox_ring": 1
+        },
+        "bottle": true,
+        "phone": false,
+        "nUnlocked": true,
+        "ringCharge": 1,
+        "helpChoice": "do_not_help",
+        "memoryChoice": "vague",
+        "legAnswer": "unhurt",
+        "worldFlags": {
+          "landingDone": true,
+          "deerSeen": true,
+          "bottleSpawned": true,
+          "bottleTutorialDone": true,
+          "rootLessonDone": true,
+          "rootChestBurned": true,
+          "firstBurnDone": true,
+          "chestTaken": true,
+          "usedMuffin": true,
+          "rootGateBurned": true,
+          "memoryAsked": true,
+          "strangerSeen": true,
+          "groveOpen": true,
+          "ringPicked": true,
+          "nInvited": true,
+          "groveExited": true,
+          "riftEntered": true
+        },
+        "puzzleFlags": {},
+        "dialogueSeen": {
+          "muffinPickup": true,
+          "muffinTalk": true,
+          "quiet": true
+        },
+        "callSeen": {},
+        "pendingCalls": [],
+        "monsterOutcomes": {},
+        "killCount": 0,
+        "spareCount": 0,
+        "rewardLedger": {},
+        "activityFlags": {},
+        "questFlags": {},
+        "chapterComplete": {
+          "ch00": true
+        },
+        "cooldowns": {
+          "xActive": 0,
+          "x": 0,
+          "c": 0,
+          "b": 0
+        },
+        "walkDistance": 4425.53999999972,
+        "playTime": 70.12899999999769,
+        "face": "right",
+        "walking": false,
+        "anim": 63.59699999999876,
+        "fx": {
+          "black": true
+        }
+      },
+      "save": {
+        "schemaVersion": 1,
+        "engineRevision": "UF-CH00-2026-10-09-r2",
+        "contentVersion": "CH-2026-10-09",
+        "layoutVersion": "UF-R00-V1B-2026-10-09",
+        "mapVersion": "UF-R00-V1B-2026-10-09",
+        "designBaseline": "UF-DESIGN-2026-10-09",
+        "runId": "ad9f90da-587f-4f7e-8b9e-c1f897b171ef",
+        "checkpoint": {
+          "runId": "ad9f90da-587f-4f7e-8b9e-c1f897b171ef",
+          "chapter": "ch01_pending",
+          "resumeScene": "10.10",
+          "room": "rift_bridge",
+          "spawn": [
+            1790,
+            595
+          ],
+          "worldSeed": 4134474074,
+          "bottlePosition": [
+            398.75,
+            580
+          ],
+          "name": null,
+          "hp": 20,
+          "maxHP": 20,
+          "baseDF": 0,
+          "foodDF": 4,
+          "gold": 0,
+          "equipment": {
+            "weapon": null,
+            "armor": null
+          },
+          "inventory": {
+            "soul_bottle": 1,
+            "warm_muffin": 0,
+            "old_fox_ring": 1
+          },
+          "bottle": true,
+          "phone": false,
+          "nUnlocked": true,
+          "ringCharge": 1,
+          "helpChoice": "do_not_help",
+          "memoryChoice": "vague",
+          "legAnswer": "unhurt",
+          "worldFlags": {
+            "landingDone": true,
+            "deerSeen": true,
+            "bottleSpawned": true,
+            "bottleTutorialDone": true,
+            "rootLessonDone": true,
+            "rootChestBurned": true,
+            "firstBurnDone": true,
+            "chestTaken": true,
+            "usedMuffin": true,
+            "rootGateBurned": true,
+            "memoryAsked": true,
+            "strangerSeen": true,
+            "groveOpen": true,
+            "ringPicked": true,
+            "nInvited": true,
+            "groveExited": true,
+            "riftEntered": true
+          },
+          "puzzleFlags": {},
+          "dialogueSeen": {
+            "muffinPickup": true,
+            "muffinTalk": true,
+            "quiet": true
+          },
+          "callSeen": {},
+          "pendingCalls": [],
+          "monsterOutcomes": {},
+          "killCount": 0,
+          "spareCount": 0,
+          "rewardLedger": {},
+          "activityFlags": {},
+          "questFlags": {},
+          "chapterComplete": {
+            "ch00": true
+          },
+          "cooldowns": {
+            "xActive": 0,
+            "x": 0,
+            "c": 0,
+            "b": 0
+          },
+          "walkDistance": 4425.53999999972,
+          "playTime": 70.12899999999769
+        },
+        "meta": {
+          "ringSpent": [],
+          "history": [
+            "legacy",
+            "ch00"
+          ]
+        }
+      }
+    },
+    {
+      "branch": "help",
+      "injury": "เจ็บ",
+      "endState": {
+        "runId": "f3a80c58-8a4d-4a67-931d-6f5d2ea82bf1",
+        "chapter": "ch01_pending",
+        "resumeScene": "10.10",
+        "room": "rift_bridge",
+        "spawn": [
+          1790,
+          595
+        ],
+        "worldSeed": 1354500253,
+        "bottlePosition": [
+          398.75,
+          580
+        ],
+        "name": null,
+        "hp": 20,
+        "maxHP": 20,
+        "baseDF": 0,
+        "foodDF": 4,
+        "gold": 0,
+        "equipment": {
+          "weapon": null,
+          "armor": null
+        },
+        "inventory": {
+          "soul_bottle": 1,
+          "warm_muffin": 0
+        },
+        "bottle": true,
+        "phone": false,
+        "nUnlocked": false,
+        "ringCharge": 0,
+        "helpChoice": "help",
+        "memoryChoice": "vague",
+        "legAnswer": "hurt",
+        "worldFlags": {
+          "landingDone": true,
+          "deerSeen": true,
+          "bottleSpawned": true,
+          "bottleTutorialDone": true,
+          "rootLessonDone": true,
+          "rootChestBurned": true,
+          "firstBurnDone": true,
+          "chestTaken": true,
+          "usedMuffin": true,
+          "rootGateBurned": true,
+          "memoryAsked": true,
+          "strangerSeen": true,
+          "riftEntered": true
+        },
+        "puzzleFlags": {},
+        "dialogueSeen": {
+          "muffinPickup": true,
+          "muffinTalk": true
+        },
+        "callSeen": {},
+        "pendingCalls": [],
+        "monsterOutcomes": {},
+        "killCount": 0,
+        "spareCount": 0,
+        "rewardLedger": {},
+        "activityFlags": {},
+        "questFlags": {},
+        "chapterComplete": {
+          "ch00": true
+        },
+        "cooldowns": {
+          "xActive": 0,
+          "x": 0,
+          "c": 0,
+          "b": 0
+        },
+        "walkDistance": 3220.979999999823,
+        "playTime": 50.36199999999702,
+        "face": "right",
+        "walking": false,
+        "anim": 46.81673202294775,
+        "fx": {
+          "black": true
+        }
+      },
+      "save": {
+        "schemaVersion": 1,
+        "engineRevision": "UF-CH00-2026-10-09-r2",
+        "contentVersion": "CH-2026-10-09",
+        "layoutVersion": "UF-R00-V1B-2026-10-09",
+        "mapVersion": "UF-R00-V1B-2026-10-09",
+        "designBaseline": "UF-DESIGN-2026-10-09",
+        "runId": "f3a80c58-8a4d-4a67-931d-6f5d2ea82bf1",
+        "checkpoint": {
+          "runId": "f3a80c58-8a4d-4a67-931d-6f5d2ea82bf1",
+          "chapter": "ch01_pending",
+          "resumeScene": "10.10",
+          "room": "rift_bridge",
+          "spawn": [
+            1790,
+            595
+          ],
+          "worldSeed": 1354500253,
+          "bottlePosition": [
+            398.75,
+            580
+          ],
+          "name": null,
+          "hp": 20,
+          "maxHP": 20,
+          "baseDF": 0,
+          "foodDF": 4,
+          "gold": 0,
+          "equipment": {
+            "weapon": null,
+            "armor": null
+          },
+          "inventory": {
+            "soul_bottle": 1,
+            "warm_muffin": 0
+          },
+          "bottle": true,
+          "phone": false,
+          "nUnlocked": false,
+          "ringCharge": 0,
+          "helpChoice": "help",
+          "memoryChoice": "vague",
+          "legAnswer": "hurt",
+          "worldFlags": {
+            "landingDone": true,
+            "deerSeen": true,
+            "bottleSpawned": true,
+            "bottleTutorialDone": true,
+            "rootLessonDone": true,
+            "rootChestBurned": true,
+            "firstBurnDone": true,
+            "chestTaken": true,
+            "usedMuffin": true,
+            "rootGateBurned": true,
+            "memoryAsked": true,
+            "strangerSeen": true,
+            "riftEntered": true
+          },
+          "puzzleFlags": {},
+          "dialogueSeen": {
+            "muffinPickup": true,
+            "muffinTalk": true
+          },
+          "callSeen": {},
+          "pendingCalls": [],
+          "monsterOutcomes": {},
+          "killCount": 0,
+          "spareCount": 0,
+          "rewardLedger": {},
+          "activityFlags": {},
+          "questFlags": {},
+          "chapterComplete": {
+            "ch00": true
+          },
+          "cooldowns": {
+            "xActive": 0,
+            "x": 0,
+            "c": 0,
+            "b": 0
+          },
+          "walkDistance": 3220.979999999823,
+          "playTime": 50.36199999999702
+        },
+        "meta": {
+          "ringSpent": [],
+          "history": [
+            "legacy",
+            "ch00"
+          ]
+        }
+      }
+    }
+  ],
+  "checks": [
+    "do_not_help: approved shared R00 version is loaded",
+    "do_not_help: world uses owner-selected v1 source",
+    "do_not_help: actual terrain/object renderer is installed",
+    "do_not_help: game has no full-reference map background asset",
+    "do_not_help: injury choice completes and releases walking",
+    "do_not_help: identity and phone remain unrevealed",
+    "do_not_help: deer and bottle hint arise from 620px of actual walking",
+    "do_not_help: bottle interaction grants its exact item and tutorial",
+    "do_not_help: STAT opens from the actual overworld menu",
+    "do_not_help: same-world bridge advances to extension without teleport",
+    "do_not_help: extension-save opens SAVE through nearby interaction",
+    "do_not_help: extension-save commits a real checkpoint",
+    "do_not_help: X starts a five-second pulse",
+    "do_not_help: menu pauses the light timer",
+    "do_not_help: C burns chest roots independently of the path gate",
+    "do_not_help: native chest interaction grants one muffin",
+    "do_not_help: muffin is consumed once and adds four DF",
+    "do_not_help: muffin dialogue returns to its item pane",
+    "do_not_help: forward C opens the real root gate",
+    "do_not_help: walking through gate advances memory scene on the same map",
+    "do_not_help: old-tree-save opens SAVE through nearby interaction",
+    "do_not_help: old-tree-save commits a real checkpoint",
+    "do_not_help: stranger choice follows the selected branch",
+    "do_not_help: declining help preserves exploration",
+    "do_not_help: V opens the fox-marked native stone door",
+    "do_not_help: opened tunnel leads into the approved grove plaza",
+    "do_not_help: native ring chest grants one revival charge",
+    "do_not_help: actual N unlocks the two dark-centered hands",
+    "do_not_help: grove-save opens SAVE through nearby interaction",
+    "do_not_help: grove-save commits a real checkpoint",
+    "do_not_help: waterfall quiet dialogue is reachable by walking",
+    "do_not_help: grove exit triggers the hands ambush with earned items",
+    "do_not_help: branch stops at the safe 10.10 rift checkpoint",
+    "do_not_help: identity gates and consumed-item effects survive the handoff",
+    "do_not_help: chapter-end controls remain above the black world",
+    "do_not_help: automatic rift SAVE is valid",
+    "do_not_help: no JavaScript runtime errors during branch",
+    "help: approved shared R00 version is loaded",
+    "help: world uses owner-selected v1 source",
+    "help: actual terrain/object renderer is installed",
+    "help: game has no full-reference map background asset",
+    "help: injury choice completes and releases walking",
+    "help: identity and phone remain unrevealed",
+    "help: deer and bottle hint arise from 620px of actual walking",
+    "help: bottle interaction grants its exact item and tutorial",
+    "help: STAT opens from the actual overworld menu",
+    "help: same-world bridge advances to extension without teleport",
+    "help: extension-save opens SAVE through nearby interaction",
+    "help: extension-save commits a real checkpoint",
+    "help: X starts a five-second pulse",
+    "help: menu pauses the light timer",
+    "help: C burns chest roots independently of the path gate",
+    "help: native chest interaction grants one muffin",
+    "help: muffin is consumed once and adds four DF",
+    "help: muffin dialogue returns to its item pane",
+    "help: forward C opens the real root gate",
+    "help: walking through gate advances memory scene on the same map",
+    "help: old-tree-save opens SAVE through nearby interaction",
+    "help: old-tree-save commits a real checkpoint",
+    "help: stranger choice follows the selected branch",
+    "help: help branch awards no grove items or powers",
+    "help: branch stops at the safe 10.10 rift checkpoint",
+    "help: identity gates and consumed-item effects survive the handoff",
+    "help: chapter-end controls remain above the black world",
+    "help: automatic rift SAVE is valid",
+    "help: no JavaScript runtime errors during branch"
+  ],
+  "shots": [
+    "output/playwright/r00-do_not_help-forest-start.png",
+    "output/playwright/r00-do_not_help-bottle.png",
+    "output/playwright/r00-do_not_help-stat.png",
+    "output/playwright/r00-do_not_help-root-gate-open.png",
+    "output/playwright/r00-do_not_help-old-tree-save.png",
+    "output/playwright/r00-do_not_help-stone-open.png",
+    "output/playwright/r00-do_not_help-grove-entry.png",
+    "output/playwright/r00-do_not_help-grove-hands.png",
+    "output/playwright/r00-do_not_help-rift-end.png",
+    "output/playwright/r00-help-forest-start.png",
+    "output/playwright/r00-help-bottle.png",
+    "output/playwright/r00-help-stat.png",
+    "output/playwright/r00-help-root-gate-open.png",
+    "output/playwright/r00-help-old-tree-save.png",
+    "output/playwright/r00-help-rift-end.png"
+  ],
+  "transcripts": [
+    {
+      "branch": "do_not_help",
+      "text": "ยินดีต้องรับคุณแฟนอิอิ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": ". . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เข้ามาถึงที่นี่แล้วหรอเนี่ยไวจัง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ง้าาา เจ้าหนูสุขสันวันครบรอบ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "1ปี3เดือนนะครับ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เราอยู่ด้วยกันมาได้อีกเดือนแย้วนะเนี่ยย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอรู้สึกคุ้นๆกับฉากนี้มั้ยนะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ทำไมเค้ารู้สึกเหมือน. . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เราเคยผ่านมันมารอบนึงแล้วเยยหละ. . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เค้าว่าเรา. .อาจจะโดนเข้ามาแทรกแทรงกับ อึกก!!"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "✋︎⧫︎ ♓︎⬧︎ ⬧︎□︎ ♎︎♋︎❒︎🙵 ♒︎♏︎❒︎♏︎📬︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "👎︎♋︎❒︎🙵♏︎❒︎ ⬧︎⧫︎♓︎●︎●︎📬︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "✌︎■︎♎︎ ♎︎♋︎❒︎🙵♏︎❒︎ ⍓︎♏︎⧫︎📬︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "☟︎□︎⬥︎ ♓︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📬︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "✌︎❒︎♏︎ ⍓︎□︎◆︎ ♋︎ ♒︎◆︎❍︎♋︎■︎ ⬥︎♒︎□︎ ♐︎♏︎●︎●︎ ♎︎□︎⬥︎■︎ ♒︎♏︎❒︎♏︎✍︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "✡︎□︎◆︎ ♒︎♋︎❖︎♏︎ ♓︎⧫︎◻︎⧫︎♒︎♏︎ ⧫︎♒︎♓︎■︎♑︎ ⧫︎♒︎♋︎⧫︎ ⬥︎♓︎●︎●︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "♏︎■︎♋︎♌︎●︎♏︎ ❍︎⍓︎ ❒︎♏︎⧫︎◆︎❒︎■︎📬︎ ✋︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📪︎ ❖︎♏︎❒︎⍓︎ ♓︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📬︎"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อื่มม . . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อาจจะไม่ได้มีอะไรมากแต่ว่า"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เดี๋ยวมารอดูนะครับ คิคิ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "หื้ออ บีบี๋เธอมาที่นี่แล้วหรอ. . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ตะไมมาช้าจางง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอเจ็บขามั้ยตกมาซะสูงเลย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เดี๋ยวเราจะเดินไปที่ของเค้ากัน. . . ที่เดิม"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ที่เราค่อยอยู่"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "555555"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธออาจจะนึกภาพมันไม่ออกหรอก ผ่านมานานมากแล้ว"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อื่มม. . . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "นานแล้วแหละ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "แต่เธอเจ็บขามั้ยนะเค้าถามแล้วก็ลืมเลย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "โอเค งั้นเธอค่อยๆเดินมานะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เอ้า เค้าจะบอกวิธีเดินให้นะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "w  คือเดินหน้า"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "a  คือไปทางซ้าย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "s  คือถอยหลัง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "d  คือไปทางขวา"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ค่อยๆเดินมานะ อย่ารีบ. . . เค้ารอเธออยู่"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอมองเห็นทางมั้ย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เหมือนตรงนั้นมีอะไรซักอย่างทำให้เค้าเข้าไปไม่ได้เลย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอเอ่อ. . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เค้าจะลองใช้พลังสร้างอะไรซักอย่างดู"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ให้เธอลองเดินไปรอบๆ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอจะเห็นขวดแก้วนึงที่มีไฟวิญญาณสีฟ้าม่วงลอยอยู่"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เก็บมันขึ้นมาเลย แล้วแสงมันจะสว่างพอที่จะนำทางเธอได้อยู่นิดหน่อย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอคงเจอขวดแก้วของเค้าแย้วใช่มั้ย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เก่งมากค้าบ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เอาหละเธอคงเห็น. . .ที่นี่มันมืดมาก"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ใช่มั้ยละ อื่มมหรือเค้าตาไม่ดีหรอไม่ใช่หรอก"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เอาหละนี่คือวิธีใช้งาน"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "X — ส่องแสงนำทาง 5วิ คูดาล์ว2วิ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "C — เผาสิ่งที่กีดขวาง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "V — เรียก ??? ออกมาช่วย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "B — ฟื้นฟูเลือดของเธอเอง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "โอเคเค้าว่าเค้าคงต้องสอนเธอนะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "น่าจะมีโอกาสได้ลองใช้ดู"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อื่มมม . . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เค้าอาจจะไม่ได้เห็นทุกเหตุการณ์ตลอด"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ถ้าเธอต้องการกดปุ่มพวกนั้นเพื่อดึงพลังของเค้าไปใช้นะะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "โอ้ เค้าว่านี่แหละจุดที่เธอน่าจะต้องลองมัน"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เอ่ออ.. . .แปลกจังทำไมเค้าใช้พลังไม่ได้ละ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อื่มม เธอลองใช้ดูเองได้มั้ย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "และคุณก็ลองใช้มัน"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "นี่ไงได้แล้วๆ!!"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เป็นไงล้าา ของที่เค้าให้ ไม่แย่เลยใช่มั้ยล้า"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ตอนนี้ก็ได้เวลาไปต่อแล้วหละ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "มันคือมัฟฟิ้น มันกำลังอุ่นๆเลยด้วยเหตุผลบ้างอย่าง ฟื้นฟู3hp เพิ่ม4df"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ยังอุ่นอยู่หรอ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "งื่มๆๆ เค้าไม่ได้แอบอุ่นมันนะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "แต่ถ้าเธอหิวก็กินได้เลย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ค่อยๆกินด้วย เค้ายังไม่มีน้ำให้เธอเยย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เป็นไงบ้างเธอจำอะไรแถวนี้ได้บ้างรึยัง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ยังงั้นหรอ งั้นลองเดินไปเรื่อยๆก่อนละกัน"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อื่มม มันน่าจะไม่อันตรายนะครั้งล่าสุดที่เค้ามา"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "มันก็ซักพักแล้ว เธอก็ด้วยครั้งนั้นมันอื่ม . . ."
+    },
+    {
+      "branch": "do_not_help",
+      "text": "หมายความว่าไงหนะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ที่นี่ไม่น่ามีใครนิ เหมือนเขาจะบาดเจ็บด้วย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอละจะเข้าไปช่วยมั้ย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "หื้มม. . .โอ้ววว!!!"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ง้าา บีบี๋เธอมาเจอมันจนได้เธอเริ่มจำมันได้แล้วหรอ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อิอิ ไม่ว่ายังไงถึงเธอจะจำไม่ได้ เธอลองเดินเข้าไปดูจิเค้าจะเปิดทางให้"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "??? เริ่มทำอะไรซักอย่างและจากนั้น"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "นี่คือแหวนที่อดีตจิ้งจอกเคยให้กับสาวผู้นึงที่เป็นดั่งคนรัก ก่อนเธอจะตาย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "และมันถูกเก็บไว้ด้วยความรักอย่างดี"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "สามารถฟื้นคืนชีพได้1รอบ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอคงเจอมันแล้วสินะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "งื่มๆๆ นั่นหนะมันคือของเธอนั่นแหละ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อิอิ มันได้กลับมาหาเจ้าของอีกรอบแล้วนะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "แล้วก็นี่แหละคือสถานที่ที่เค้าพูดถึงก่อนหน้านี้"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "และก็มาที่นี่เค้าได้ฟื้นพลังเพิ่มขึ้นด้วย"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอลองกดตัวNดูสิ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "อย่างน้อยการมาที่นี่ก็ทำให้เค้าได้พลังบางส่วนกลับมานะะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เอาหละเราออกไปจากที่นี่กันเถอะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "ตรงนี้เงียบดีเนอะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "แค่ได้กลับมาก็เหมือนหายใจคล่องขึ้นนิดนึง"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เธอจะนั่งพักก่อนก็ได้นะ"
+    },
+    {
+      "branch": "do_not_help",
+      "text": "เค้าไม่รีบแล้วหละ"
+    },
+    {
+      "branch": "help",
+      "text": "ยินดีต้องรับคุณแฟนอิอิ"
+    },
+    {
+      "branch": "help",
+      "text": ". . ."
+    },
+    {
+      "branch": "help",
+      "text": "เข้ามาถึงที่นี่แล้วหรอเนี่ยไวจัง"
+    },
+    {
+      "branch": "help",
+      "text": "ง้าาา เจ้าหนูสุขสันวันครบรอบ"
+    },
+    {
+      "branch": "help",
+      "text": "1ปี3เดือนนะครับ"
+    },
+    {
+      "branch": "help",
+      "text": "เราอยู่ด้วยกันมาได้อีกเดือนแย้วนะเนี่ยย"
+    },
+    {
+      "branch": "help",
+      "text": "เธอรู้สึกคุ้นๆกับฉากนี้มั้ยนะ"
+    },
+    {
+      "branch": "help",
+      "text": "ทำไมเค้ารู้สึกเหมือน. . ."
+    },
+    {
+      "branch": "help",
+      "text": "เราเคยผ่านมันมารอบนึงแล้วเยยหละ. . ."
+    },
+    {
+      "branch": "help",
+      "text": "เค้าว่าเรา. .อาจจะโดนเข้ามาแทรกแทรงกับ อึกก!!"
+    },
+    {
+      "branch": "help",
+      "text": "✋︎⧫︎ ♓︎⬧︎ ⬧︎□︎ ♎︎♋︎❒︎🙵 ♒︎♏︎❒︎♏︎📬︎"
+    },
+    {
+      "branch": "help",
+      "text": "👎︎♋︎❒︎🙵♏︎❒︎ ⬧︎⧫︎♓︎●︎●︎📬︎"
+    },
+    {
+      "branch": "help",
+      "text": "✌︎■︎♎︎ ♎︎♋︎❒︎🙵♏︎❒︎ ⍓︎♏︎⧫︎📬︎"
+    },
+    {
+      "branch": "help",
+      "text": "☟︎□︎⬥︎ ♓︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📬︎"
+    },
+    {
+      "branch": "help",
+      "text": "✌︎❒︎♏︎ ⍓︎□︎◆︎ ♋︎ ♒︎◆︎❍︎♋︎■︎ ⬥︎♒︎□︎ ♐︎♏︎●︎●︎ ♎︎□︎⬥︎■︎ ♒︎♏︎❒︎♏︎✍︎"
+    },
+    {
+      "branch": "help",
+      "text": "✡︎□︎◆︎ ♒︎♋︎❖︎♏︎ ♓︎⧫︎◻︎⧫︎♒︎♏︎ ⧫︎♒︎♓︎■︎♑︎ ⧫︎♒︎♋︎⧫︎ ⬥︎♓︎●︎●︎"
+    },
+    {
+      "branch": "help",
+      "text": "♏︎■︎♋︎♌︎●︎♏︎ ❍︎⍓︎ ❒︎♏︎⧫︎◆︎❒︎■︎📬︎ ✋︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📪︎ ❖︎♏︎❒︎⍓︎ ♓︎■︎⧫︎♏︎❒︎♏︎⬧︎⧫︎♓︎■︎♑︎📬︎"
+    },
+    {
+      "branch": "help",
+      "text": "อื่มม . . ."
+    },
+    {
+      "branch": "help",
+      "text": "อาจจะไม่ได้มีอะไรมากแต่ว่า"
+    },
+    {
+      "branch": "help",
+      "text": "เดี๋ยวมารอดูนะครับ คิคิ"
+    },
+    {
+      "branch": "help",
+      "text": "หื้ออ บีบี๋เธอมาที่นี่แล้วหรอ. . ."
+    },
+    {
+      "branch": "help",
+      "text": "ตะไมมาช้าจางง"
+    },
+    {
+      "branch": "help",
+      "text": "เธอเจ็บขามั้ยตกมาซะสูงเลย"
+    },
+    {
+      "branch": "help",
+      "text": "เดี๋ยวเราจะเดินไปที่ของเค้ากัน. . . ที่เดิม"
+    },
+    {
+      "branch": "help",
+      "text": "ที่เราค่อยอยู่"
+    },
+    {
+      "branch": "help",
+      "text": "555555"
+    },
+    {
+      "branch": "help",
+      "text": "เธออาจจะนึกภาพมันไม่ออกหรอก ผ่านมานานมากแล้ว"
+    },
+    {
+      "branch": "help",
+      "text": "อื่มม. . . ."
+    },
+    {
+      "branch": "help",
+      "text": "นานแล้วแหละ"
+    },
+    {
+      "branch": "help",
+      "text": "แต่เธอเจ็บขามั้ยนะเค้าถามแล้วก็ลืมเลย"
+    },
+    {
+      "branch": "help",
+      "text": "โอเคงั้นอยู่นิ่งๆนะ"
+    },
+    {
+      "branch": "help",
+      "text": "โอเคน่าจะดีขึ้นแล้วนะ"
+    },
+    {
+      "branch": "help",
+      "text": "เอ้า เค้าจะบอกวิธีเดินให้นะ"
+    },
+    {
+      "branch": "help",
+      "text": "w  คือเดินหน้า"
+    },
+    {
+      "branch": "help",
+      "text": "a  คือไปทางซ้าย"
+    },
+    {
+      "branch": "help",
+      "text": "s  คือถอยหลัง"
+    },
+    {
+      "branch": "help",
+      "text": "d  คือไปทางขวา"
+    },
+    {
+      "branch": "help",
+      "text": "ค่อยๆเดินมานะ อย่ารีบ. . . เค้ารอเธออยู่"
+    },
+    {
+      "branch": "help",
+      "text": "เธอมองเห็นทางมั้ย"
+    },
+    {
+      "branch": "help",
+      "text": "เหมือนตรงนั้นมีอะไรซักอย่างทำให้เค้าเข้าไปไม่ได้เลย"
+    },
+    {
+      "branch": "help",
+      "text": "เธอเอ่อ. . ."
+    },
+    {
+      "branch": "help",
+      "text": "เค้าจะลองใช้พลังสร้างอะไรซักอย่างดู"
+    },
+    {
+      "branch": "help",
+      "text": "ให้เธอลองเดินไปรอบๆ"
+    },
+    {
+      "branch": "help",
+      "text": "เธอจะเห็นขวดแก้วนึงที่มีไฟวิญญาณสีฟ้าม่วงลอยอยู่"
+    },
+    {
+      "branch": "help",
+      "text": "เก็บมันขึ้นมาเลย แล้วแสงมันจะสว่างพอที่จะนำทางเธอได้อยู่นิดหน่อย"
+    },
+    {
+      "branch": "help",
+      "text": "เธอคงเจอขวดแก้วของเค้าแย้วใช่มั้ย"
+    },
+    {
+      "branch": "help",
+      "text": "เก่งมากค้าบ"
+    },
+    {
+      "branch": "help",
+      "text": "เอาหละเธอคงเห็น. . .ที่นี่มันมืดมาก"
+    },
+    {
+      "branch": "help",
+      "text": "ใช่มั้ยละ อื่มมหรือเค้าตาไม่ดีหรอไม่ใช่หรอก"
+    },
+    {
+      "branch": "help",
+      "text": "เอาหละนี่คือวิธีใช้งาน"
+    },
+    {
+      "branch": "help",
+      "text": "X — ส่องแสงนำทาง 5วิ คูดาล์ว2วิ"
+    },
+    {
+      "branch": "help",
+      "text": "C — เผาสิ่งที่กีดขวาง"
+    },
+    {
+      "branch": "help",
+      "text": "V — เรียก ??? ออกมาช่วย"
+    },
+    {
+      "branch": "help",
+      "text": "B — ฟื้นฟูเลือดของเธอเอง"
+    },
+    {
+      "branch": "help",
+      "text": "โอเคเค้าว่าเค้าคงต้องสอนเธอนะ"
+    },
+    {
+      "branch": "help",
+      "text": "น่าจะมีโอกาสได้ลองใช้ดู"
+    },
+    {
+      "branch": "help",
+      "text": "อื่มมม . . ."
+    },
+    {
+      "branch": "help",
+      "text": "เค้าอาจจะไม่ได้เห็นทุกเหตุการณ์ตลอด"
+    },
+    {
+      "branch": "help",
+      "text": "ถ้าเธอต้องการกดปุ่มพวกนั้นเพื่อดึงพลังของเค้าไปใช้นะะ"
+    },
+    {
+      "branch": "help",
+      "text": "โอ้ เค้าว่านี่แหละจุดที่เธอน่าจะต้องลองมัน"
+    },
+    {
+      "branch": "help",
+      "text": "เอ่ออ.. . .แปลกจังทำไมเค้าใช้พลังไม่ได้ละ"
+    },
+    {
+      "branch": "help",
+      "text": "อื่มม เธอลองใช้ดูเองได้มั้ย"
+    },
+    {
+      "branch": "help",
+      "text": "และคุณก็ลองใช้มัน"
+    },
+    {
+      "branch": "help",
+      "text": "นี่ไงได้แล้วๆ!!"
+    },
+    {
+      "branch": "help",
+      "text": "เป็นไงล้าา ของที่เค้าให้ ไม่แย่เลยใช่มั้ยล้า"
+    },
+    {
+      "branch": "help",
+      "text": "ตอนนี้ก็ได้เวลาไปต่อแล้วหละ"
+    },
+    {
+      "branch": "help",
+      "text": "มันคือมัฟฟิ้น มันกำลังอุ่นๆเลยด้วยเหตุผลบ้างอย่าง ฟื้นฟู3hp เพิ่ม4df"
+    },
+    {
+      "branch": "help",
+      "text": "ยังอุ่นอยู่หรอ"
+    },
+    {
+      "branch": "help",
+      "text": "งื่มๆๆ เค้าไม่ได้แอบอุ่นมันนะ"
+    },
+    {
+      "branch": "help",
+      "text": "แต่ถ้าเธอหิวก็กินได้เลย"
+    },
+    {
+      "branch": "help",
+      "text": "ค่อยๆกินด้วย เค้ายังไม่มีน้ำให้เธอเยย"
+    },
+    {
+      "branch": "help",
+      "text": "เป็นไงบ้างเธอจำอะไรแถวนี้ได้บ้างรึยัง"
+    },
+    {
+      "branch": "help",
+      "text": "ยังงั้นหรอ งั้นลองเดินไปเรื่อยๆก่อนละกัน"
+    },
+    {
+      "branch": "help",
+      "text": "อื่มม มันน่าจะไม่อันตรายนะครั้งล่าสุดที่เค้ามา"
+    },
+    {
+      "branch": "help",
+      "text": "มันก็ซักพักแล้ว เธอก็ด้วยครั้งนั้นมันอื่ม . . ."
+    },
+    {
+      "branch": "help",
+      "text": "หมายความว่าไงหนะ"
+    },
+    {
+      "branch": "help",
+      "text": "ที่นี่ไม่น่ามีใครนิ เหมือนเขาจะบาดเจ็บด้วย"
+    },
+    {
+      "branch": "help",
+      "text": "เธอละจะเข้าไปช่วยมั้ย"
+    }
+  ],
+  "errors": [],
+  "waypointSnaps": [
+    {
+      "branch": "do_not_help",
+      "label": "main-bridge-0",
+      "requested": [
+        350,
+        608.75
+      ],
+      "walked": [
+        348,
+        608
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "main-bridge-1",
+      "requested": [
+        506.25,
+        566.25
+      ],
+      "walked": [
+        508,
+        568
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "main-bridge-2",
+      "requested": [
+        662.5,
+        577.5
+      ],
+      "walked": [
+        664,
+        576
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-path-0",
+      "requested": [
+        851.25,
+        568.75
+      ],
+      "walked": [
+        852,
+        568
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-path-1",
+      "requested": [
+        883.75,
+        507.5
+      ],
+      "walked": [
+        892,
+        512
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-path-2",
+      "requested": [
+        857.5,
+        463.75
+      ],
+      "walked": [
+        864,
+        456
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-return-0",
+      "requested": [
+        857.5,
+        463.75
+      ],
+      "walked": [
+        864,
+        456
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-return-1",
+      "requested": [
+        883.75,
+        507.5
+      ],
+      "walked": [
+        892,
+        512
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-return-2",
+      "requested": [
+        851.25,
+        568.75
+      ],
+      "walked": [
+        852,
+        568
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "root-chest-return-3",
+      "requested": [
+        695,
+        577.5
+      ],
+      "walked": [
+        696,
+        576
+      ]
+    },
+    {
+      "branch": "do_not_help",
+      "label": "grove-save-path-0",
+      "requested": [
+        1390,
+        218.75
+      ],
+      "walked": [
+        1388,
+        220
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "main-bridge-0",
+      "requested": [
+        350,
+        608.75
+      ],
+      "walked": [
+        348,
+        608
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "main-bridge-1",
+      "requested": [
+        506.25,
+        566.25
+      ],
+      "walked": [
+        508,
+        568
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "main-bridge-2",
+      "requested": [
+        662.5,
+        577.5
+      ],
+      "walked": [
+        664,
+        576
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-path-0",
+      "requested": [
+        851.25,
+        568.75
+      ],
+      "walked": [
+        852,
+        568
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-path-1",
+      "requested": [
+        883.75,
+        507.5
+      ],
+      "walked": [
+        892,
+        512
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-path-2",
+      "requested": [
+        857.5,
+        463.75
+      ],
+      "walked": [
+        864,
+        456
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-return-0",
+      "requested": [
+        857.5,
+        463.75
+      ],
+      "walked": [
+        864,
+        456
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-return-1",
+      "requested": [
+        883.75,
+        507.5
+      ],
+      "walked": [
+        892,
+        512
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-return-2",
+      "requested": [
+        851.25,
+        568.75
+      ],
+      "walked": [
+        852,
+        568
+      ]
+    },
+    {
+      "branch": "help",
+      "label": "root-chest-return-3",
+      "requested": [
+        695,
+        577.5
+      ],
+      "walked": [
+        696,
+        576
+      ]
+    }
+  ],
+  "presentations": [
+    {
+      "branch": "do_not_help",
+      "construction": "layered-floor-and-depth-sorted-objects",
+      "hasWholeMapBackground": false,
+      "treeTypes": [
+        "broad",
+        "tall",
+        "root"
+      ],
+      "engineRevision": "UF-CH00-2026-10-09-r2"
+    },
+    {
+      "branch": "help",
+      "construction": "layered-floor-and-depth-sorted-objects",
+      "hasWholeMapBackground": false,
+      "treeTypes": [
+        "broad",
+        "tall",
+        "root"
+      ],
+      "engineRevision": "UF-CH00-2026-10-09-r2"
+    }
+  ],
+  "testBoundaries": {
+    "navigation": "actual keyboard, 70px/s, axis-aligned collider routes",
+    "sceneSpeed": 50,
+    "warpUsed": false,
+    "fixturesUsed": false,
+    "damageUsed": false,
+    "storage": "underfall.qa.save.v1 in isolated underfall-r00-v1 CLI profile"
+  },
+  "testedAt": "2026-10-10T02:32:34.947Z"
+}

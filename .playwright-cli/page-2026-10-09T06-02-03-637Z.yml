@@ -1,0 +1,58 @@
+- main [ref=e2]:
+  - generic [ref=e3]: UNDERFALL / PLAYER R5 / ASSET PACK 01
+  - heading "ผู้เล่น R5 — ทดสอบสไปรต์ขนาดจริง" [level=1] [ref=e4]
+  - paragraph [ref=e5]: ผมบ๊อบน้ำตาล · เสื้อครามแถบชมพู · กางเกงขาสั้น · ขาเปล่า · รองเท้าหุ้มข้อเตี้ยหน้านี้เป็นพรีวิวแอสเซต ไม่ใช่ CH00/CH01 และไม่เปลี่ยนเกมเดิม
+  - generic [ref=e6]: เดิน 24 × 32 px
+  - generic [ref=e7]: ฉาก 40 × 32 px
+  - generic [ref=e8]: RGBA · 24 สี · ขอบคม
+  - alert
+  - generic [ref=e9]:
+    - generic [ref=e10]:
+      - heading "ลองเดิน / ท่าฉาก" [level=2] [ref=e11]
+      - generic "พื้นที่ลองเดินผู้เล่นด้วยปุ่ม WASD หรือปุ่มลูกศร" [ref=e13]
+      - paragraph [ref=e14]: คลิกพื้นที่ก่อนลอง WASD / ลูกศร · พื้นหลังและกรอบศึกเป็นพื้นที่ตรวจภาพเท่านั้น ไม่มีระบบเควส ศึก หรือ SAVE
+      - status [ref=e15]: กำลังโหลดเฟรม…
+    - generic [ref=e16]:
+      - heading "ตรวจเฟรม" [level=2] [ref=e17]
+      - generic [ref=e18]:
+        - button "หน้า" [disabled] [pressed] [ref=e19]
+        - button "หลัง" [disabled] [ref=e20]
+        - button "ซ้าย" [disabled] [ref=e21]
+        - button "ขวา" [disabled] [ref=e22]
+      - generic [ref=e23]:
+        - button "เดินวน" [disabled] [ref=e24]
+        - button "หยุดแอนิเมชัน" [disabled] [ref=e25]
+        - button "เฟรมถัดไป" [disabled] [ref=e26]
+      - generic [ref=e27]: ท่าประกอบฉาก
+      - combobox "ท่าประกอบฉาก" [disabled] [ref=e28] [cursor=pointer]:
+        - option "เดิน / ยืน" [selected]
+        - option "ร่วงหล่น"
+        - option "นอนหลังตก"
+        - option "นั่ง"
+        - option "กำลังลุก"
+        - option "หยิบขวด"
+        - option "ถือขวด"
+        - option "เล่นชุดลงพื้น"
+        - option "เล่นชุดเก็บขวด"
+      - generic [ref=e29]: พื้นหลังตรวจภาพ
+      - combobox "พื้นหลังตรวจภาพ" [ref=e30] [cursor=pointer]:
+        - option "ป่ามืด" [selected]
+        - option "รูน"
+        - option "ตารางโปร่งใส"
+        - option "พื้นสว่าง"
+        - option "ตำแหน่งยืนในศึก"
+      - generic [ref=e31]:
+        - checkbox "แสดง pivot และกรอบชนค่าตั้งต้น" [ref=e32]
+        - text: แสดง pivot และกรอบชนค่าตั้งต้น
+      - paragraph [ref=e33]: เท้าผูกกับ pivot เดียว ไม่ยืดคนตามท่านั่ง/นอน ความสูงแอสเรียลร่างปกติเป็นเป้าหมาย 32 px; ยังไม่มีสไปรต์ของเขาให้เทียบจริง
+      - paragraph [ref=e34]:
+        - link "ข้อมูลเฟรม" [ref=e35] [cursor=pointer]:
+          - /url: manifest.json
+        - text: ·
+        - link "ชีตเดิน" [ref=e36] [cursor=pointer]:
+          - /url: player-r5-walk-atlas.png
+        - text: ·
+        - link "ชีตท่าฉาก" [ref=e37] [cursor=pointer]:
+          - /url: player-r5-story-atlas.png
+  - heading "เฟรมเดินทั้ง 4 ทิศ — ยืน / ขา A / ขา B" [level=2] [ref=e39]
+  - heading "ท่าฉาก — ขนาดตัวคงเดิม เพิ่มพื้นที่ข้างสำหรับท่านอน" [level=2] [ref=e41]

@@ -1,0 +1,80 @@
+- main [ref=f2e2]:
+  - generic [ref=f2e3]: UNDERFALL / PLAYER R5 / ASSET PACK 01
+  - heading "ผู้เล่น R5 — ทดสอบสไปรต์ขนาดจริง" [level=1] [ref=f2e4]
+  - paragraph [ref=f2e5]: ผมบ๊อบน้ำตาล · เสื้อครามแถบชมพู · กางเกงขาสั้น · ขาเปล่า · รองเท้าหุ้มข้อเตี้ยหน้านี้เป็นพรีวิวแอสเซต ไม่ใช่ CH00/CH01 และไม่เปลี่ยนเกมเดิม
+  - generic [ref=f2e6]: เดิน 24 × 32 px
+  - generic [ref=f2e7]: ฉาก 40 × 32 px
+  - generic [ref=f2e8]: RGBA · 24 สี · ขอบคม
+  - alert
+  - generic [ref=f2e9]:
+    - generic [ref=f2e10]:
+      - heading "ลองเดิน / ท่าฉาก" [level=2] [ref=f2e11]
+      - generic "พื้นที่ลองเดินผู้เล่นด้วยปุ่ม WASD หรือปุ่มลูกศร" [ref=f2e13]
+      - paragraph [ref=f2e14]: คลิกพื้นที่ก่อนลอง WASD / ลูกศร · พื้นหลังและกรอบศึกเป็นพื้นที่ตรวจภาพเท่านั้น ไม่มีระบบเควส ศึก หรือ SAVE
+      - status [ref=f2e15]: hold | 40×32 px | pivot 20,32 18 PNG + 2 atlases · exported / not installed
+    - generic [ref=f2e16]:
+      - heading "ตรวจเฟรม" [level=2] [ref=f2e17]
+      - generic [ref=f2e18]:
+        - button "หน้า" [ref=f2e19] [cursor=pointer]
+        - button "หลัง" [ref=f2e20] [cursor=pointer]
+        - button "ซ้าย" [ref=f2e21] [cursor=pointer]
+        - button "ขวา" [pressed] [ref=f2e22] [cursor=pointer]
+      - generic [ref=f2e23]:
+        - button "ยืนเฉยๆ" [ref=f2e98] [cursor=pointer]
+        - button "เล่นแอนิเมชัน" [ref=f2e99] [cursor=pointer]
+        - button "เฟรมถัดไป" [active] [ref=f2e26] [cursor=pointer]
+      - generic [ref=f2e27]: ท่าประกอบฉาก
+      - combobox "ท่าประกอบฉาก" [ref=f2e28] [cursor=pointer]:
+        - option "เดิน / ยืน"
+        - option "ร่วงหล่น"
+        - option "นอนหลังตก"
+        - option "นั่ง"
+        - option "กำลังลุก"
+        - option "หยิบขวด"
+        - option "ถือขวด" [selected]
+        - option "เล่นชุดลงพื้น"
+        - option "เล่นชุดเก็บขวด"
+      - generic [ref=f2e29]: พื้นหลังตรวจภาพ
+      - combobox "พื้นหลังตรวจภาพ" [ref=f2e30] [cursor=pointer]:
+        - option "ป่ามืด"
+        - option "รูน"
+        - option "ตารางโปร่งใส"
+        - option "พื้นสว่าง" [selected]
+        - option "ตำแหน่งยืนในศึก"
+      - generic [ref=f2e31]:
+        - checkbox "แสดง pivot และกรอบชนค่าตั้งต้น" [ref=f2e32]
+        - text: แสดง pivot และกรอบชนค่าตั้งต้น
+      - paragraph [ref=f2e33]: เท้าผูกกับ pivot เดียว ไม่ยืดคนตามท่านั่ง/นอน ความสูงแอสเรียลร่างปกติเป็นเป้าหมาย 32 px; ยังไม่มีสไปรต์ของเขาให้เทียบจริง
+      - paragraph [ref=f2e34]:
+        - link "ข้อมูลเฟรม" [ref=f2e35] [cursor=pointer]:
+          - /url: manifest.json
+        - text: ·
+        - link "ชีตเดิน" [ref=f2e36] [cursor=pointer]:
+          - /url: player-r5-walk-atlas.png
+        - text: ·
+        - link "ชีตท่าฉาก" [ref=f2e37] [cursor=pointer]:
+          - /url: player-r5-story-atlas.png
+  - generic [ref=f2e38]:
+    - heading "เฟรมเดินทั้ง 4 ทิศ — ยืน / ขา A / ขา B" [level=2] [ref=f2e39]
+    - generic [ref=f2e40]:
+      - figure "front-idle · 24×32" [ref=f2e41]
+      - figure "front-walk-a · 24×32" [ref=f2e44]
+      - figure "front-walk-b · 24×32" [ref=f2e47]
+      - figure "back-idle · 24×32" [ref=f2e50]
+      - figure "back-walk-a · 24×32" [ref=f2e53]
+      - figure "back-walk-b · 24×32" [ref=f2e56]
+      - figure "left-idle · 24×32" [ref=f2e59]
+      - figure "left-walk-a · 24×32" [ref=f2e62]
+      - figure "left-walk-b · 24×32" [ref=f2e65]
+      - figure "right-idle · 24×32" [ref=f2e68]
+      - figure "right-walk-a · 24×32" [ref=f2e71]
+      - figure "right-walk-b · 24×32" [ref=f2e74]
+  - generic [ref=f2e77]:
+    - heading "ท่าฉาก — ขนาดตัวคงเดิม เพิ่มพื้นที่ข้างสำหรับท่านอน" [level=2] [ref=f2e78]
+    - generic [ref=f2e79]:
+      - figure "fall · 40×32" [ref=f2e80]
+      - figure "lie · 40×32" [ref=f2e83]
+      - figure "sit · 40×32" [ref=f2e86]
+      - figure "rise · 40×32" [ref=f2e89]
+      - figure "pickup · 40×32" [ref=f2e92]
+      - figure "hold · 40×32" [ref=f2e95]

@@ -1,0 +1,624 @@
+{
+  "schema": "underfall.map-assets.v1",
+  "version": "UF-R00-V1B-2026-10-09",
+  "status": "prepared-approved-art-runtime-validation-separate",
+  "documentation": {
+    "id": "20261009-r00-v1-runtime-manifest",
+    "updated": "2026-10-09",
+    "status": "prepared-reference-faithful",
+    "summary": "ภาพพื้นโลกR00จากv1bและสไปรต์แยกจากต้นฉบับ พร้อมmaskcleanupและหลักฐานพิกเซลนอกmaskไม่เปลี่ยน"
+  },
+  "approvedSource": {
+    "file": "design/maps/2026-10-08-v1/01-r00-forest-and-sacred-grove-v1b.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "1847f7131a5852919acd1e77eb7cc1d31728bde38e47b3b857321decee31faf4",
+    "unchanged": true,
+    "authority": "Owner requested design/maps/2026-10-08-v1 for implemented CH00 maps"
+  },
+  "cleanupSource": {
+    "file": "cleanup-source.png",
+    "reference": "C:\\Users\\wisu\\.codex\\generated_images\\01a12094-647b-7bc2-9e66-d1361beefdaa\\exec-77833498-69e4-498d-a5a3-1d066d5940cf.png",
+    "width": 1536,
+    "height": 1024,
+    "sha256": "68c6ff739bbf58e59a333846ce85e21afef04996daa4a56371eadc2da6682bfb",
+    "usage": "Only the explicitly listed cleanup mask; never a wholesale replacement"
+  },
+  "background": {
+    "file": "background.png",
+    "width": 1498,
+    "height": 902,
+    "sourceCrop": [
+      18,
+      50,
+      1516,
+      952
+    ],
+    "sourceCropOrigin": [
+      18,
+      50
+    ],
+    "resized": false,
+    "worldScale": 1.25,
+    "worldWidth": 1872.5,
+    "worldHeight": 1127.5,
+    "sourceToWorld": "worldX=(sourceX-18)*1.25; worldY=(sourceY-50)*1.25",
+    "sha256": "114557876af5cf0fc618954f60800e818a7cd26caac4fd73aeb01ad630b80670"
+  },
+  "cleanupMask": {
+    "file": "cleanup-mask.png",
+    "sourceFile": "cleanup-mask-source.png",
+    "alphaValues": [
+      0,
+      255
+    ],
+    "sourceMaskPixels": 36898,
+    "patches": [
+      {
+        "id": "c1-chest",
+        "sourceRect": [
+          668,
+          377,
+          700,
+          407
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "c1-label",
+        "sourceRect": [
+          700,
+          373,
+          735,
+          397
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "c2-label",
+        "sourceRect": [
+          528,
+          184,
+          564,
+          214
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "c3-label",
+        "sourceRect": [
+          205,
+          765,
+          240,
+          796
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "c4-chest",
+        "sourceRect": [
+          1058,
+          169,
+          1091,
+          201
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "c4-label",
+        "sourceRect": [
+          1090,
+          166,
+          1124,
+          192
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "s1-label",
+        "sourceRect": [
+          1145,
+          231,
+          1180,
+          255
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "m1-label",
+        "sourceRect": [
+          1433,
+          214,
+          1473,
+          239
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "from-start-label",
+        "sourceRect": [
+          7,
+          469,
+          82,
+          507
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "prototype-player",
+        "sourceRect": [
+          280,
+          509,
+          314,
+          562
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "prototype-hooded",
+        "sourceRect": [
+          980,
+          539,
+          1044,
+          609
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "stone-door-face",
+        "sourceRect": [
+          927,
+          385,
+          978,
+          477
+        ],
+        "geometry": "polygon-within-rectangle",
+        "sourcePolygon": [
+          [
+            929,
+            389
+          ],
+          [
+            941,
+            386
+          ],
+          [
+            947,
+            390
+          ],
+          [
+            953,
+            387
+          ],
+          [
+            961,
+            390
+          ],
+          [
+            971,
+            388
+          ],
+          [
+            975,
+            394
+          ],
+          [
+            976,
+            467
+          ],
+          [
+            969,
+            474
+          ],
+          [
+            928,
+            474
+          ]
+        ]
+      },
+      {
+        "id": "main-rift-label",
+        "sourceRect": [
+          1401,
+          343,
+          1521,
+          380
+        ],
+        "geometry": "rectangle"
+      },
+      {
+        "id": "prototype-purple-rift",
+        "sourceRect": [
+          1375,
+          377,
+          1521,
+          563
+        ],
+        "geometry": "original-purple-pixels-and-core-polygon-within-rectangle",
+        "sourceCorePolygon": [
+          [
+            1450,
+            392
+          ],
+          [
+            1481,
+            449
+          ],
+          [
+            1478,
+            464
+          ],
+          [
+            1450,
+            508
+          ],
+          [
+            1419,
+            463
+          ],
+          [
+            1421,
+            451
+          ]
+        ],
+        "purplePixelRule": "r>8 && r>g*1.25+2 && b>g*1.3+3 && b>r*0.55"
+      }
+    ]
+  },
+  "sprites": {
+    "chest-c1-closed": {
+      "file": "chest-c1-closed.png",
+      "width": 32,
+      "height": 30,
+      "sourceRect": [
+        668,
+        377,
+        700,
+        407
+      ],
+      "sourcePivot": [
+        684,
+        406
+      ],
+      "pivot": [
+        16,
+        29
+      ],
+      "opaquePixels": 929,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "65e1eec32080ae20721a0db37e09dbbc3b03303c7e7419c240c35be4fece9a9a"
+    },
+    "chest-c2-closed": {
+      "file": "chest-c2-closed.png",
+      "width": 31,
+      "height": 28,
+      "sourceRect": [
+        496,
+        190,
+        527,
+        218
+      ],
+      "sourcePivot": [
+        511,
+        217
+      ],
+      "pivot": [
+        15,
+        27
+      ],
+      "opaquePixels": 838,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "d6ebc62756896014459071394b688a4ce18d2c801b78061d6d895d5768e91773"
+    },
+    "chest-c3-closed": {
+      "file": "chest-c3-closed.png",
+      "width": 31,
+      "height": 32,
+      "sourceRect": [
+        171,
+        768,
+        202,
+        800
+      ],
+      "sourcePivot": [
+        186,
+        799
+      ],
+      "pivot": [
+        15,
+        31
+      ],
+      "opaquePixels": 960,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "0896a2293b2ec5f0be8bead99e50381d0f503411f48ce2a5b37535704be6ec55"
+    },
+    "chest-c4-closed": {
+      "file": "chest-c4-closed.png",
+      "width": 33,
+      "height": 32,
+      "sourceRect": [
+        1058,
+        169,
+        1091,
+        201
+      ],
+      "sourcePivot": [
+        1074,
+        200
+      ],
+      "pivot": [
+        16,
+        31
+      ],
+      "opaquePixels": 1024,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "44b3289d718856c51ca8efa306e8faaf54f7c091bb05626be84ff2ab7bbb4efb"
+    },
+    "stone-door-closed": {
+      "file": "stone-door-closed.png",
+      "width": 51,
+      "height": 92,
+      "sourceRect": [
+        927,
+        385,
+        978,
+        477
+      ],
+      "sourcePivot": [
+        952,
+        474
+      ],
+      "pivot": [
+        25,
+        89
+      ],
+      "opaquePixels": 4108,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "9e13c68429ab0be0f97e5b2c07508011147295234ca05840c7307e3daabe7547"
+    },
+    "rift-purple": {
+      "file": "rift-purple.png",
+      "width": 146,
+      "height": 186,
+      "sourceRect": [
+        1375,
+        377,
+        1521,
+        563
+      ],
+      "sourcePivot": [
+        1450,
+        513
+      ],
+      "pivot": [
+        75,
+        136
+      ],
+      "opaquePixels": 11527,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "ac85a84110eb592558e78ec9bc7ca2ceaae7e8eff4893d5d3b6d7faa8b321699"
+    },
+    "chest-closed": {
+      "file": "chest-closed.png",
+      "width": 32,
+      "height": 30,
+      "sourceRect": [
+        668,
+        377,
+        700,
+        407
+      ],
+      "sourcePivot": [
+        684,
+        406
+      ],
+      "pivot": [
+        16,
+        29
+      ],
+      "opaquePixels": 929,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "65e1eec32080ae20721a0db37e09dbbc3b03303c7e7419c240c35be4fece9a9a"
+    }
+  },
+  "verification": {
+    "method": "RGBA byte equality after excluding the explicit binary source-coordinate mask",
+    "pixelsChangedOutsideMask": 0,
+    "outsideMaskExactMatch": true,
+    "sourcePixelsOutsideMask": 1535966,
+    "sourcePixelsChangedInsideMask": 36847,
+    "approvedOutsideRgbaSha256": "e25b2b0d3d2edf0fc0f96dd1b97d1c37fc7c634abf7d6937b2bd3701f2cf6fe4",
+    "preparedOutsideRgbaSha256": "e25b2b0d3d2edf0fc0f96dd1b97d1c37fc7c634abf7d6937b2bd3701f2cf6fe4",
+    "allSpriteOpaqueRgbMatchesApprovedSource": true,
+    "allSpriteAlphaBinary": true,
+    "sourceFileSha256AfterPreparation": "1847f7131a5852919acd1e77eb7cc1d31728bde38e47b3b857321decee31faf4"
+  },
+  "notes": [
+    "All coordinates use the approved source image and exclusive right/bottom rectangle ends.",
+    "C2 and C3 chest art and the S1 save star remain baked in their approved original positions.",
+    "Closed C1/C4 chests, closed stone door and prototype purple rift were separated for interaction overlays.",
+    "No character pack, chapter code, story, approved source PNG or design document was modified.",
+    "No claim of browser collision, gameplay or acceptance is made by this mechanical preparation."
+  ],
+  "images": {
+    "background": {
+      "file": "background.png",
+      "width": 1498,
+      "height": 902,
+      "sourceCrop": [
+        18,
+        50,
+        1516,
+        952
+      ],
+      "sourceCropOrigin": [
+        18,
+        50
+      ],
+      "resized": false,
+      "worldScale": 1.25,
+      "worldWidth": 1872.5,
+      "worldHeight": 1127.5,
+      "sourceToWorld": "worldX=(sourceX-18)*1.25; worldY=(sourceY-50)*1.25",
+      "sha256": "114557876af5cf0fc618954f60800e818a7cd26caac4fd73aeb01ad630b80670",
+      "sourceRect": [
+        18,
+        50,
+        1516,
+        952
+      ],
+      "localPivot": [
+        0,
+        0
+      ]
+    },
+    "chestC1": {
+      "file": "chest-c1-closed.png",
+      "width": 32,
+      "height": 30,
+      "sourceRect": [
+        668,
+        377,
+        700,
+        407
+      ],
+      "sourcePivot": [
+        684,
+        406
+      ],
+      "pivot": [
+        16,
+        29
+      ],
+      "opaquePixels": 929,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "65e1eec32080ae20721a0db37e09dbbc3b03303c7e7419c240c35be4fece9a9a",
+      "localPivot": [
+        16,
+        29
+      ]
+    },
+    "chestC4": {
+      "file": "chest-c4-closed.png",
+      "width": 33,
+      "height": 32,
+      "sourceRect": [
+        1058,
+        169,
+        1091,
+        201
+      ],
+      "sourcePivot": [
+        1074,
+        200
+      ],
+      "pivot": [
+        16,
+        31
+      ],
+      "opaquePixels": 1024,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "44b3289d718856c51ca8efa306e8faaf54f7c091bb05626be84ff2ab7bbb4efb",
+      "localPivot": [
+        16,
+        31
+      ]
+    },
+    "stoneDoor": {
+      "file": "stone-door-closed.png",
+      "width": 51,
+      "height": 92,
+      "sourceRect": [
+        927,
+        385,
+        978,
+        477
+      ],
+      "sourcePivot": [
+        952,
+        474
+      ],
+      "pivot": [
+        25,
+        89
+      ],
+      "opaquePixels": 4108,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "9e13c68429ab0be0f97e5b2c07508011147295234ca05840c7307e3daabe7547",
+      "localPivot": [
+        25,
+        89
+      ]
+    },
+    "rift": {
+      "file": "rift-purple.png",
+      "width": 146,
+      "height": 186,
+      "sourceRect": [
+        1375,
+        377,
+        1521,
+        563
+      ],
+      "sourcePivot": [
+        1450,
+        513
+      ],
+      "pivot": [
+        75,
+        136
+      ],
+      "opaquePixels": 11527,
+      "alphaValues": [
+        0,
+        255
+      ],
+      "opaqueRgbMatchesApprovedSource": true,
+      "sha256": "ac85a84110eb592558e78ec9bc7ca2ceaae7e8eff4893d5d3b6d7faa8b321699",
+      "localPivot": [
+        75,
+        136
+      ]
+    }
+  }
+}

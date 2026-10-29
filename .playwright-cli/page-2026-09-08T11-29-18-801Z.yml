@@ -1,0 +1,10 @@
+- main "UNDERFALL เกมเรื่องเล่าของเรา" [ref=e2]:
+  - generic "ฉากเกมป่ามืด ใช้ WASD หรือปุ่มลูกศรเพื่อเดิน" [ref=e3]
+  - generic [ref=e4]:
+    - generic [aria-hidden] [ref=e5]: ♥
+    - heading "ยิ" [level=1] [ref=e6]
+    - paragraph [ref=e7]: เรื่องเล่าเล็ก ๆ ของเรา
+    - button "กำลังเตรียมการเดินทาง . . ." [disabled] [ref=e8]
+    - paragraph [ref=e9]: ครบรอบ 1 ปี กับอีก 2 เดือน
+  - paragraph
+  - button "ปิดเสียง" [ref=e10] [cursor=pointer]: ♪

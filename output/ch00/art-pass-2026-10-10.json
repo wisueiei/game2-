@@ -1,0 +1,25 @@
+{
+  "scope": "CH00 layered-map visual refinement; not final visual approval",
+  "source": "design/maps/2026-10-08-v1/01-r00-forest-and-sacred-grove-v1b.png",
+  "newNativeDetails": 28,
+  "assetManifest": "assets/maps/r00-details-v1/manifest.json",
+  "generator": "tools/prepare-r00-details.py",
+  "changes": [
+    "Terrain-only grass and dirt texture clipped to existing contours",
+    "Joined navigation-floor pixel edging without changing collision",
+    "Cliff columns and highlights on existing cliff faces",
+    "Curving root cover with wood highlights and moss",
+    "Waterfall strips and foam, existing waterfall rectangles unchanged",
+    "Native source flower, crystal, bench, cave and twin-stone cutouts at original positions",
+    "Subtle flower light at source-derived decorative groups"
+  ],
+  "preserved": ["map-layout.json", "map-entities.json", "runtime.js", "storage.js", "story.md", "ch00.md", "ch01.md", "approved R5 sprite atlases", "original v1b map"],
+  "visualInspection": "Four isolated browser fixtures inspected; these are not full story-flow evidence",
+  "limits": [
+    "Flattened concept source cannot provide unseen object pixels",
+    "Color-mask plant extraction still needs silhouette polish for some clusters",
+    "Texture and cliff joins are a refinement pass, not pixel-identical concept reproduction",
+    "CH01 and later region maps remain outside this build",
+    "Final appearance remains subject to user review"
+  ]
+}

@@ -1,0 +1,41 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - text: UNDERFALL / INTERFACE ATELIER
+      - heading "หน้าต่างของเรื่องเล่า" [level=1] [ref=e4]
+    - generic [ref=e5]:
+      - text: 48 หน้า · พรีวิวเท่านั้น
+      - link "คู่มือส่งต่อ" [ref=e7] [cursor=pointer]:
+        - /url: interface-handoff.md
+  - generic [ref=e8]:
+    - complementary "เลือกหน้าอินเทอร์เฟซ" [ref=e9]:
+      - text: ค้นหาหน้า / ระบบ
+      - searchbox "ค้นหาหน้า / ระบบ" [ref=e10]
+      - navigation
+    - main [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]:
+          - text: 01 / 48
+          - heading "หน้าต้อนรับ" [level=2] [ref=e14]
+        - generic [ref=e15]:
+          - generic [ref=e16]: บริบทตัวอย่าง
+          - combobox "บริบทตัวอย่าง" [ref=e17]:
+            - option "รูน · มีโทรศัพท์" [selected]
+            - option "ป่า · ยังไม่มีโทรศัพท์"
+            - option "ไม่มีเซฟ"
+            - option "กระเป๋าว่าง"
+            - option "เงินไม่พอ"
+            - option "ศึกทอเรียล · ไว้ชีวิตเท่านั้น"
+      - generic "พรีวิวอินเทอร์เฟซเกม" [ref=e19]
+      - generic [ref=e22]:
+        - generic [ref=e23]: ↑↓ / WASD เลือก Z / Enter ยืนยัน Esc ย้อน I / P กระเป๋า / โทรศัพท์
+        - button "ขยายพรีวิว" [ref=e24] [cursor=pointer]
+      - generic [ref=e25]: ใช้ข้อมูลทดลองในพื้นที่แยก ไม่อ่านหรือเขียนเซฟเกมจริง · ไม่ปลดตอน/ตัวตนที่ยังไม่เปิดเผย
+      - region "ข้อมูลหน้าปัจจุบัน" [ref=e26]:
+        - generic [ref=e27]:
+          - heading "สถานะที่ลองได้" [level=3] [ref=e28]
+          - paragraph [ref=e29]: กำลังโหลด…
+        - generic [ref=e30]:
+          - heading "ภาษา UNDERFALL" [level=3] [ref=e31]
+          - paragraph [ref=e32]: กรอบพิกเซล · ขาวอุ่น / คราม / ชมพู · ฟ้าวิญญาณข้อความไทยเป็น DOM · ชื่อผู้พูดมุมขวา
+      - alert

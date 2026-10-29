@@ -1,0 +1,56 @@
+### Result
+{"checks":["Both-branch flow left a valid handoff checkpoint","Reloaded bridge resumes end screen without repeating intro","Corrupt JSON shows recovery UI","Reading a corrupt save does not erase it","Explicit backup recovery keeps the same run","Incompatible rejected-engine save is not silently loaded","Incompatible data remains available for export","Failed SAVE does not announce success or heal HP","Retry commits a real checkpoint and then heals HP","B at full HP does not consume cooldown","B heals four HP and begins a twelve-second cooldown","X remains active just before five seconds","Repeated X does not extend light","Two-second cooldown begins after light expires","X is ready after five plus two seconds","Healing cooldown pauses in menus","CELL exists as a gated menu category","Phone stays locked before the CH01 gift","Production page exposes no mutable QA controls","No alternate debug story-entry API exists","Entire 480x290 scenic plaza has walkable foot-collider space","Representative main corridors retain eighty-pixel clear width","Narrow viewport has no horizontal page overflow","No JavaScript runtime errors during guarded-state tests"],"errors":[],"shots":["output/playwright/ch00-save-error.png","output/playwright/ch00-mobile-stat.png"],"measure":{"blocked":0,"total":8760,"area":139200},"pathMeasure":{"forest_extension":0,"forest_old_trees":0},"branch":"guardrails"}
+### Ran Playwright code
+```js
+await (async page => {
+  const checks=[],errors=[],shots=[];
+  page.on('pageerror',e=>errors.push(String(e)));
+  await page.goto('http://127.0.0.1:4188/index_new.html?qa=1');await page.waitForFunction(()=>window.UF_QA);
+  const get=()=>page.evaluate(()=>UF_QA.snapshot());
+  const assert=(ok,msg)=>{if(!ok)throw Error(msg);checks.push(msg);};
+  const key=await page.evaluate(()=>UF_QA.storage.KEY);
+  const good=await page.evaluate(async()=>{const p=(await(await fetch('output/ch00/help-result.json')).json()).save;const key=UF_QA.storage.KEY;localStorage.setItem(key,JSON.stringify(p));localStorage.setItem(key+'.backup',JSON.stringify(p));return p;});
+  assert(good&&good.checkpoint.room==='rift_bridge','Both-branch flow left a valid handoff checkpoint');
+  await page.evaluate(()=>UF_QA.load());
+  assert((await get()).mode==='end','Reloaded bridge resumes end screen without repeating intro');
+  const runId=(await get()).state.runId;
+  await page.evaluate(({key})=>localStorage.setItem(key,'{broken-json'),{key});
+  await page.getByRole('button',{name:'เมนูหลัก',exact:true}).click();await page.getByRole('button',{name:'เล่นต่อ',exact:true}).click();
+  assert((await get()).page==='save-problem','Corrupt JSON shows recovery UI');
+  assert(await page.evaluate(key=>localStorage.getItem(key)==='{broken-json',key),'Reading a corrupt save does not erase it');
+  await page.getByRole('button',{name:'โหลดสำรอง',exact:true}).click();
+  assert((await get()).state.runId===runId,'Explicit backup recovery keeps the same run');
+  await page.evaluate(({key,good})=>{localStorage.setItem(key,JSON.stringify({...good,engineRevision:'rejected-implementation'}));}, {key,good});
+  await page.keyboard.press('Escape');await page.getByRole('button',{name:'เมนูหลัก',exact:true}).click();await page.getByRole('button',{name:'เล่นต่อ',exact:true}).click();
+  assert((await get()).page==='save-problem','Incompatible rejected-engine save is not silently loaded');
+  assert(await page.evaluate(key=>JSON.parse(localStorage.getItem(key)).engineRevision==='rejected-implementation',key),'Incompatible data remains available for export');
+  await page.evaluate(({key,good})=>localStorage.setItem(key,JSON.stringify(good)),{key,good});
+  const fixture=structuredClone(good);fixture.checkpoint.chapter='ch00';fixture.checkpoint.chapterComplete={};fixture.checkpoint.room='forest_extension';fixture.checkpoint.spawn=[88,156];fixture.checkpoint.resumeScene='C00-06';fixture.checkpoint.cooldowns={x:0,xActive:0,c:0,b:0};
+  await page.evaluate(p=>UF_QA.restoreFixture(p),fixture);
+  await page.evaluate(()=>UF_QA.damage(1));const before=(await get()).state.hp;
+  await page.evaluate(()=>{window.qaOriginalSetItem=Storage.prototype.setItem;Storage.prototype.setItem=function(k,v){if(k.startsWith('underfall.qa'))throw new DOMException('QA storage quota','QuotaExceededError');return window.qaOriginalSetItem.call(this,k,v);};});
+  await page.evaluate(()=>UF_QA.save());assert((await get()).page==='save-error'&&(await get()).state.hp===before,'Failed SAVE does not announce success or heal HP');
+  await page.screenshot({path:'output/playwright/ch00-save-error.png'});shots.push('output/playwright/ch00-save-error.png');
+  await page.evaluate(()=>{Storage.prototype.setItem=window.qaOriginalSetItem;delete window.qaOriginalSetItem;});
+  await page.getByRole('button',{name:'ลองใหม่',exact:true}).click();assert((await get()).page==='saved'&&(await get()).state.hp===20,'Retry commits a real checkpoint and then heals HP');
+  await page.getByRole('button',{name:'กลับไปเดิน',exact:true}).click();await page.evaluate(()=>UF_QA.setSpeed(1));
+  await page.clock.pauseAt(new Date(await page.evaluate(()=>Date.now()+50)));
+  await page.keyboard.press('b');assert((await get()).state.cooldowns.b===0,'B at full HP does not consume cooldown');await page.evaluate(()=>UF_QA.damage(6));await page.keyboard.press('b');assert((await get()).state.hp===18&&(await get()).state.cooldowns.b===12,'B heals four HP and begins a twelve-second cooldown');
+  await page.keyboard.press('x');await page.clock.runFor(4900);const remain=(await get()).state.cooldowns.xActive;assert(remain>0&&remain<.2,'X remains active just before five seconds');await page.keyboard.press('x');assert((await get()).state.cooldowns.xActive<=remain,'Repeated X does not extend light');await page.clock.runFor(200);assert((await get()).state.cooldowns.xActive===0&&(await get()).state.cooldowns.x>1.7,'Two-second cooldown begins after light expires');await page.clock.runFor(2050);assert((await get()).state.cooldowns.x===0,'X is ready after five plus two seconds');
+  await page.keyboard.press('Escape');const beforePause=(await get()).state.cooldowns.b;await page.clock.runFor(1000);assert((await get()).state.cooldowns.b===beforePause,'Healing cooldown pauses in menus');
+  await page.getByRole('button',{name:'CELL · โทรศัพท์',exact:true}).count().then(n=>assert(n===1,'CELL exists as a gated menu category'));
+  assert(await page.getByRole('button',{name:'CELL · โทรศัพท์',exact:true}).isDisabled(),'Phone stays locked before the CH01 gift');await page.keyboard.press('Escape');
+  const prod=await page.context().newPage();await prod.goto('http://127.0.0.1:4188/index_new.html');await prod.waitForFunction(()=>window.UNDERFALL);assert(await prod.evaluate(()=>typeof UF_QA==='undefined'),'Production page exposes no mutable QA controls');assert(await prod.evaluate(()=>Object.isFrozen(window.UNDERFALL)&&typeof UNDERFALL.startNew==='undefined'&&typeof UNDERFALL.warp==='undefined'),'No alternate debug story-entry API exists');await prod.close();
+  await page.evaluate(()=>UF_QA.warp('sacred_grove',[220,400]));
+  const measure=await page.evaluate(()=>{let blocked=0,total=0;for(let x=176;x<656;x+=4)for(let y=144;y<434;y+=4){total++;if(UF_QA.collides(x,y))blocked++;}return {blocked,total,area:480*290};});
+  assert(measure.blocked===0,'Entire 480x290 scenic plaza has walkable foot-collider space');
+  const pathMeasure=await page.evaluate(()=>{const result={};for(const [id,x,y]of [['forest_extension',210,163],['forest_old_trees',260,263]]){UF_QA.warp(id,[x,y]);let blocked=0;for(let offset=-40;offset<=40;offset+=2)if(UF_QA.collides(x,y+offset))blocked++;result[id]=blocked;}return result;});
+  assert(Object.values(pathMeasure).every(n=>n===0),'Representative main corridors retain eighty-pixel clear width');
+  await page.evaluate(p=>UF_QA.restoreFixture(p),fixture);await page.keyboard.press('Escape');await page.getByRole('button',{name:'STAT · สถานะ',exact:true}).click();
+  await page.setViewportSize({width:390,height:844});await page.clock.runFor(150);assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Narrow viewport has no horizontal page overflow');await page.screenshot({path:'output/playwright/ch00-mobile-stat.png'});shots.push('output/playwright/ch00-mobile-stat.png');await page.setViewportSize({width:1280,height:800});
+  await page.evaluate(({key,good})=>{localStorage.setItem(key,JSON.stringify(good));UF_QA.load();},{key,good});
+  assert(errors.length===0,'No JavaScript runtime errors during guarded-state tests');
+  return {checks,errors,shots,measure,pathMeasure,branch:'guardrails'};
+}
+)(page);
+```
