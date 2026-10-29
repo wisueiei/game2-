@@ -1,0 +1,1386 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>UNDERFALL — ครบรอบ 1 ปี 2 เดือน</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  html,body{height:100%;background:#000;overflow:hidden;
+    font-family:'Kanit','Tahoma','Leelawadee UI',sans-serif;
+    -webkit-user-select:none;user-select:none;-webkit-tap-highlight-color:transparent;}
+  #stage{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:#000}
+  #frame{position:relative;overflow:hidden;background:#000}
+  #cv{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;image-rendering:crisp-edges}
+  #ui{position:absolute;inset:0;pointer-events:none;overflow:hidden}
+
+  /* ---------- scanline / vignette ---------- */
+  #crt{position:absolute;inset:0;pointer-events:none;z-index:60;
+    background:repeating-linear-gradient(to bottom,rgba(0,0,0,.16) 0px,rgba(0,0,0,.16) 1px,rgba(0,0,0,0) 2px,rgba(0,0,0,0) 4px);
+    opacity:.55;mix-blend-mode:multiply}
+  #vig{position:absolute;inset:0;pointer-events:none;z-index:61;
+    background:radial-gradient(ellipse at center,rgba(0,0,0,0) 45%,rgba(0,0,0,.75) 100%)}
+  #fade{position:absolute;inset:0;pointer-events:none;z-index:70;background:#000;opacity:0;
+    transition:opacity 1.2s linear}
+
+  /* ---------- title ---------- */
+  #title{position:absolute;inset:0;z-index:40;display:flex;flex-direction:column;
+    align-items:center;justify-content:center;gap:calc(var(--u)*7px);
+    background:#000;transition:opacity .9s ease}
+  #title.hide{opacity:0;pointer-events:none}
+  #tHeart{width:calc(var(--u)*22px);image-rendering:pixelated;
+    filter:drop-shadow(0 0 calc(var(--u)*4px) #ff2f4a);animation:beat 1.15s ease-in-out infinite}
+  @keyframes beat{0%,100%{transform:scale(1)}12%{transform:scale(1.22)}26%{transform:scale(1)}38%{transform:scale(1.14)}}
+  #tMain{color:#fff;font-size:calc(var(--u)*15px);font-weight:600;letter-spacing:calc(var(--u)*1px);
+    text-shadow:0 calc(var(--u)*2px) 0 #3a1420, 0 0 calc(var(--u)*10px) rgba(255,110,150,.45)}
+  #tSub{color:#c9c3d6;font-size:calc(var(--u)*7.5px);text-align:center;line-height:1.7;min-height:calc(var(--u)*13px)}
+  #tPress{color:#ffd94a;font-size:calc(var(--u)*8px);opacity:0;animation:blink 1.25s steps(1) infinite;
+    text-shadow:0 0 calc(var(--u)*6px) rgba(255,217,74,.55)}
+  @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:.15}}
+
+  /* ---------- center narration ---------- */
+  #center{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:35;
+    width:86%;text-align:center;color:#fff;font-size:calc(var(--u)*11px);font-weight:500;line-height:1.75;
+    opacity:0;transition:opacity .85s ease, letter-spacing .85s ease;letter-spacing:calc(var(--u)*.6px);
+    text-shadow:0 calc(var(--u)*1.5px) 0 #000, 0 0 calc(var(--u)*12px) rgba(190,200,255,.35);white-space:pre-line}
+  #center.on{opacity:1;letter-spacing:0}
+
+  /* ---------- dialog box (undertale style) ---------- */
+  #dlg{position:absolute;left:50%;bottom:calc(var(--u)*12px);transform:translateX(-50%) translateY(calc(var(--u)*8px));
+    width:calc(var(--u)*344px);min-height:calc(var(--u)*70px);z-index:45;
+    background:#000;border:calc(var(--u)*2.5px) solid #fff;border-radius:calc(var(--u)*1px);
+    padding:calc(var(--u)*11px) calc(var(--u)*12px) calc(var(--u)*12px);
+    opacity:0;pointer-events:none;transition:opacity .25s ease, transform .25s ease;
+    box-shadow:0 0 calc(var(--u)*14px) rgba(120,160,255,.18)}
+  #dlg.on{opacity:1;transform:translateX(-50%) translateY(0)}
+  #dName{position:absolute;top:calc(var(--u)*-9px);right:calc(var(--u)*8px);
+    background:#000;border:calc(var(--u)*2px) solid #ffd94a;color:#ffd94a;
+    font-size:calc(var(--u)*8px);font-weight:600;line-height:1;
+    padding:calc(var(--u)*2.5px) calc(var(--u)*6px);letter-spacing:calc(var(--u)*1px);
+    text-shadow:0 0 calc(var(--u)*6px) rgba(255,217,74,.7)}
+  #dText{color:#fff;font-size:calc(var(--u)*9.5px);line-height:1.65;min-height:calc(var(--u)*34px);
+    text-shadow:0 calc(var(--u)*1px) 0 #000;white-space:pre-wrap;word-break:break-word}
+  #dArrow{position:absolute;right:calc(var(--u)*9px);bottom:calc(var(--u)*5px);color:#fff;
+    font-size:calc(var(--u)*8px);opacity:0;animation:blink .8s steps(1) infinite}
+  #dArrow.on{opacity:1}
+
+  /* ---------- choices ---------- */
+  #choice{position:absolute;left:50%;bottom:calc(var(--u)*94px);transform:translateX(-50%);
+    z-index:46;display:none;gap:calc(var(--u)*26px);align-items:center;justify-content:center}
+  #choice.on{display:flex}
+  .btn{position:relative;pointer-events:auto;cursor:pointer;
+    background:#000;border:calc(var(--u)*2.5px) solid #fff;color:#fff;
+    font-family:inherit;font-size:calc(var(--u)*11px);font-weight:600;
+    padding:calc(var(--u)*7px) calc(var(--u)*24px) calc(var(--u)*7px) calc(var(--u)*30px);
+    transition:all .12s linear;text-shadow:0 calc(var(--u)*1px) 0 #000}
+  .btn .sel{position:absolute;left:calc(var(--u)*8px);top:50%;transform:translateY(-50%);
+    width:calc(var(--u)*11px);image-rendering:pixelated;opacity:0;transition:opacity .1s}
+  .btn.act{border-color:#ffd94a;color:#ffd94a;box-shadow:0 0 calc(var(--u)*12px) rgba(255,217,74,.35)}
+  .btn.act .sel{opacity:1;animation:nudge .55s ease-in-out infinite alternate}
+  @keyframes nudge{from{transform:translateY(-50%) translateX(0)}to{transform:translateY(-50%) translateX(calc(var(--u)*2px))}}
+
+  /* ---------- prompts / hud ---------- */
+  #prompt{position:absolute;left:50%;bottom:calc(var(--u)*30px);transform:translateX(-50%);z-index:44;
+    color:#bfe6ff;font-size:calc(var(--u)*9px);opacity:0;transition:opacity .25s;
+    background:rgba(0,0,0,.65);border:calc(var(--u)*1.5px) solid #6fbfe8;
+    padding:calc(var(--u)*4px) calc(var(--u)*10px);text-shadow:0 0 calc(var(--u)*7px) rgba(120,200,255,.8)}
+  #prompt.on{opacity:1;animation:blink 1s steps(1) infinite}
+  #hud{position:absolute;left:calc(var(--u)*9px);top:calc(var(--u)*8px);z-index:44;color:#8d8aa0;
+    font-size:calc(var(--u)*7px);line-height:1.6;opacity:0;transition:opacity .8s}
+  #hud.on{opacity:.85}
+  #endTip{position:absolute;left:50%;bottom:calc(var(--u)*22px);transform:translateX(-50%);z-index:72;
+    color:#2e2e38;font-size:calc(var(--u)*7px);opacity:0;transition:opacity 2s}
+  #endTip.on{opacity:1}
+
+  /* ---------- touch dpad ---------- */
+  #pad{position:absolute;left:calc(var(--u)*10px);bottom:calc(var(--u)*10px);z-index:50;
+    display:none;grid-template-columns:repeat(3,calc(var(--u)*26px));grid-template-rows:repeat(3,calc(var(--u)*26px));gap:calc(var(--u)*2px)}
+  #pad.on{display:grid}
+  .pk{pointer-events:auto;background:rgba(255,255,255,.09);border:calc(var(--u)*1.5px) solid rgba(255,255,255,.35);
+    color:#fff;font-size:calc(var(--u)*9px);display:flex;align-items:center;justify-content:center;border-radius:calc(var(--u)*2px)}
+  .pk:active{background:rgba(255,217,74,.35)}
+  #padZ{position:absolute;right:calc(var(--u)*12px);bottom:calc(var(--u)*16px);z-index:50;display:none;
+    pointer-events:auto;width:calc(var(--u)*40px);height:calc(var(--u)*40px);border-radius:50%;
+    background:rgba(255,255,255,.09);border:calc(var(--u)*1.5px) solid rgba(255,255,255,.35);
+    color:#fff;font-size:calc(var(--u)*10px);align-items:center;justify-content:center}
+  #padZ.on{display:flex}
+  #snd{position:absolute;right:calc(var(--u)*7px);top:calc(var(--u)*6px);z-index:55;pointer-events:auto;
+    cursor:pointer;color:#6c6a7d;font-size:calc(var(--u)*8px);background:none;border:none;font-family:inherit}
+  #snd:hover{color:#fff}
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="frame">
+    <canvas id="cv"></canvas>
+    <div id="ui">
+      <div id="center"></div>
+
+      <div id="dlg">
+        <div id="dName">???</div>
+        <div id="dText"></div>
+        <div id="dArrow">▼</div>
+      </div>
+
+      <div id="choice">
+        <button class="btn" id="b0"><img class="sel" alt=""><span>เจ็บ</span></button>
+        <button class="btn" id="b1"><img class="sel" alt=""><span>ไม่เจ็บ</span></button>
+      </div>
+
+      <div id="prompt">[ Z ] เก็บขวดแก้ว</div>
+      <div id="hud"></div>
+
+      <div id="pad">
+        <div></div><div class="pk" data-k="w">W</div><div></div>
+        <div class="pk" data-k="a">A</div><div></div><div class="pk" data-k="d">D</div>
+        <div></div><div class="pk" data-k="s">S</div><div></div>
+      </div>
+      <div id="padZ">Z</div>
+
+      <button id="snd" title="เปิด/ปิดเสียง (M)">♪ ON</button>
+
+      <div id="title">
+        <img id="tHeart" alt="">
+        <div id="tMain"></div>
+        <div id="tSub"></div>
+        <div id="tPress">* กดปุ่มใดก็ได้ เพื่อเริ่ม *</div>
+      </div>
+
+      <div id="endTip">กด R เพื่อเริ่มใหม่</div>
+      <div id="crt"></div>
+      <div id="vig"></div>
+      <div id="fade"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+/* =========================================================
+   0. SETUP
+   ========================================================= */
+const W = 400, H = 225;
+const cv    = document.getElementById('cv');
+const ctx   = cv.getContext('2d');
+cv.width = W; cv.height = H; ctx.imageSmoothingEnabled = false;
+
+const lc = document.createElement('canvas'); lc.width = W; lc.height = H;
+const lctx = lc.getContext('2d');
+
+const $ = id => document.getElementById(id);
+const frame=$('frame'), centerEl=$('center'), dlg=$('dlg'), dName=$('dName'),
+      dText=$('dText'), dArrow=$('dArrow'), choiceEl=$('choice'),
+      b0=$('b0'), b1=$('b1'), promptEl=$('prompt'), hudEl=$('hud'),
+      titleEl=$('title'), tMain=$('tMain'), tSub=$('tSub'), tPress=$('tPress'),
+      fadeEl=$('fade'), padEl=$('pad'), padZ=$('padZ'), sndBtn=$('snd'),
+      endTip=$('endTip'), tHeart=$('tHeart');
+
+function resize(){
+  const s = Math.min(window.innerWidth / W, window.innerHeight / H);
+  frame.style.width  = (W*s)+'px';
+  frame.style.height = (H*s)+'px';
+  document.documentElement.style.setProperty('--u', s);
+}
+addEventListener('resize', resize); resize();
+
+const wait = ms => new Promise(r => setTimeout(r, ms));
+const clamp = (v,a,b) => v<a?a:(v>b?b:v);
+const lerp = (a,b,t) => a+(b-a)*t;
+function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+const rnd = mulberry32(20240614);
+const rr  = (a,b) => a + rnd()*(b-a);
+
+/* =========================================================
+   1. PIXEL SPRITES
+   ========================================================= */
+const PAL = {
+  k:'#140d14', H:'#eae7ee', h:'#b7b2c4', S:'#f6d2b3', s:'#d9a98c',
+  E:'#3fc9b0', B:'#5d3123', b:'#3c1d15', G:'#e5b356',
+  D:'#932f2f', d:'#601b1d', L:'#2b2330', O:'#6d4527', R:'#ff2f4a'
+};
+
+function buildSprite(rows, pal){
+  const w = rows[0].length, h = rows.length;
+  const c = document.createElement('canvas'); c.width=w; c.height=h;
+  const x = c.getContext('2d');
+  const img = x.createImageData(w,h);
+  for(let j=0;j<h;j++){
+    for(let i=0;i<w;i++){
+      const col = pal[rows[j][i]];
+      if(!col) continue;
+      const o = (j*w+i)*4;
+      img.data[o  ] = parseInt(col.slice(1,3),16);
+      img.data[o+1] = parseInt(col.slice(3,5),16);
+      img.data[o+2] = parseInt(col.slice(5,7),16);
+      img.data[o+3] = 255;
+    }
+  }
+  x.putImageData(img,0,0);
+  return c;
+}
+function flipH(src){
+  const c=document.createElement('canvas'); c.width=src.width; c.height=src.height;
+  const x=c.getContext('2d'); x.imageSmoothingEnabled=false;
+  x.translate(src.width,0); x.scale(-1,1); x.drawImage(src,0,0);
+  return c;
+}
+
+// --- head/torso blocks (rows 0..21) --------------------------------
+const HAT_F = [
+'................',
+'.......kkk......',
+'......kBBBk.....',
+'.....kBBBBBk....',
+'....kBBBBBBBk...',
+'...kGGGGGGGGGk..',
+'..kBBBBBBBBBBBk.',
+'.kkkkkkkkkkkkkk.'];
+const FACE_F = [
+'....kHHHHHHk....',
+'...kHHHHHHHHk...',
+'...kHSSSSSSHk...',
+'...kHSESSEsHk...',
+'...kHSSSSSSHk...',
+'....kHSSSSHk....'];
+const FACE_B = [
+'....kHHHHHHk....',
+'...kHHHHHHHHk...',
+'...kHHHHHHHHk...',
+'...kHHHHHHHHk...',
+'...kHHHHHHHHk...',
+'....kHHHHHHk....'];
+const BODY_F = [
+'..kHHkDDDDkHHk..',
+'..kHHkDGGDkHHk..',
+'..kHkDDDDDDkHk..',
+'...kDDDDDDDDk...',
+'...kDdDDDDdDk...',
+'...kDDDDDDDDk...',
+'..kDDDDDDDDDDk..',
+'..kddddddddddk..'];
+const BODY_B = [
+'..kHHkDDDDkHHk..',
+'..kHHkDDDDkHHk..',
+'..kHkDDDDDDkHk..',
+'...kDDDDDDDDk...',
+'...kDDDDDDDDk...',
+'...kDDDDDDDDk...',
+'..kDDDDDDDDDDk..',
+'..kddddddddddk..'];
+const LEGS_F = [
+['...kLLkkkkLLk...','...kLLk..kLLk...','...kOOk..kOOk...','...kkkk..kkkk...'],
+['...kLLkkkkLLk...','...kLLkkkkLLk...','...kOOkkkkOOk...','...kkkkkkkkkk...']
+];
+
+const HAT_S = [
+'................',
+'......kkk.......',
+'.....kBBBk......',
+'....kBBBBBk.....',
+'...kBBBBBBBk....',
+'..kGGGGGGGGGk...',
+'.kBBBBBBBBBBBk..',
+'.kkkkkkkkkkkkk..'];
+const FACE_S = [
+'...kHHHHHHk.....',
+'..kHHHHHHHHk....',
+'..kHHHSSSSk.....',
+'..kHHHSESSk.....',
+'..kHHHSSSSk.....',
+'...kHHSSSk......'];
+const BODY_S = [
+'..kHHkDDDDk.....',
+'..kHHkDDDDk.....',
+'...kHkDDDDk.....',
+'....kDDDDDk.....',
+'....kDdDDDk.....',
+'....kDDDDDk.....',
+'...kDDDDDDDk....',
+'...kdddddddk....'];
+const LEGS_S = [
+['....kLLLLk......','....kLLkLLk.....','....kOOkOOk.....','....kkkkkkk.....'],
+['....kLLLLk......','....kLLLLk......','...kOOkOOOk.....','...kkkkkkkk.....']
+];
+
+function assemble(hat, face, body, legs){ return hat.concat(face, body, legs); }
+const SPR = {
+  front: [0,1].map(i => buildSprite(assemble(HAT_F, FACE_F, BODY_F, LEGS_F[i]), PAL)),
+  back : [0,1].map(i => buildSprite(assemble(HAT_F, FACE_B, BODY_B, LEGS_F[i]), PAL)),
+  right: [0,1].map(i => buildSprite(assemble(HAT_S, FACE_S, BODY_S, LEGS_S[i]), PAL))
+};
+SPR.left = SPR.right.map(flipH);
+const SPR_W = 16, SPR_H = 26;
+
+const HEART = buildSprite([
+'.kk...kk.',
+'kRRk.kRRk',
+'kRRRkRRRk',
+'kRRRRRRRk',
+'.kRRRRRk.',
+'..kRRRk..',
+'...kRk...',
+'....k....'], PAL);
+const heartURL = HEART.toDataURL();
+tHeart.src = heartURL;
+document.querySelectorAll('.sel').forEach(im => im.src = heartURL);
+
+/* =========================================================
+   2. AUDIO (pure WebAudio, no files)
+   ========================================================= */
+const A = {
+  ac:null, master:null, musicGain:null, muted:false, noiseBuf:null,
+  windSrc:null, windGain:null, musicTimer:null
+};
+function initAudio(){
+  if(A.ac) return;
+  const AC = window.AudioContext || window.webkitAudioContext;
+  if(!AC) return;
+  A.ac = new AC();
+  A.master = A.ac.createGain(); A.master.gain.value = 0.55; A.master.connect(A.ac.destination);
+  A.musicGain = A.ac.createGain(); A.musicGain.gain.value = 0.30; A.musicGain.connect(A.master);
+  const len = A.ac.sampleRate * 2;
+  A.noiseBuf = A.ac.createBuffer(1, len, A.ac.sampleRate);
+  const d = A.noiseBuf.getChannelData(0);
+  for(let i=0;i<len;i++) d[i] = Math.random()*2-1;
+}
+function tone(freq, dur, type, vol, dest, slideTo){
+  if(!A.ac || A.muted) return;
+  const o=A.ac.createOscillator(), g=A.ac.createGain();
+  o.type = type||'square'; o.frequency.value = freq;
+  if(slideTo) o.frequency.exponentialRampToValueAtTime(Math.max(20,slideTo), A.ac.currentTime+dur);
+  g.gain.setValueAtTime(0.0001, A.ac.currentTime);
+  g.gain.exponentialRampToValueAtTime(vol||0.12, A.ac.currentTime+0.012);
+  g.gain.exponentialRampToValueAtTime(0.0001, A.ac.currentTime+dur);
+  o.connect(g); g.connect(dest||A.master);
+  o.start(); o.stop(A.ac.currentTime+dur+0.02);
+}
+function noise(dur, vol, freq, q){
+  if(!A.ac || A.muted) return;
+  const s=A.ac.createBufferSource(); s.buffer=A.noiseBuf;
+  const f=A.ac.createBiquadFilter(); f.type='bandpass'; f.frequency.value=freq||800; f.Q.value=q||1;
+  const g=A.ac.createGain();
+  g.gain.setValueAtTime(vol||0.15, A.ac.currentTime);
+  g.gain.exponentialRampToValueAtTime(0.0001, A.ac.currentTime+dur);
+  s.connect(f); f.connect(g); g.connect(A.master); s.start(); s.stop(A.ac.currentTime+dur);
+}
+let blipN=0;
+function blip(){ tone(560 + (blipN++%3)*70, 0.045, 'square', 0.045); }
+function sfxThud(){ tone(150,0.55,'sine',0.35,null,32); noise(0.6,0.30,300,0.7); noise(0.9,0.14,900,0.5); }
+function sfxSparkle(){ const b=880+Math.random()*260; tone(b,0.18,'triangle',0.05); setTimeout(()=>tone(b*1.5,0.16,'triangle',0.04),70); }
+function sfxHeal(){ [523,659,784,1046].forEach((f,i)=>setTimeout(()=>tone(f,0.5,'sine',0.09),i*160)); }
+function sfxPickup(){ [659,784,988,1318,1568].forEach((f,i)=>setTimeout(()=>tone(f,0.45,'triangle',0.11),i*95)); }
+function sfxBarrier(){ tone(220,0.22,'sawtooth',0.05,null,150); noise(0.2,0.06,1600,3); }
+function sfxSelect(){ tone(680,0.07,'square',0.07); }
+function windStart(){
+  if(!A.ac || A.windSrc) return;
+  const s=A.ac.createBufferSource(); s.buffer=A.noiseBuf; s.loop=true;
+  const f=A.ac.createBiquadFilter(); f.type='lowpass'; f.frequency.value=520;
+  const g=A.ac.createGain(); g.gain.value=0.0001;
+  g.gain.exponentialRampToValueAtTime(0.20, A.ac.currentTime+2.2);
+  s.connect(f); f.connect(g); g.connect(A.master); s.start();
+  A.windSrc=s; A.windGain=g;
+}
+function windStop(){
+  if(!A.windGain) return;
+  A.windGain.gain.exponentialRampToValueAtTime(0.0001, A.ac.currentTime+0.5);
+  const s=A.windSrc; setTimeout(()=>{try{s.stop()}catch(e){}}, 700);
+  A.windSrc=null; A.windGain=null;
+}
+// gentle ambient loop
+const MELODY = [0,3,7,10,7,3,5,3, 0,3,7,12,10,7,3,-2];
+let mi=0;
+function musicTick(){
+  if(!A.ac || A.muted) return;
+  const root = 196; // G3
+  const n = MELODY[mi % MELODY.length];
+  const f = root * Math.pow(2, n/12);
+  tone(f*2, 1.5, 'triangle', 0.055, A.musicGain);
+  if(mi % 8 === 0) tone(f/2, 3.4, 'sine', 0.075, A.musicGain);
+  if(mi % 4 === 2) tone(f*3, 0.9, 'sine', 0.02, A.musicGain);
+  mi++;
+}
+function musicStart(){ if(A.musicTimer) return; musicTick(); A.musicTimer=setInterval(musicTick, 760); }
+sndBtn.onclick = e => { e.stopPropagation(); toggleMute(); };
+function toggleMute(){
+  A.muted = !A.muted;
+  if(A.master) A.master.gain.value = A.muted ? 0 : 0.55;
+  sndBtn.textContent = A.muted ? '♪ OFF' : '♪ ON';
+}
+
+/* =========================================================
+   3. INPUT
+   ========================================================= */
+const keys = Object.create(null);
+let anyKeyHit = false;
+let advanceResolve = null, typing = false, skipTyping = false;
+let choiceOpen = false, choiceIdx = 0, choiceResolve = null;
+
+function onAdvance(){
+  if(!A.ac) initAudio();
+  if(choiceOpen){ pickChoice(choiceIdx); return; }
+  if(typing){ skipTyping = true; return; }
+  if(state.nearBottle && !state.hasBottle && state.canMove){ doPickup(); return; }
+  if(advanceResolve){ const r=advanceResolve; advanceResolve=null; r(); }
+}
+function waitAdvance(){ return new Promise(r => advanceResolve = r); }
+function holdOrSkip(ms){
+  return new Promise(r => {
+    let done=false;
+    const fin = () => { if(done) return; done=true; clearTimeout(t); if(advanceResolve===fin) advanceResolve=null; r(); };
+    const t = setTimeout(fin, ms);
+    advanceResolve = fin;
+  });
+}
+
+addEventListener('keydown', e => {
+  const k = e.key.length===1 ? e.key.toLowerCase() : e.key.toLowerCase();
+  keys[k] = true;
+  anyKeyHit = true;
+  if(k===' '||k==='arrowup'||k==='arrowdown'||k==='arrowleft'||k==='arrowright') e.preventDefault();
+  if(k==='m'){ toggleMute(); return; }
+  if(k==='r' && state.scene==='end'){ location.reload(); return; }
+  if(choiceOpen){
+    if(k==='a'||k==='arrowleft')  moveChoice(-1);
+    if(k==='d'||k==='arrowright') moveChoice(1);
+  }
+  if(k==='z'||k==='x'||k==='e'||k==='enter'||k===' ') onAdvance();
+});
+addEventListener('keyup', e => { keys[e.key.toLowerCase()] = false; });
+addEventListener('blur', () => { for(const k in keys) keys[k]=false; });
+
+// pointer = advance (except on buttons)
+$('ui').addEventListener('pointerdown', e => {
+  if(e.target.closest('.btn') || e.target.closest('#pad') || e.target.closest('#snd') || e.target.id==='padZ') return;
+  anyKeyHit = true; onAdvance();
+});
+padZ.addEventListener('pointerdown', e => { e.preventDefault(); anyKeyHit=true; onAdvance(); });
+
+const touchDir = {x:0,y:0};
+padEl.querySelectorAll('.pk').forEach(el => {
+  const k = el.dataset.k;
+  const on  = e => { e.preventDefault(); keys[k]=true; };
+  const off = e => { e.preventDefault(); keys[k]=false; };
+  el.addEventListener('pointerdown', on);
+  el.addEventListener('pointerup', off);
+  el.addEventListener('pointerleave', off);
+  el.addEventListener('pointercancel', off);
+});
+if(matchMedia('(pointer: coarse)').matches){ padEl.classList.add('on'); padZ.classList.add('on'); }
+
+/* =========================================================
+   4. TEXT ENGINE (Thai-safe typewriter)
+   ========================================================= */
+const COMBINING = /[ัิ-ฺ็-๎̀-ͯ]/;
+function graphemes(str){
+  const out=[];
+  for(const ch of str){
+    if(out.length && COMBINING.test(ch)) out[out.length-1] += ch;
+    else out.push(ch);
+  }
+  return out;
+}
+async function say(text, opt){
+  opt = opt || {};
+  dlg.classList.add('on');
+  dName.textContent = opt.name || '???';
+  dArrow.classList.remove('on');
+  const g = graphemes('* ' + text);
+  let buf = '';
+  typing = true; skipTyping = false;
+  dText.textContent = '';
+  for(let i=0;i<g.length;i++){
+    if(skipTyping){ buf = g.join(''); break; }
+    buf += g[i];
+    dText.textContent = buf;
+    if(g[i].trim()) blip();
+    await wait(opt.speed || 34);
+  }
+  dText.textContent = g.join('');
+  typing = false; skipTyping = false;
+  dArrow.classList.add('on');
+  await waitAdvance();
+  dArrow.classList.remove('on');
+}
+function hideDlg(){ dlg.classList.remove('on'); }
+
+async function narrate(text, hold){
+  centerEl.textContent = text;
+  centerEl.classList.add('on');
+  await holdOrSkip(hold || (1400 + graphemes(text).length * 55));
+  centerEl.classList.remove('on');
+  await wait(760);
+}
+
+/* choices */
+function renderChoice(){
+  b0.classList.toggle('act', choiceIdx===0);
+  b1.classList.toggle('act', choiceIdx===1);
+}
+function moveChoice(d){
+  const n = clamp(choiceIdx + d, 0, 1);
+  if(n!==choiceIdx){ choiceIdx=n; renderChoice(); sfxSelect(); }
+}
+function pickChoice(i){
+  if(!choiceOpen) return;
+  choiceOpen = false;
+  choiceEl.classList.remove('on');
+  sfxSelect();
+  const r = choiceResolve; choiceResolve = null;
+  if(r) r(i);
+}
+b0.addEventListener('pointerdown', e=>{e.stopPropagation(); choiceIdx=0; renderChoice(); pickChoice(0);});
+b1.addEventListener('pointerdown', e=>{e.stopPropagation(); choiceIdx=1; renderChoice(); pickChoice(1);});
+b0.addEventListener('pointerenter', ()=>{ if(choiceOpen && choiceIdx!==0){choiceIdx=0;renderChoice();sfxSelect();} });
+b1.addEventListener('pointerenter', ()=>{ if(choiceOpen && choiceIdx!==1){choiceIdx=1;renderChoice();sfxSelect();} });
+
+function askChoice(){
+  choiceIdx = 0; renderChoice();
+  choiceEl.classList.add('on');
+  choiceOpen = true;
+  return new Promise(r => choiceResolve = r);
+}
+
+/* =========================================================
+   5. WORLD
+   ========================================================= */
+const MAPR = 430;
+const trees=[], flowers=[], tufts=[], stones=[];
+
+// bottle inside a ring of flowers, far from spawn
+const bAng = rr(0.4, 1.2);
+const BOTTLE = { x: Math.cos(bAng)*312, y: Math.sin(bAng)*298, t:0 };
+
+(function genWorld(){
+  // grass tufts
+  for(let i=0;i<520;i++){
+    const a=rnd()*Math.PI*2, r=Math.sqrt(rnd())*(MAPR-6);
+    tufts.push({x:Math.cos(a)*r, y:Math.sin(a)*r, h:1+Math.floor(rnd()*3), c: rnd()<.35?'#1d3a26':'#162c1d'});
+  }
+  // stones
+  for(let i=0;i<26;i++){
+    const a=rnd()*Math.PI*2, r=Math.sqrt(rnd())*(MAPR-30);
+    stones.push({x:Math.cos(a)*r, y:Math.sin(a)*r, w:3+Math.floor(rnd()*5)});
+  }
+  // dense tree wall on the border
+  for(let i=0;i<120;i++){
+    const a = (i/120)*Math.PI*2 + rr(-0.02,0.02);
+    const r = MAPR + rr(0, 46);
+    trees.push({x:Math.cos(a)*r, y:Math.sin(a)*r, s: rr(0.85,1.25), tone: rnd()});
+  }
+  for(let i=0;i<46;i++){
+    const a = rnd()*Math.PI*2, r = MAPR - rr(6, 46);
+    trees.push({x:Math.cos(a)*r, y:Math.sin(a)*r, s: rr(0.8,1.15), tone: rnd()});
+  }
+  // scattered inner trees (keep spawn clear)
+  for(let i=0;i<40;i++){
+    const a=rnd()*Math.PI*2, r=rr(110, MAPR-70);
+    const x=Math.cos(a)*r, y=Math.sin(a)*r;
+    if(Math.hypot(x-BOTTLE.x, y-BOTTLE.y) < 78) continue;
+    trees.push({x, y, s: rr(0.75,1.1), tone: rnd()});
+  }
+  trees.sort((p,q)=>p.y-q.y);
+
+  // flower clusters
+  function cluster(cx, cy, n, spread){
+    for(let i=0;i<n;i++){
+      const a=rnd()*Math.PI*2, r=Math.sqrt(rnd())*spread;
+      flowers.push({x:cx+Math.cos(a)*r, y:cy+Math.sin(a)*r, glow:0, cd:0, ph:rnd()*6.28});
+    }
+  }
+  for(let i=0;i<17;i++){
+    const a=rnd()*Math.PI*2, r=rr(60, MAPR-70);
+    const cx=Math.cos(a)*r, cy=Math.sin(a)*r;
+    if(Math.hypot(cx-BOTTLE.x, cy-BOTTLE.y) < 90) continue;
+    cluster(cx, cy, 7+Math.floor(rnd()*9), rr(16,34));
+  }
+  cluster(30, 46, 9, 22);          // a patch near spawn so the hint reads early
+  // ring around the bottle
+  for(let i=0;i<26;i++){
+    const a=(i/26)*Math.PI*2;
+    const r=rr(30,46);
+    flowers.push({x:BOTTLE.x+Math.cos(a)*r, y:BOTTLE.y+Math.sin(a)*r, glow:0, cd:0, ph:rnd()*6.28});
+  }
+  cluster(BOTTLE.x, BOTTLE.y, 10, 18);
+})();
+
+/* =========================================================
+   6. STATE
+   ========================================================= */
+const state = {
+  scene:'title',        // title | fall | land | talk | explore | end
+  canMove:false,
+  hasBottle:false, bottleSpawned:false, nearBottle:false,
+  distWalked:0,
+  darkness:1.0,         // 0 = fully lit, 1 = pitch black
+  playerLightR:0, playerLightA:0,
+  healFx:0, healSpin:0, dustT:0, flash:0, shake:0,
+  fallT:0, fallBg:0, fallLock:false
+};
+const player = { x:0, y:0, face:'front', frame:0, animT:0, rot:0, bob:0, hop:0 };
+
+const parts = [];   // {x,y,vx,vy,life,max,r,col,kind}
+const lights = [];  // rebuilt each frame
+
+function spawnSpark(x,y,n,col){
+  for(let i=0;i<n;i++){
+    parts.push({
+      x:x+rr(-4,4), y:y+rr(-2,2),
+      vx:rr(-9,9), vy:rr(-22,-7),
+      life:0, max:rr(1.6,3.2), r:rr(0.8,1.9),
+      col: col||'#a9e6ff', kind:'spark'
+    });
+  }
+}
+function spawnDust(x,y,n){
+  for(let i=0;i<n;i++){
+    const a=rnd()*Math.PI*2, sp=rr(18,86);
+    parts.push({
+      x, y:y+rr(-2,2),
+      vx:Math.cos(a)*sp, vy:Math.sin(a)*sp*0.35 - rr(2,16),
+      life:0, max:rr(0.9,2.1), r:rr(1.4,4.2),
+      col:'#6a5a4a', kind:'dust'
+    });
+  }
+}
+function spawnHeal(x,y,n){
+  for(let i=0;i<n;i++){
+    const a=rnd()*Math.PI*2;
+    parts.push({
+      x:x+Math.cos(a)*rr(9,20), y:y-rr(0,24),
+      vx:0, vy:rr(-26,-9), a, rad:rr(12,22), spin:rr(2.2,4.6),
+      life:0, max:rr(0.9,1.8), r:rr(0.9,1.8),
+      col: rnd()<.5?'#7dffb0':'#39e08a', kind:'heal', ox:x, oy:y
+    });
+  }
+}
+function spawnSmoke(x,y,n,col){
+  for(let i=0;i<n;i++){
+    parts.push({
+      x:x+rr(-12,12), y:y-rr(0,18),
+      vx:rr(-8,8), vy:rr(-14,-3),
+      life:0, max:rr(1.4,2.9), r:rr(2,4.6),
+      col: col||'#3d5a49', kind:'smoke'
+    });
+  }
+}
+const ripples = []; // barrier hits
+
+/* =========================================================
+   7. DRAW HELPERS
+   ========================================================= */
+let camX=0, camY=0;
+function px(x,y,w,h,c){ ctx.fillStyle=c; ctx.fillRect(Math.round(x),Math.round(y),w,h); }
+const sx = wx => Math.round(wx - camX);
+const sy = wy => Math.round(wy - camY);
+
+function drawTree(t){
+  const X = sx(t.x), Y = sy(t.y);
+  if(X < -40 || X > W+40 || Y < -70 || Y > H+40) return;
+  const s = t.s;
+  const trunkH = Math.round(16*s), trunkW = Math.max(3, Math.round(5*s));
+  px(X-trunkW/2, Y-trunkH, trunkW, trunkH, '#2a1c14');
+  px(X-trunkW/2, Y-trunkH, 1, trunkH, '#3d2a1e');
+  const g1 = t.tone<.5 ? '#16301f' : '#12291b';
+  const g2 = t.tone<.5 ? '#1e3f28' : '#193523';
+  const base = Y - trunkH;
+  const layers = [
+    {w:Math.round(30*s), h:Math.round(9*s),  dy:0},
+    {w:Math.round(25*s), h:Math.round(9*s),  dy:Math.round(-7*s)},
+    {w:Math.round(18*s), h:Math.round(9*s),  dy:Math.round(-14*s)},
+    {w:Math.round(10*s), h:Math.round(7*s),  dy:Math.round(-20*s)}
+  ];
+  layers.forEach((L,i) => {
+    px(X-L.w/2, base+L.dy-L.h, L.w, L.h, i%2 ? g1 : g2);
+    px(X-L.w/2, base+L.dy-L.h, L.w, 1, '#26502f');
+  });
+}
+function drawTuft(t){
+  const X=sx(t.x), Y=sy(t.y);
+  if(X<-6||X>W+6||Y<-6||Y>H+6) return;
+  px(X, Y-t.h, 1, t.h, t.c);
+  px(X+2, Y-t.h+1, 1, t.h-1, t.c);
+}
+function drawFlower(f, time){
+  const X=sx(f.x), Y=sy(f.y);
+  if(X<-8||X>W+8||Y<-8||Y>H+8) return;
+  const bright = f.glow;
+  const sway = Math.sin(time*1.6 + f.ph) * (bright>0.1?1:0.4);
+  const bx = X + Math.round(sway);
+  px(X, Y-3, 1, 3, bright>0.1 ? '#2f6b4d' : '#1c3a29');
+  const petal = bright>0.05
+      ? `rgba(${Math.round(lerp(150,235,bright))},${Math.round(lerp(210,250,bright))},255,1)`
+      : '#5f7f96';
+  const core  = bright>0.05 ? '#ffffff' : '#8a9aa6';
+  px(bx-1, Y-5, 1, 1, petal);
+  px(bx+1, Y-5, 1, 1, petal);
+  px(bx-2, Y-4, 1, 1, petal);
+  px(bx+2, Y-4, 1, 1, petal);
+  px(bx,   Y-6, 1, 1, petal);
+  px(bx,   Y-4, 1, 1, core);
+}
+function drawBottle(){
+  if(!state.bottleSpawned || state.hasBottle) return;
+  const X=sx(BOTTLE.x), Y=sy(BOTTLE.y);
+  if(X<-20||X>W+20||Y<-24||Y>H+20) return;
+  const fl = Math.sin(BOTTLE.t*4.4)*0.5+0.5;
+  const yo = Math.round(Math.sin(BOTTLE.t*1.7)*1.5);
+  drawBottleSprite(X, Y+yo, fl);
+}
+function drawBottleSprite(X, Y, fl){
+  // glass
+  px(X-3, Y-13, 6, 1, '#2b3a4a');
+  px(X-2, Y-14, 4, 1, '#6b4a2c');   // cork
+  px(X-4, Y-12, 8, 11, 'rgba(120,170,200,0.20)');
+  px(X-4, Y-12, 1, 11, '#3c586e');
+  px(X+3, Y-12, 1, 11, '#3c586e');
+  px(X-4, Y-2,  8, 1,  '#3c586e');
+  // soul flame
+  const c1 = `rgba(${Math.round(lerp(110,180,fl))},${Math.round(lerp(150,215,fl))},255,1)`;
+  const c2 = `rgba(${Math.round(lerp(150,200,fl))},110,255,1)`;
+  px(X-1, Y-5, 2, 3, c1);
+  px(X-2, Y-4, 1, 2, c2);
+  px(X+1, Y-4, 1, 2, c2);
+  px(X-1, Y-8+Math.round(fl), 2, 3, c2);
+  px(X,   Y-9+Math.round(fl*2), 1, 2, c1);
+}
+function drawHeldBottle(){
+  if(!state.hasBottle) return;
+  const fl = Math.sin(BOTTLE.t*4.4)*0.5+0.5;
+  const X = sx(player.x) + (player.face==='left' ? -9 : 9);
+  const Y = sy(player.y) - 8 + Math.round(Math.sin(BOTTLE.t*2.2));
+  drawBottleSprite(X, Y, fl);
+}
+function drawPlayer(){
+  const set = SPR[player.face] || SPR.front;
+  const img = set[player.frame|0];
+  const X = sx(player.x), Y = sy(player.y) + player.bob - player.hop;
+  ctx.save();
+  ctx.translate(X, Y);
+  if(player.rot) ctx.rotate(player.rot * Math.PI/180);
+  ctx.drawImage(img, -SPR_W/2 | 0, -SPR_H);
+  ctx.restore();
+}
+function drawShadow(){
+  const X=sx(player.x), Y=sy(player.y);
+  ctx.fillStyle='rgba(0,0,0,0.45)';
+  ctx.beginPath(); ctx.ellipse(X, Y, 7, 2.6, 0, 0, 6.283); ctx.fill();
+}
+
+function hole(x,y,r,a){
+  if(r<=0||a<=0) return;
+  const g = lctx.createRadialGradient(x,y,0,x,y,r);
+  g.addColorStop(0,   `rgba(255,255,255,${a})`);
+  g.addColorStop(0.45,`rgba(255,255,255,${a*0.55})`);
+  g.addColorStop(1,   'rgba(255,255,255,0)');
+  lctx.fillStyle=g;
+  lctx.beginPath(); lctx.arc(x,y,r,0,6.283); lctx.fill();
+}
+function bloom(x,y,r,col,a){
+  const g = ctx.createRadialGradient(x,y,0,x,y,r);
+  g.addColorStop(0, col.replace('ALPHA', a));
+  g.addColorStop(1, col.replace('ALPHA', 0));
+  ctx.fillStyle=g;
+  ctx.beginPath(); ctx.arc(x,y,r,0,6.283); ctx.fill();
+}
+
+/* =========================================================
+   8. SCENE RENDERERS
+   ========================================================= */
+const fallStreaks = [];
+for(let i=0;i<90;i++) fallStreaks.push({x:rnd()*W, y:rnd()*H, l:rr(5,26), sp:rr(180,520), w:rnd()<.2?2:1});
+const fallDebris = [];
+for(let i=0;i<26;i++) fallDebris.push({x:rnd()*W, y:rnd()*H, sp:rr(60,170), r:rr(1,3), rot:rnd()*6.28});
+
+function drawFall(dt, t){
+  const p = state.fallBg; // 0 -> 1 darkening
+  const top = `rgb(${Math.round(lerp(58,4,p))},${Math.round(lerp(44,4,p))},${Math.round(lerp(84,10,p))})`;
+  const bot = `rgb(${Math.round(lerp(14,0,p))},${Math.round(lerp(10,0,p))},${Math.round(lerp(26,0,p))})`;
+  const g = ctx.createLinearGradient(0,0,0,H);
+  g.addColorStop(0, top); g.addColorStop(1, bot);
+  ctx.fillStyle=g; ctx.fillRect(0,0,W,H);
+
+  // shrinking light hole above (where she fell from)
+  const hr = lerp(70, 0, clamp(p*1.25,0,1));
+  if(hr > 1){
+    bloom(W/2, -20 - p*40, hr, 'rgba(190,200,255,ALPHA)', 0.35*(1-p));
+  }
+
+  // speed lines
+  ctx.globalAlpha = 0.5;
+  for(const s of fallStreaks){
+    s.y -= s.sp*dt*(0.5+p*0.9);
+    if(s.y < -s.l){ s.y = H + rnd()*40; s.x = rnd()*W; }
+    px(s.x, s.y, s.w, s.l, p>0.6?'#2a2740':'#5b5478');
+  }
+  ctx.globalAlpha = 1;
+
+  // debris
+  for(const d of fallDebris){
+    d.y -= d.sp*dt; d.rot += dt*3;
+    if(d.y < -6){ d.y = H+rr(0,50); d.x = rnd()*W; }
+    px(d.x, d.y, d.r, d.r, p>0.6?'#3a3550':'#7a7396');
+  }
+
+  // character, tumbling
+  const cxp = W/2 + Math.sin(t*0.9)*22;
+  const cyp = H/2 + Math.sin(t*1.7)*10;
+  const set = SPR.front;
+  ctx.save();
+  ctx.translate(cxp, cyp);
+  ctx.rotate(Math.sin(t*1.15)*0.30 + 0.12);
+  ctx.globalAlpha = lerp(1, 0.35, clamp((p-0.55)/0.45,0,1));
+  ctx.drawImage(set[(t*7|0)%2], -8, -13);
+  ctx.restore();
+  ctx.globalAlpha = 1;
+
+  // trailing sparkles from her dress
+  if(rnd()<0.35) parts.push({x:cxp+rr(-6,6), y:cyp+rr(-6,6), vx:rr(-6,6), vy:rr(40,90), life:0, max:rr(0.5,1.1), r:rr(0.8,1.6), col:'#c9b6ff', kind:'trail'});
+  for(let i=parts.length-1;i>=0;i--){
+    const q=parts[i]; q.life+=dt;
+    if(q.kind!=='trail'){ parts.splice(i,1); continue; }
+    q.x+=q.vx*dt; q.y+=q.vy*dt;
+    if(q.life>q.max){ parts.splice(i,1); continue; }
+    ctx.globalAlpha = 1 - q.life/q.max;
+    px(q.x, q.y, q.r, q.r, q.col);
+  }
+  ctx.globalAlpha = 1;
+
+  // darkening veil
+  ctx.fillStyle = `rgba(0,0,0,${clamp(p*0.9,0,0.92)})`;
+  ctx.fillRect(0,0,W,H);
+}
+
+function drawWorld(dt, t){
+  // camera
+  const tx = player.x - W/2, ty = player.y - H/2;
+  camX = lerp(camX, tx, 1 - Math.pow(0.0008, dt));
+  camY = lerp(camY, ty, 1 - Math.pow(0.0008, dt));
+  let shX=0, shY=0;
+  if(state.shake>0){ shX = rr(-1,1)*state.shake; shY = rr(-1,1)*state.shake; state.shake = Math.max(0, state.shake - dt*14); }
+  camX += shX; camY += shY;
+
+  // ground
+  ctx.fillStyle = '#04050a'; ctx.fillRect(0,0,W,H);
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(sx(0), sy(0), MAPR, 0, 6.283);
+  ctx.fillStyle = '#10201a'; ctx.fill();
+  ctx.clip();
+  // soft dirt patches
+  ctx.fillStyle = '#0d1a15';
+  for(let i=0;i<10;i++){
+    const a=(i/10)*6.283, r=MAPR*0.55;
+    ctx.beginPath(); ctx.arc(sx(Math.cos(a)*r), sy(Math.sin(a)*r), 90, 0, 6.283); ctx.fill();
+  }
+  for(const g of tufts) drawTuft(g);
+  for(const s of stones) px(sx(s.x), sy(s.y)-1, s.w, 2, '#20242c');
+  ctx.restore();
+
+  // ring hint at the barrier
+  ctx.strokeStyle = 'rgba(120,90,190,0.10)';
+  ctx.lineWidth = 2;
+  ctx.beginPath(); ctx.arc(sx(0), sy(0), MAPR, 0, 6.283); ctx.stroke();
+
+  for(const f of flowers) drawFlower(f, t);
+
+  // depth-sorted: trees + player + bottle
+  const drawList = [];
+  for(const tr of trees) drawList.push({y:tr.y, fn:()=>drawTree(tr)});
+  drawList.push({y:player.y, fn:()=>{ drawShadow(); drawPlayer(); drawHeldBottle(); }});
+  if(state.bottleSpawned && !state.hasBottle) drawList.push({y:BOTTLE.y, fn:drawBottle});
+  drawList.sort((a,b)=>a.y-b.y);
+  for(const d of drawList) d.fn();
+
+  // healing spiral — green light lines winding around her
+  if(state.healFx > 0){
+    const PX = sx(player.x), PY = sy(player.y);
+    ctx.lineWidth = 1;
+    for(let i=0;i<5;i++){
+      const ph = state.healSpin + i*1.25;
+      const yy = PY - 2 - ((state.healSpin*11 + i*6.5) % 28);
+      const ry = 1.6 + Math.abs(Math.sin(ph))*3.4;
+      const rx = 9 + Math.abs(Math.sin(ph*0.7))*7;
+      const a  = state.healFx * (0.14 + 0.30*Math.abs(Math.sin(ph)));
+      ctx.strokeStyle = `rgba(105,255,168,${a.toFixed(3)})`;
+      ctx.beginPath(); ctx.ellipse(PX, yy, rx, ry, 0, 0, 6.283); ctx.stroke();
+    }
+    for(let i=0;i<4;i++){
+      const ph = state.healSpin*1.7 + i*1.57;
+      px(PX + Math.cos(ph)*13, PY - 13 + Math.sin(ph)*4.6, 1, 1, '#e2ffee');
+    }
+  }
+
+  // particles (world space)
+  for(const q of parts){
+    const X=sx(q.x), Y=sy(q.y);
+    const k = 1 - q.life/q.max;
+    ctx.globalAlpha = clamp(k,0,1) * (q.kind==='dust'?0.75 : q.kind==='smoke'?0.38 : 1);
+    px(X, Y, Math.max(1, q.r|0), Math.max(1, q.r|0), q.col);
+  }
+  ctx.globalAlpha = 1;
+
+  // barrier ripples
+  for(const rp of ripples){
+    const k = 1 - rp.life/rp.max;
+    ctx.strokeStyle = `rgba(168,120,255,${k*0.75})`;
+    ctx.lineWidth = 1;
+    ctx.beginPath(); ctx.arc(sx(rp.x), sy(rp.y), rp.r0 + (1-k)*22, 0, 6.283); ctx.stroke();
+    ctx.strokeStyle = `rgba(220,190,255,${k*0.35})`;
+    ctx.beginPath(); ctx.arc(sx(rp.x), sy(rp.y), rp.r0 + (1-k)*13, 0, 6.283); ctx.stroke();
+  }
+
+  /* ---- lighting pass ---- */
+  lctx.globalCompositeOperation = 'source-over';
+  lctx.clearRect(0,0,W,H);
+  lctx.fillStyle = `rgba(2,3,9,${state.darkness})`;
+  lctx.fillRect(0,0,W,H);
+  lctx.globalCompositeOperation = 'destination-out';
+
+  hole(sx(player.x), sy(player.y)-10, state.playerLightR, state.playerLightA);
+  for(const f of flowers){
+    if(f.glow > 0.02) hole(sx(f.x), sy(f.y)-3, 34 + f.glow*30, f.glow*0.78);
+  }
+  for(const q of parts){
+    if(q.kind==='spark') hole(sx(q.x), sy(q.y), 26*(1-q.life/q.max)+9, 0.46*(1-q.life/q.max));
+    if(q.kind==='heal')  hole(sx(q.x), sy(q.y), 13, 0.17*(1-q.life/q.max));
+  }
+  if(state.bottleSpawned && !state.hasBottle) hole(sx(BOTTLE.x), sy(BOTTLE.y)-6, 74, 0.5);
+  if(state.healFx>0)  hole(sx(player.x), sy(player.y)-12, 62, 0.30*state.healFx);
+  if(state.dustT>0)   hole(sx(player.x), sy(player.y)-6, 70*state.dustT, 0.5*state.dustT);
+  lctx.globalCompositeOperation = 'source-over';
+  ctx.drawImage(lc, 0, 0);
+
+  /* ---- additive bloom ---- */
+  ctx.globalCompositeOperation = 'lighter';
+  for(const f of flowers){
+    if(f.glow > 0.02) bloom(sx(f.x), sy(f.y)-3, 22+f.glow*14, 'rgba(120,205,255,ALPHA)', f.glow*0.20);
+  }
+  for(const q of parts){
+    const k = 1-q.life/q.max;
+    if(q.kind==='spark') bloom(sx(q.x), sy(q.y), 12, 'rgba(150,220,255,ALPHA)', 0.28*k);
+    if(q.kind==='heal')  bloom(sx(q.x), sy(q.y), 9, 'rgba(110,255,170,ALPHA)', 0.09*k);
+  }
+  if(state.bottleSpawned && !state.hasBottle)
+    bloom(sx(BOTTLE.x), sy(BOTTLE.y)-6, 30, 'rgba(150,150,255,ALPHA)', 0.30);
+  if(state.hasBottle)
+    bloom(sx(player.x)+(player.face==='left'?-9:9), sy(player.y)-12, 34, 'rgba(150,160,255,ALPHA)', 0.28);
+  if(state.healFx>0)
+    bloom(sx(player.x), sy(player.y)-13, 46, 'rgba(90,255,160,ALPHA)', 0.10*state.healFx);
+  ctx.globalCompositeOperation = 'source-over';
+
+  // keep her readable through the healing glow
+  if(state.healFx > 0.02){ ctx.globalAlpha = 0.9; drawPlayer(); ctx.globalAlpha = 1; }
+
+  // white flash
+  if(state.flash > 0){
+    ctx.fillStyle = `rgba(255,255,255,${clamp(state.flash,0,1)})`;
+    ctx.fillRect(0,0,W,H);
+    state.flash -= dt*2.2;
+  }
+}
+
+/* =========================================================
+   9. UPDATE
+   ========================================================= */
+function updateWorld(dt, t){
+  BOTTLE.t += dt;
+
+  // movement
+  let dx=0, dy=0;
+  if(state.canMove){
+    if(keys['w']||keys['arrowup'])    dy -= 1;
+    if(keys['s']||keys['arrowdown'])  dy += 1;
+    if(keys['a']||keys['arrowleft'])  dx -= 1;
+    if(keys['d']||keys['arrowright']) dx += 1;
+  }
+  const moving = (dx||dy);
+  if(moving){
+    const l = Math.hypot(dx,dy) || 1;
+    const sp = 64;
+    const nx = player.x + dx/l*sp*dt;
+    const ny = player.y + dy/l*sp*dt;
+    player.x = nx; player.y = ny;
+    state.distWalked += sp*dt;
+    if(Math.abs(dx) > Math.abs(dy)) player.face = dx>0 ? 'right' : 'left';
+    else                            player.face = dy>0 ? 'front' : 'back';
+    player.animT += dt;
+    if(player.animT > 0.16){ player.animT = 0; player.frame ^= 1; }
+    player.bob = (player.frame ? -1 : 0);
+  } else {
+    player.frame = 0; player.bob = 0; player.animT = 0;
+  }
+
+  // barrier
+  const d = Math.hypot(player.x, player.y);
+  if(d > MAPR){
+    const a = Math.atan2(player.y, player.x);
+    player.x = Math.cos(a)*MAPR; player.y = Math.sin(a)*MAPR;
+    if(!state.barrierCd || t - state.barrierCd > 0.45){
+      state.barrierCd = t;
+      ripples.push({x:player.x, y:player.y, r0:6, life:0, max:0.8});
+      sfxBarrier();
+    }
+  }
+  for(let i=ripples.length-1;i>=0;i--){
+    ripples[i].life += dt;
+    if(ripples[i].life > ripples[i].max) ripples.splice(i,1);
+  }
+
+  // flowers
+  for(const f of flowers){
+    if(f.cd > 0) f.cd -= dt;
+    const dd = Math.hypot(f.x-player.x, f.y-player.y);
+    if(dd < 11 && f.cd <= 0){
+      f.cd = 3.4; f.glow = 1;
+      spawnSpark(f.x, f.y-4, 5 + (rnd()*4|0));
+      sfxSparkle();
+    }
+    if(f.glow > 0) f.glow = Math.max(0, f.glow - dt*0.14);
+  }
+
+  // particles
+  for(let i=parts.length-1;i>=0;i--){
+    const q = parts[i];
+    q.life += dt;
+    if(q.life > q.max){ parts.splice(i,1); continue; }
+    if(q.kind === 'heal'){
+      q.a += q.spin*dt;
+      q.oy -= 15*dt;
+      q.x = q.ox + Math.cos(q.a)*q.rad;
+      q.y = q.oy + Math.sin(q.a)*q.rad*0.35;
+    } else {
+      q.x += q.vx*dt;
+      q.y += q.vy*dt;
+      if(q.kind === 'spark'){ q.vy += 5*dt; q.vx *= (1 - dt*0.9); }
+      if(q.kind === 'dust'){ q.vx *= (1-dt*2.1); q.vy *= (1-dt*1.8); q.vy += 8*dt; }
+      if(q.kind === 'smoke'){ q.vx *= (1-dt*1.2); q.vy *= (1-dt*0.55); }
+    }
+  }
+
+  state.healSpin += dt*2.7;
+  if(state.healFx > 0) state.healFx = Math.max(0, state.healFx - dt*0.55);
+  if(state.dustT  > 0) state.dustT  = Math.max(0, state.dustT  - dt*0.5);
+
+  // bottle proximity
+  if(state.bottleSpawned && !state.hasBottle){
+    const near = Math.hypot(player.x-BOTTLE.x, player.y-BOTTLE.y) < 22 && state.canMove;
+    if(near !== state.nearBottle){
+      state.nearBottle = near;
+      promptEl.classList.toggle('on', near);
+    }
+  }
+}
+
+/* =========================================================
+   10. MAIN LOOP
+   ========================================================= */
+let last = performance.now(), T = 0;
+function loop(now){
+  let dt = (now - last)/1000; last = now;
+  dt = Math.min(dt, 0.05);
+  T += dt;
+
+  ctx.clearRect(0,0,W,H);
+  if(state.scene === 'fall'){
+    drawFall(dt, T);
+  } else if(state.scene === 'title' || state.scene === 'end'){
+    ctx.fillStyle = '#000'; ctx.fillRect(0,0,W,H);
+  } else {
+    updateWorld(dt, T);
+    drawWorld(dt, T);
+  }
+  requestAnimationFrame(loop);
+}
+requestAnimationFrame(loop);
+
+/* =========================================================
+   11. CINEMATIC HELPERS
+   ========================================================= */
+function tween(ms, fn, ease){
+  return new Promise(res => {
+    const t0 = performance.now();
+    (function step(now){
+      let k = clamp((now - t0)/ms, 0, 1);
+      fn(ease ? ease(k) : k);
+      if(k < 1) requestAnimationFrame(step); else res();
+    })(t0);
+  });
+}
+const easeOut = k => 1 - Math.pow(1-k, 3);
+const easeIO  = k => k<0.5 ? 2*k*k : 1 - Math.pow(-2*k+2,2)/2;
+
+/* =========================================================
+   12. STORY
+   ========================================================= */
+const INTRO_LINES = [
+  'ยินดีต้องรับคุณแฟนอิอิ',
+  '. . .',
+  'เข้ามาถึงที่นี่แล้วหรอเนี่ยไวจัง',
+  'เข้าคบกันมา 1 ปีกับอีก 2 เดือนแล้วน้าา',
+  'เธอชอบถามเค้าบ่อยๆเยยว่าเค้ารักเธอมั้ย',
+  '. . .',
+  '. . .',
+  'เค้ารักจิ -///-  ทำไมจะไม่รัก',
+  'เค้าแค่พูดไม่เก่ง',
+  'เอาหละอาจจะไม่ได้มีอะไรมาก. . . แต่ว่า',
+  '. . .',
+  'เดี๋ยวมารอดูนะครับ คิคิ'
+];
+
+const TALK1 = [
+  'หื้ออ บีบี๋เธอมาที่นี่แล้วหรอ. . .',
+  'ตะไมมาช้าจางง',
+  'เธอเจ็บขามั้ยตกมาซะสูงเลย',
+  'เดี๋ยวเราจะเดินไปที่ของเค้ากัน. . . ที่เดิม',
+  'ที่เราค่อยอยู่',
+  '. . .',
+  '555555',
+  'เธออาจจะนึกภาพมันไม่ออกหรอก ผ่านมานานมากแล้ว',
+  'อื่มม. . . .',
+  'นานแล้วแหละ',
+  'แต่เธอเจ็บขามั้ยนะเค้าถามแล้วก็ลืมเลย'
+];
+
+const TALK2 = [
+  'เธอมองเห็นทางมั้ย',
+  '. . .',
+  'เหมือนตรงนั้นมีอะไรซักอย่างทำให้เค้าเข้าไปไม่ได้เลย',
+  '. . .',
+  'เธอเอ่อ. . .',
+  'เค้าจะลองใช้พลังสร้างอะไรซักอย่างดู',
+  'ให้เธอลองเดินไปรอบๆ',
+  'เธอจะเห็นขวดแก้วนึงที่มีไฟวิญญาณสีฟ้าม่วงลอยอยู่',
+  'เก็บมันขึ้นมาเลย แล้วแสงมันจะสว่างพอที่จะนำทางเธอได้อยู่นิดหน่อย'
+];
+
+const FINALE = [
+  'อิอิ',
+  '. . .',
+  'เธอคงเจอขวดแก้วของเค้าแย้วใช่มั้ย',
+  'เก่งมากค้าบ',
+  '. . .',
+  'งื่มๆๆ. . . เธอคงสงสัย',
+  'แต่ว่า เจอกันรอบหน้านะครับ'
+];
+
+async function typeInto(el, text, speed){
+  const g = graphemes(text); el.textContent='';
+  for(let i=0;i<g.length;i++){ el.textContent += g[i]; if(g[i].trim()) blip(); await wait(speed); }
+}
+
+async function titleScreen(){
+  state.scene = 'title';
+  await wait(700);
+  await typeInto(tMain, 'ยินดีต้อนรับ', 95);
+  await wait(450);
+  await typeInto(tSub, 'เรื่องเล่าเล็กๆ ของเรา\nฉากที่ 1 : การร่วงหล่น', 38);
+  await wait(300);
+  tPress.style.opacity = 1;
+  anyKeyHit = false;
+  await new Promise(r => {
+    const t = setInterval(() => { if(anyKeyHit){ clearInterval(t); r(); } }, 60);
+  });
+  initAudio();
+  if(A.ac && A.ac.state === 'suspended') A.ac.resume();
+  titleEl.classList.add('hide');
+  await wait(950);
+}
+
+async function fallScene(){
+  state.scene = 'fall';
+  state.fallBg = 0;
+  windStart();
+  musicStart();
+  // darken over the whole narration
+  const totalLines = INTRO_LINES.length;
+  tween(46000, k => { if(!state.fallLock) state.fallBg = k; }, easeIO);
+
+  await wait(1400);
+  for(let i=0;i<totalLines;i++){
+    const line = INTRO_LINES[i];
+    const hold = line.trim()==='. . .' ? 1100 : 1500 + graphemes(line).length*62;
+    await narrate(line, hold);
+  }
+  // make sure it's fully dark before landing
+  state.fallLock = true;
+  const from = state.fallBg;
+  await tween(1800, k => { state.fallBg = lerp(from, 1, easeIO(k)); });
+  state.fallBg = 1;
+  await wait(500);
+}
+
+async function landScene(){
+  windStop();
+  // switch to world, pitch black
+  state.scene = 'land';
+  state.darkness = 1.0;
+  state.playerLightR = 0; state.playerLightA = 0;
+  player.x = 0; player.y = 0; player.rot = 90; player.face = 'front';
+  camX = player.x - W/2; camY = player.y - H/2;
+  await wait(500);
+
+  // impact
+  sfxThud();
+  state.flash = 0.85;
+  state.shake = 6;
+  state.dustT = 1;
+  spawnDust(player.x, player.y, 90);
+  setTimeout(()=>spawnDust(player.x, player.y, 45), 140);
+  state.darkness = 0.978;
+  await tween(1500, k => { state.playerLightR = 48*k; state.playerLightA = 0.64*k; });
+  await wait(1400);
+
+  // slowly push herself up to sitting
+  await tween(3400, k => { player.rot = lerp(90, 42, easeOut(k)); }, null);
+  await wait(900);
+}
+
+async function standUp(){
+  await tween(1700, k => { player.rot = lerp(42, 0, easeOut(k)); });
+  player.rot = 0;
+  await tween(280, k => { player.hop = Math.sin(k*Math.PI)*3; });
+  player.hop = 0;
+  tone(420, 0.12, 'sine', 0.06);
+  await wait(350);
+}
+
+async function healScene(){
+  sfxHeal();
+  state.healFx = 1;
+  const t0 = performance.now();
+  spawnSmoke(player.x, player.y-4, 16, '#3f6b52');
+  const iv = setInterval(() => {
+    spawnHeal(player.x, player.y-6, 3);
+    if(rnd() < 0.45) spawnSmoke(player.x, player.y-3, 2, '#3f6b52');
+    state.healFx = 1;
+  }, 110);
+  await wait(3600);
+  clearInterval(iv);
+  await wait(900);
+}
+
+async function pickupSequence(){
+  promptEl.classList.remove('on');
+  state.canMove = false;
+  state.hasBottle = true;
+  state.nearBottle = false;
+  sfxPickup();
+  state.flash = 0.55;
+  spawnSpark(BOTTLE.x, BOTTLE.y-6, 34, '#c2b3ff');
+  await tween(1400, k => {
+    state.playerLightR = lerp(48, 145, easeOut(k));
+    state.playerLightA = lerp(0.64, 0.97, easeOut(k));
+    state.darkness = lerp(0.978, 0.925, easeOut(k));
+  });
+  await wait(1200);
+}
+function doPickup(){ if(state.pickupBusy) return; state.pickupBusy = true; onPickup(); }
+let onPickup = () => {};
+
+async function endScene(){
+  // fade the world out, then the letter
+  fadeEl.style.transition = 'opacity 2.4s linear';
+  fadeEl.style.opacity = 1;
+  await wait(2600);
+  state.scene = 'end';
+  fadeEl.style.opacity = 0;
+  await wait(400);
+
+  for(const line of FINALE){
+    const hold = line.trim()==='. . .' ? 1100 : 1500 + graphemes(line).length*62;
+    await narrate(line, hold);
+  }
+  await wait(600);
+  // everything goes black
+  if(A.musicTimer){ clearInterval(A.musicTimer); A.musicTimer = null; }
+  if(A.musicGain) A.musicGain.gain.exponentialRampToValueAtTime(0.0001, A.ac.currentTime + 3);
+  fadeEl.style.transition = 'opacity 3.4s linear';
+  fadeEl.style.opacity = 1;
+  document.getElementById('crt').style.opacity = 0;
+  await wait(4200);
+  endTip.classList.add('on');
+}
+
+async function story(){
+  // เปิดด้วย  index.html#skip  = ข้ามฉากตกลงมา (ไว้เทสต์)
+  if(/skip/i.test(location.hash)){
+    titleEl.classList.add('hide');
+    initAudio(); if(A.ac && A.ac.state==='suspended') A.ac.resume();
+    musicStart();
+    await wait(400);
+  } else {
+    await titleScreen();
+    await fallScene();
+  }
+  await landScene();
+
+  /* ---- ??? appears ---- */
+  await wait(400);
+  for(const line of TALK1) await say(line);
+
+  const pick = await askChoice();
+  if(pick === 0){
+    await say('โอเคงั้นอยู่นิ่งๆนะ');
+    hideDlg();
+    await healScene();
+    await say('โอเคน่าจะดีขึ้นแล้วนะ');
+    hideDlg();
+    await standUp();
+  } else {
+    await say('โอเค งั้นเธอค่อยๆเดินมานะ');
+    hideDlg();
+    await standUp();
+  }
+
+  /* ---- tutorial ---- */
+  await say('เอ้า เค้าจะบอกวิธีเดินให้นะ');
+  await say('w  คือเดินหน้า');
+  await say('a  คือไปทางซ้าย');
+  await say('s  คือถอยหลัง');
+  await say('d  คือไปทางขวา');
+  await say('ค่อยๆเดินมานะ อย่ารีบ. . . เค้ารอเธออยู่');
+  hideDlg();
+
+  hudEl.innerHTML = 'W A S D — เดิน<br>Z / คลิก — พูดคุย · เก็บของ<br>M — เสียง';
+  hudEl.classList.add('on');
+  setTimeout(()=>hudEl.classList.remove('on'), 11000);
+
+  /* ---- free roam #1 ---- */
+  state.scene = 'explore';
+  state.canMove = true;
+  await new Promise(r => {
+    const iv = setInterval(() => { if(state.distWalked > 620){ clearInterval(iv); r(); } }, 120);
+  });
+  state.canMove = false;
+
+  for(const line of TALK2) await say(line);
+  hideDlg();
+
+  /* ---- bottle appears ---- */
+  state.bottleSpawned = true;
+  tone(300, 0.9, 'sine', 0.09, null, 700);
+  spawnSpark(BOTTLE.x, BOTTLE.y-6, 18, '#b7c8ff');
+  state.canMove = true;
+
+  await new Promise(r => { onPickup = async () => { await pickupSequence(); r(); }; });
+
+  await say('เก่งมากเลยย เห็นมั้ยสว่างขึ้นตั้งเยอะ');
+  await say('เอาหละ. . . ตามเค้ามานะ');
+  hideDlg();
+  await wait(900);
+
+  await endScene();
+}
+
+window.__G = { state, player, flowers, trees, parts, BOTTLE, spawnHeal, spawnSmoke, spawnSpark };
+story();
+
+})();
+</script>
+</body>
+</html>

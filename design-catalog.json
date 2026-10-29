@@ -1,0 +1,965 @@
+{
+  "documentation": {
+    "id": "20261009-design-catalog",
+    "updated": "2026-10-10",
+    "status": "current-data",
+    "summary": "ทะเบียนเลือกเวอร์ชันและแหล่งภาพ/บท/พิกัด พร้อมขอบเขตสร้างจริงCH00และงานที่ยังไม่ติดตั้ง"
+  },
+  "designBaseline": "UF-DESIGN-2026-10-09",
+  "canonicalVersions": {
+    "player": "R5",
+    "specialForms": "R4",
+    "otherSelectedCharacters": "R2",
+    "maps": "v1 (latest author selection 2026-10-09; R00 v1b)",
+    "mapRendering": "2D constructed floor/water/cliffs plus separate depth-sorted trees and sprites; latest author confirmation",
+    "portraits": "v1 + identity clarification 2026-10-09",
+    "ch00": "CH00-2026-10-09-r2",
+    "ch01": "CH01-2026-10-09-r4",
+    "layout": "UF-R00-V1B-2026-10-09",
+    "layoutScope": "CH00 R00 only; future chapter defaults retain their own layout contract",
+    "interface": "UF-INTERFACE-2026-10-09-v1"
+  },
+  "sources": {
+    "current": "design-current.md",
+    "plot": "โครงเรื่อง.md",
+    "script": "story.md",
+    "instructions": "CLAUDE.md",
+    "body": "design/monsters/2026-10-08-revision-05/README.md",
+    "maps": "design/maps/2026-10-08-v1/README.md",
+    "mapRules": "design/maps/2026-10-08-v1/MAP_NOTES.md",
+    "r00SourceImage": "design/maps/2026-10-08-v1/01-r00-forest-and-sacred-grove-v1b.png",
+    "r00RuntimeMap": "assets/maps/r00-v1/manifest.json",
+    "r00WorldLayout": "src/ch00/map-layout.json",
+    "r00WorldEntities": "src/ch00/map-entities.json",
+    "portraits": "design/dialogue-portraits/2026-10-08-v1/README.md",
+    "portraitCatalog": "design/dialogue-portraits/2026-10-08-v1/portrait-catalog.json",
+    "layout": "design/chapters/current-layout.json",
+    "layoutNote": "design/chapters/layout-contract.md",
+    "playerSprites": "assets/characters/player-r5/v1/README.md",
+    "interface": "design/interface/v1/interface-handoff.md"
+  },
+  "characterSheets": [
+    {
+      "sheet": "01",
+      "revision": "R2",
+      "path": "design/monsters/2026-10-08-revision-02/01-main-cast-r2.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "02",
+      "revision": "R2b",
+      "path": "design/monsters/2026-10-08-revision-02/02-royal-story-cast-r2b.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "03",
+      "revision": "R4",
+      "path": "design/monsters/2026-10-08-revision-04/03-void-special-forms-r4.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "04",
+      "revision": "R2",
+      "path": "design/monsters/2026-10-08-revision-02/04-ruins-monsters-r2.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "05",
+      "revision": "R2",
+      "path": "design/monsters/2026-10-08-revision-02/05-community-monsters-r2.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "06",
+      "revision": "R2",
+      "path": "design/monsters/2026-10-08-revision-02/06-small-cast-experiment-r2.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "07",
+      "revision": "R5",
+      "path": "design/monsters/2026-10-08-revision-05/07-player-petite-shorts-r5.png",
+      "installedInGame": false
+    },
+    {
+      "sheet": "08",
+      "revision": "R2",
+      "path": "design/monsters/2026-10-08-revision-02/08-undertale-supporting-roster-r2.png",
+      "installedInGame": false
+    }
+  ],
+  "geometry": {
+    "pathWidthMultiplier": 1.25,
+    "selectedScenicWalkableAreaMultiplier": 1.45,
+    "multiplierScope": "Earlier v2 layout targets; not measured net walkable-area guarantees for selected R00 v1b",
+    "runtimeMeasured": false,
+    "ch00RuntimeMeasured": {
+      "plaza": [
+        480,
+        290
+      ],
+      "plazaGridStep": 4,
+      "blockedSamples": 0,
+      "pathWidthSamples": 80,
+      "report": "output/ch00/guardrails-result.json",
+      "layoutRevision": "UF-LAYOUT-2026-10-09",
+      "engineRevision": "UF-CH00-2026-10-09-r1",
+      "scope": "Historical CH00 geometry before latest v1 map selection; does not validate R00 v1b or future areas"
+    },
+    "ch00R00V1RuntimeMeasured": true,
+    "selectedR00Map": {
+      "layoutRevision": "UF-R00-V1B-2026-10-09",
+      "sourceCrop": [
+        18,
+        50,
+        1516,
+        952
+      ],
+      "scale": 1.25,
+      "coordinateSpace": "one shared R00 world derived from the selected source image",
+      "rendererContract": "Construct tile floor/navmesh, water and cliffs; place separate source-derived tree/object sprites and depth-sort with characters",
+      "fullMapImageUsage": "reference/debug only",
+      "validationStatus": "Current layered CH00 build/static/browser checks pass"
+    }
+  },
+  "identity": {
+    "bottleVoice": "real Shiku/Yuan, hidden early",
+    "voidVoice": "same alternate-timeline Shiku as encountered behind tree",
+    "firstAlternateFaceAndBodyReveal": "SX03",
+    "earlyVoidPortrait": null,
+    "voidEcho": "separate unresolved placeholder"
+  },
+  "implementation": {
+    "currentPlayable": "index_new.html (CH00), index.html (legacy episode)",
+    "newTarget": "index_new.html",
+    "newTargetCreated": true,
+    "spritesExported": false,
+    "portraitSpritesExported": false,
+    "saveAndCombatImplemented": false,
+    "runtimeTested": false,
+    "spriteExportScope": "complete CH00/CH01 cast; global spritesExported remains false until all required actors are exported",
+    "playerSpritesExported": true,
+    "ch00Implemented": true,
+    "ch01Implemented": false,
+    "saveImplemented": true,
+    "combatImplemented": false,
+    "ch00RuntimeTested": true,
+    "ch00CurrentBuild": {
+      "engineRevision": "UF-CH00-2026-10-09-r2",
+      "mapVersion": "UF-R00-V1B-2026-10-09",
+      "sizeBytes": 1098710,
+      "renderConstruction": "layered-floor-and-depth-sorted-objects",
+      "trees": 88,
+      "logicalViewport": [
+        400,
+        225
+      ],
+      "presentationCanvas": [
+        1600,
+        900
+      ],
+      "wholeMapBackgroundUsed": false
+    },
+    "ch00CurrentStaticEvidence": {
+      "checks": 41,
+      "protectedOriginalFiles": 11,
+      "report": "output/ch00/static-result.json"
+    },
+    "ch00PreviousV1RasterBuild": {
+      "engineRevision": "UF-CH00-2026-10-09-r2",
+      "mapVersion": "UF-R00-V1B-2026-10-09",
+      "sizeBytes": 3960888,
+      "renderConstruction": "full-map PNG raster prototype with canopy overlays",
+      "scope": "Previous prototype before latest author confirmation of real layered scene construction"
+    },
+    "ch00PreviousV1RasterStaticEvidence": {
+      "engineRevision": "UF-CH00-2026-10-09-r2",
+      "layoutVersion": "UF-R00-V1B-2026-10-09",
+      "checks": 36,
+      "protectedOriginalFiles": 11,
+      "pixelsChangedOutsideCleanupMask": 0,
+      "renderConstruction": "full-map PNG raster prototype with canopy overlays",
+      "scope": "Previous prototype payload/assets/source integrity only; does not validate latest layered scene construction"
+    },
+    "ch00PreviousGeometryRuntimeTested": true,
+    "ch00PreviousGeometryEvidence": {
+      "engineRevision": "UF-CH00-2026-10-09-r1",
+      "layoutRevision": "UF-LAYOUT-2026-10-09",
+      "browserAssertions": {
+        "flow": 24,
+        "help": 18,
+        "guardrails": 24
+      },
+      "staticChecks": 24,
+      "scope": "Previous geometry only; R00 v1b acceptance must be rerun"
+    },
+    "hoodedStrangerSpritesExported": true,
+    "handoff": "design/chapters/ch00-runtime.md",
+    "engineRevision": "UF-CH00-2026-10-09-r2",
+    "ch00CurrentBrowserEvidence": {
+      "flowAssertions": 66,
+      "guardAssertions": 50,
+      "errors": 0,
+      "flow": "output/playwright/r00-map-flow-result.json",
+      "guards": "output/playwright/r00-guardrails-result.json",
+      "scope": "CH00 both branches only; not CH01, not all SS1, visual approval remains author-owned"
+    }
+  },
+  "scope": {
+    "ch00End": "enter_rift_before_legend",
+    "ch01End": "exit_ruins_before_sans_spellbook",
+    "torielFight": "mercy_only_prototype"
+  },
+  "documentationRegistry": [
+    {
+      "id": "20261009-r00-v1-runtime-manifest",
+      "path": "assets/maps/r00-v1/manifest.json",
+      "title": "ข้อมูลภาพโลก R00 v1b",
+      "status": "prepared-reference-faithful",
+      "summary": "ภาพพื้นโลกR00จากv1bและสไปรต์แยกจากต้นฉบับ พร้อมmaskcleanupและหลักฐานพิกเซลนอกmaskไม่เปลี่ยน",
+      "tags": [
+        "maps",
+        "design",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-night-witch-live-readme",
+      "path": "assets/sprites/night-witch/README.md",
+      "title": "Night Witch — 24×32 sprite frames",
+      "status": "legacy-live",
+      "summary": "สไปรต์Night Witchที่เกมเดิมใช้จริง เก็บข้อมูลเทคนิคแต่ไม่ถือเป็นแบบผู้เล่นR5",
+      "tags": [
+        "legacy",
+        "characters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-portraits-v1-expression-guide",
+      "path": "design/dialogue-portraits/2026-10-08-v1/EXPRESSION_GUIDE.md",
+      "title": "UNDERFALL — ทะเบียนสีหน้าและข้อจำกัดรายตัว",
+      "status": "current-design",
+      "summary": "ปัจจุบัน: UNDERFALL — ทะเบียนสีหน้าและข้อจำกัดรายตัว; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "portraits",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-portraits-v1-manifest",
+      "path": "design/dialogue-portraits/2026-10-08-v1/manifest.json",
+      "title": "design/dialogue-portraits/2026-10-08-v1/manifest.json",
+      "status": "current-data",
+      "summary": "ปัจจุบัน: manifest.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "portraits",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-portraits-v1-portrait-catalog",
+      "path": "design/dialogue-portraits/2026-10-08-v1/portrait-catalog.json",
+      "title": "design/dialogue-portraits/2026-10-08-v1/portrait-catalog.json",
+      "status": "current-data",
+      "summary": "ปัจจุบัน: portrait-catalog.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "portraits",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-portraits-v1-prompts",
+      "path": "design/dialogue-portraits/2026-10-08-v1/PROMPTS.md",
+      "title": "UNDERFALL — Dialogue Portraits v1: prompts",
+      "status": "current-prompt-record",
+      "summary": "ปัจจุบัน: UNDERFALL — Dialogue Portraits v1: prompts; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "portraits",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-portraits-v1-readme",
+      "path": "design/dialogue-portraits/2026-10-08-v1/README.md",
+      "title": "UNDERFALL — ใบหน้าในกล่องคำพูด v1",
+      "status": "current-design",
+      "summary": "ปัจจุบัน: UNDERFALL — ใบหน้าในกล่องคำพูด v1; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "portraits",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-v1-map-notes",
+      "path": "design/maps/2026-10-08-v1/MAP_NOTES.md",
+      "title": "UNDERFALL — บันทึกพื้นที่ประกอบภาพแมพ v1",
+      "status": "current-design",
+      "summary": "บันทึกอ่านภาพแมพ v1 ที่เลือกล่าสุด โดย R00 v1b เป็นแหล่งภาพ CH00 และพิกัด/ตัวชนต้องตรวจใน runtime รอบใหม่",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-v1-prompts",
+      "path": "design/maps/2026-10-08-v1/PROMPTS.md",
+      "title": "UNDERFALL — พรอมต์วาดแมพชุด v1",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — พรอมต์วาดแมพชุด v1; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "maps",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-maps-v1-readme",
+      "path": "design/maps/2026-10-08-v1/README.md",
+      "title": "UNDERFALL — ชุดภาพร่างแมพ ป่าถึงปราสาทราชา",
+      "status": "current-design",
+      "summary": "ภาพแมพ v1 ที่ผู้เขียนเลือกล่าสุด โดย R00 ใช้ฉบับ v1b เป็นแหล่งภาพ CH00 และเก็บขอบเขตพล็อตตามแบบปัจจุบัน",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-v2-level-layout",
+      "path": "design/maps/2026-10-08-v2/LEVEL_LAYOUT.md",
+      "title": "UNDERFALL — แผนพื้นที่เดิน ประตูปริศนา และอาคารเข้าได้ v2",
+      "status": "current-design",
+      "summary": "ปัจจุบัน: UNDERFALL — แผนพื้นที่เดิน ประตูปริศนา และอาคารเข้าได้ v2; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-v2-manifest",
+      "path": "design/maps/2026-10-08-v2/manifest.json",
+      "title": "design/maps/2026-10-08-v2/manifest.json",
+      "status": "current-data",
+      "summary": "ปัจจุบัน: manifest.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-v2-prompts",
+      "path": "design/maps/2026-10-08-v2/PROMPTS.md",
+      "title": "UNDERFALL — ชุด prompt ภาพแมพ v2",
+      "status": "current-prompt-record",
+      "summary": "ปัจจุบัน: UNDERFALL — ชุด prompt ภาพแมพ v2; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-v2-readme",
+      "path": "design/maps/2026-10-08-v2/README.md",
+      "title": "UNDERFALL — แมพ v2: ทางกว้าง ลานชม และอาคารเข้าได้",
+      "status": "current-design",
+      "summary": "ปัจจุบัน: UNDERFALL — แมพ v2: ทางกว้าง ลานชม และอาคารเข้าได้; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-maps-index-readme",
+      "path": "design/maps/README.md",
+      "title": "UNDERFALL — ชุดออกแบบแมพ",
+      "status": "current-design",
+      "summary": "ปัจจุบัน: UNDERFALL — ชุดออกแบบแมพ; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "maps",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-characters-r1-prompts",
+      "path": "design/monsters/2026-10-08/PROMPTS.md",
+      "title": "UNDERFALL — พรอมต์ชุดออกแบบมอนสเตอร์ 2026-10-08",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — พรอมต์ชุดออกแบบมอนสเตอร์ 2026-10-08; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r1-readme",
+      "path": "design/monsters/2026-10-08/README.md",
+      "title": "UNDERFALL — ภาพร่างมอนสเตอร์ ชุด 2026-10-08",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — ภาพร่างมอนสเตอร์ ชุด 2026-10-08; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r2-prompts",
+      "path": "design/monsters/2026-10-08-revision-02/PROMPTS.md",
+      "title": "UNDERFALL — พรอมต์ R2",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — พรอมต์ R2; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r2-readme",
+      "path": "design/monsters/2026-10-08-revision-02/README.md",
+      "title": "UNDERFALL — งานภาพ R2 (เก็บเป็นประวัติ)",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — งานภาพ R2 (เก็บเป็นประวัติ); อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r3-prompts",
+      "path": "design/monsters/2026-10-08-revision-03/PROMPTS.md",
+      "title": "UNDERFALL — พรอมต์ R3",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — พรอมต์ R3; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r3-readme",
+      "path": "design/monsters/2026-10-08-revision-03/README.md",
+      "title": "UNDERFALL — ชุดงานภาพ R3 (เก็บเป็นประวัติ)",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — ชุดงานภาพ R3 (เก็บเป็นประวัติ); อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r4-prompts",
+      "path": "design/monsters/2026-10-08-revision-04/PROMPTS.md",
+      "title": "UNDERFALL — พรอมต์แก้แอสเรียล R4",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — พรอมต์แก้แอสเรียล R4; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r4-readme",
+      "path": "design/monsters/2026-10-08-revision-04/README.md",
+      "title": "UNDERFALL — ชุดงานภาพ R4 (เก็บเป็นประวัติ)",
+      "status": "historical-record",
+      "summary": "ประวัติ: UNDERFALL — ชุดงานภาพ R4 (เก็บเป็นประวัติ); อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design",
+        "legacy"
+      ]
+    },
+    {
+      "id": "20261009-characters-r5-manifest",
+      "path": "design/monsters/2026-10-08-revision-05/manifest.json",
+      "title": "design/monsters/2026-10-08-revision-05/manifest.json",
+      "status": "current-data",
+      "summary": "ปัจจุบัน: manifest.json; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-characters-r5-prompts",
+      "path": "design/monsters/2026-10-08-revision-05/PROMPTS.md",
+      "title": "UNDERFALL — ผู้เล่น R5: prompt และ inputs",
+      "status": "current-prompt-record",
+      "summary": "ปัจจุบัน: UNDERFALL — ผู้เล่น R5: prompt และ inputs; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-characters-r5-readme",
+      "path": "design/monsters/2026-10-08-revision-05/README.md",
+      "title": "UNDERFALL — ชุดงานภาพปัจจุบัน R5",
+      "status": "current-design",
+      "summary": "ปัจจุบัน: UNDERFALL — ชุดงานภาพปัจจุบัน R5; อ่านdesign-currentเพื่อเลือกเวอร์ชันและไม่อ้างภาพเป็นruntime",
+      "tags": [
+        "characters",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-plot-outline",
+      "path": "โครงเรื่อง.md",
+      "title": "UNDERFALL — โครงเรื่อง",
+      "status": "current-canon",
+      "summary": "ภาพรวมเส้นเวลา ตัวตน ปม ความสัมพันธ์และตอนจบที่ยืนยัน แยกช่องว่างและแบบภาพออกจากcanon",
+      "tags": [
+        "story",
+        "characters",
+        "maps"
+      ]
+    },
+    {
+      "id": "20261009-art-direction",
+      "path": "ART-DIRECTION.md",
+      "title": "UNDERFALL — ทิศทางภาพปัจจุบัน",
+      "status": "current-design",
+      "summary": "ทิศทางภาพ8-bitปัจจุบัน ตัวละครR5/ร่างR4 แมพv2 portraitและสเกล พร้อมประวัติที่ไม่ใช้ส่งสร้าง",
+      "tags": [
+        "design",
+        "characters",
+        "maps",
+        "portraits"
+      ]
+    },
+    {
+      "id": "20261009-art-prompts-pixel-v3",
+      "path": "art-prompts-pixel-v3.txt",
+      "title": "art-prompts-pixel-v3.txt",
+      "status": "historical-prompt",
+      "summary": "พรอมต์ประวัติของpipelineเก่า ไม่ใช้แทนคำสั่งภาพปัจจุบัน",
+      "tags": [
+        "legacy",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-art-prompts",
+      "path": "art-prompts.txt",
+      "title": "art-prompts.txt",
+      "status": "historical-prompt",
+      "summary": "พรอมต์ประวัติของpipelineเก่า ไม่ใช้แทนคำสั่งภาพปัจจุบัน",
+      "tags": [
+        "legacy",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-ch00",
+      "path": "ch00.md",
+      "title": "UNDERFALL — CH00 · กลับมาที่ป่าอีกครั้ง",
+      "status": "current-worksheet",
+      "summary": "ใบงานCH00-r2เริ่มตกครบรอบใหม่ถึงเข้ารอยแยก ใช้ผังล่าสุดและหยุดก่อนตำนาน",
+      "tags": [
+        "chapters",
+        "story",
+        "maps",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-ch01",
+      "path": "ch01.md",
+      "title": "UNDERFALL — CH01 · ใครบางคนรออยู่ในรูน",
+      "status": "current-worksheet",
+      "summary": "ใบงานCH01-r4ตกในมิติจนออกประตูรูน ใช้ภาพ/ผังล่าสุดและศึกทอเรียลไว้ชีวิต",
+      "tags": [
+        "chapters",
+        "story",
+        "maps",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-claude",
+      "path": "CLAUDE.md",
+      "title": "CLAUDE.md",
+      "status": "current-guide",
+      "summary": "กติกางานร่วมกัน ฐานindex.htmlจริง และแหล่งแบบล่าสุดที่ต้องอ่านก่อนสร้างCHใหม่",
+      "tags": [
+        "design",
+        "chapters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-story",
+      "path": "story.md",
+      "title": "UNDERFALL — บทและเนื้อเรื่อง",
+      "status": "current-script",
+      "summary": "ต้นฉบับบท/คำพูดและกติกาสองCH โดยอ้างชุดภาพและพิกัดปัจจุบันแต่ยังไม่สร้างเกม",
+      "tags": [
+        "story",
+        "chapters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-design-current",
+      "path": "design-current.md",
+      "title": "UNDERFALL — แบบปัจจุบันที่ใช้ร่วมกัน",
+      "status": "current-design",
+      "summary": "ระบุแหล่งตัวละคร แมพ สีหน้า เนื้อเรื่อง และใบงาน CH ที่เป็นปัจจุบัน พร้อมแยกข้อยืนยันจากค่าตั้งต้นและงานที่ยังไม่สร้าง",
+      "tags": [
+        "design",
+        "story",
+        "characters",
+        "maps",
+        "portraits",
+        "chapters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-layout-contract",
+      "path": "design/chapters/layout-contract.md",
+      "title": "UNDERFALL — สัญญาขนาดและพิกัด CH00–CH01",
+      "status": "current-design",
+      "summary": "ขนาดห้อง จุดวางองค์ประกอบ สเกลตัวละคร กล่องคำพูดและศึกที่ใช้ส่งสร้าง โดยคงบท ลายปริศนา และ gate เดิม",
+      "tags": [
+        "design",
+        "maps",
+        "chapters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-current-layout",
+      "path": "design/chapters/current-layout.json",
+      "title": "ข้อมูลขนาดและพิกัดCH00–CH01",
+      "status": "current-data",
+      "summary": "ข้อมูลห้อง anchors สเกล UIและSAVEของUF-LAYOUT-2026-10-09 เป็นค่าตั้งต้นที่ยังไม่ทดสอบจริง",
+      "tags": [
+        "maps",
+        "chapters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-design-topic",
+      "path": "design/_topic.md",
+      "title": "UNDERFALL — แผนที่เอกสารออกแบบ",
+      "status": "current-index",
+      "summary": "ทางเข้าอ่านโมเดล แมพ portraitและใบงานร่วมโดยแยกชุดปัจจุบันออกจากประวัติ",
+      "tags": [
+        "design",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-character-topic",
+      "path": "design/monsters/_topic.md",
+      "title": "UNDERFALL — ดัชนีตัวละคร",
+      "status": "current-index",
+      "summary": "เลือกผู้เล่นR5 ร่างพิเศษR4 และตัวอื่นR2จากดัชนีเดียว พร้อมที่มารุ่นก่อน",
+      "tags": [
+        "characters",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-map-topic",
+      "path": "design/maps/_topic.md",
+      "title": "UNDERFALL — ดัชนีแมพ",
+      "status": "current-index",
+      "summary": "เลือกภาพแมพ v1 ล่าสุดและผัง R00 v1b ของ CH00 พร้อมแยก v2 และผลตรวจ geometry เดิมเป็นที่มา",
+      "tags": [
+        "maps",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-portrait-topic",
+      "path": "design/dialogue-portraits/_topic.md",
+      "title": "UNDERFALL — ดัชนีportrait",
+      "status": "current-index",
+      "summary": "เลือกชีตสีหน้าและทะเบียน55รายการ พร้อมเงื่อนไขเปิดภาพปริศนา",
+      "tags": [
+        "portraits",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-chapter-layout-topic",
+      "path": "design/chapters/_topic.md",
+      "title": "UNDERFALL — ดัชนีขนาดใบงาน",
+      "status": "current-index",
+      "summary": "เลือกJSONพิกัดและสัญญาสเกลที่ทั้งCH00–CH01ใช้อ้างร่วมกัน",
+      "tags": [
+        "chapters",
+        "maps",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-design-catalog",
+      "path": "design-catalog.json",
+      "title": "ทะเบียนชุดออกแบบปัจจุบัน",
+      "status": "current-data",
+      "summary": "ทะเบียนเลือกเวอร์ชันและแหล่งภาพ/บท/พิกัด พร้อมขอบเขตสร้างจริงCH00และงานที่ยังไม่ติดตั้ง",
+      "tags": [
+        "design",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-design-validation",
+      "path": "design/validation.md",
+      "title": "UNDERFALL — ผลตรวจการซิงค์แบบ",
+      "status": "current-validation",
+      "summary": "ผลตรวจเอกสาร ลิงก์ พิกัด JSON และการคงบท/ภาพ/เกมเดิม ไม่แทนการทดสอบเดินในเกม",
+      "tags": [
+        "design",
+        "chapters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-index",
+      "path": "INDEX.md",
+      "title": "UNDERFALL — ดัชนีแบบปัจจุบัน",
+      "status": "current-index",
+      "summary": "ทางเข้าเลือกเอกสารตามบทบาท/เวอร์ชันโดยไม่ย้อนอ่านแชตและไม่ใช้ประวัติทับแบบล่าสุด",
+      "tags": [
+        "index",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-player-r5-v1-readme",
+      "path": "assets/characters/player-r5/v1/README.md",
+      "title": "UNDERFALL — ผู้เล่น R5: สไปรต์พร้อมนำเข้า v1",
+      "status": "installed-ch00",
+      "summary": "วิธีใช้18เฟรมผู้เล่นR5ขนาดจริงกับatlas pivot พร้อมสถานะติดตั้งและตรวจการเล่นเฉพาะCH00 โดยเก็บเกมเดิมไว้",
+      "tags": [
+        "characters",
+        "systems",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-player-r5-v1-prompts",
+      "path": "assets/characters/player-r5/v1/player-r5-v1-prompts.md",
+      "title": "UNDERFALL — ผู้เล่น R5 v1: ที่มาภาพและพรอมต์",
+      "status": "current-prompt-record",
+      "summary": "พรอมต์imagegenสองชีตและสองครั้งแก้ภาพ ก่อนจัดพิกเซลและขาใหม่ด้วยโค้ดที่ผู้เขียนอนุญาต",
+      "tags": [
+        "characters",
+        "design"
+      ]
+    },
+    {
+      "id": "20261009-player-r5-v1-manifest",
+      "path": "assets/characters/player-r5/v1/manifest.json",
+      "title": "ข้อมูลเฟรมผู้เล่นR5 v1",
+      "status": "installed-ch00",
+      "summary": "เฟรมผู้เล่นR5ขนาดจริง พิกัดatlas pivotและลำดับแอนิเมชัน ไม่เปลี่ยนเกมเดิม",
+      "tags": [
+        "characters",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-interface-topic",
+      "path": "design/interface/_topic.md",
+      "title": "UNDERFALL — ดัชนีอินเทอร์เฟซ",
+      "status": "current-index",
+      "summary": "ทางเข้าแบบ56หน้าอินเทอร์เฟซ พรีวิว ภาพรวมและข้อจำกัดก่อนเชื่อมเกมจริง",
+      "tags": [
+        "design",
+        "systems",
+        "index"
+      ]
+    },
+    {
+      "id": "20261009-interface-v1-handoff",
+      "path": "design/interface/v1/interface-handoff.md",
+      "title": "UNDERFALL — ใบส่งต่ออินเทอร์เฟซ v1",
+      "status": "interactive-design-not-game",
+      "summary": "แบบ56หน้าอินเทอร์เฟซพร้อมtokens ส่วนประกอบ พฤติกรรม และข้อห้ามเมื่อต่อเข้ากับเกมจริง",
+      "tags": [
+        "design",
+        "systems",
+        "chapters"
+      ]
+    },
+    {
+      "id": "20261009-undertale-interface-research",
+      "path": "design/interface/v1/undertale-interface-research.md",
+      "title": "UNDERFALL — ข้อมูลเมนู Undertale ที่ใช้อ้างแบบ",
+      "status": "research-reference",
+      "summary": "แยกปุ่มและหน้าของUndertaleจากการดัดแปลงUNDERFALL พร้อมแหล่งอ้างอิงและข้อจำกัดการนับหน้า",
+      "tags": [
+        "design",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-interface-v1-validation",
+      "path": "design/interface/v1/interface-validation.md",
+      "title": "UNDERFALL — ผลตรวจอินเทอร์เฟซ v1",
+      "status": "preview-validated-not-game",
+      "summary": "ผลตรวจ56หน้าdesktop/mobileและการโต้ตอบข้อมูลพรีวิว ไม่แทนการตรวจเกมจริง",
+      "tags": [
+        "design",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-interface-v1-screen-catalog",
+      "path": "design/interface/v1/screen-catalog.json",
+      "title": "ทะเบียนหน้าอินเทอร์เฟซ v1",
+      "status": "interactive-design-not-game",
+      "summary": "ทะเบียน56หน้าและสถานะอินเทอร์เฟซพร้อมขอบเขตปัจจุบัน/ข้อเสนอ/อนาคต",
+      "tags": [
+        "design",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261009-ch00-runtime",
+      "path": "design/chapters/ch00-runtime.md",
+      "title": "UNDERFALL — งานสร้าง CH00 ใน index_new.html",
+      "status": "implemented-ch00-layered-browser-tested",
+      "summary": "ขอบเขต CH00 และการใช้แผนที่ R00 v1b เป็นโลกเดียว พร้อมแยกผลตรวจ geometry เดิมจากการตรวจ v1 รอบล่าสุด",
+      "tags": [
+        "chapters",
+        "systems",
+        "maps",
+        "characters"
+      ]
+    },
+    {
+      "id": "20261009-hooded-stranger-v1-prompts",
+      "path": "assets/characters/hooded-stranger/v1/hooded-stranger-v1-prompts.md",
+      "title": "UNDERFALL — คนสวมหมวก CH00: พรอมต์สไปรต์",
+      "status": "current-prompt-record",
+      "summary": "พรอมต์ built-in imagegen ของคนสวมหมวกสี่ท่า อ้างฟิวมอนสเตอร์เดิม บังหน้าก่อนเฉลย และเก็บ source สำหรับจัดพิกเซล",
+      "tags": [
+        "characters",
+        "systems",
+        "chapters"
+      ]
+    },
+    {
+      "id": "20261009-hooded-stranger-v1-manifest",
+      "path": "assets/characters/hooded-stranger/v1/manifest.json",
+      "title": "ข้อมูลเฟรมคนสวมหมวก CH00",
+      "status": "installed-ch00",
+      "summary": "atlasคนสวมหมวกสี่ท่า52×40 pivot26×40 alpha0/255 พร้อมแหล่งต้นฉบับและสถานะติดตั้งเฉพาะCH00",
+      "tags": [
+        "characters",
+        "systems",
+        "chapters"
+      ]
+    },
+    {
+      "id": "20261010-r00-surface-guide",
+      "title": "UNDERFALL — พื้นและดอกไม้ R00 รุ่นเก็บรายละเอียด",
+      "path": "assets/maps/r00-surfaces-v2/README.md",
+      "summary": "หย่อมพื้นสีเงียบและดอกไม้แยกจากภาพv1bสำหรับฉากแบ่งเลเยอร์ โดยไม่เปลี่ยนผังหรือภาพต้นฉบับ",
+      "status": "current-runtime-assets",
+      "tags": [
+        "maps",
+        "design",
+        "systems"
+      ]
+    },
+    {
+      "id": "20261010-r00-surface-manifest",
+      "title": "ข้อมูลพื้นและดอกไม้ R00 รุ่นเก็บรายละเอียด",
+      "path": "assets/maps/r00-surfaces-v2/manifest.json",
+      "summary": "rectหย่อมพื้นR00สีเงียบและดอกไม้จากv1b พร้อมแหล่งและขอบเขตการปรับโดยไม่เปลี่ยนผัง",
+      "status": "current-runtime-data",
+      "tags": [
+        "maps",
+        "design",
+        "systems"
+      ]
+    }
+  ],
+  "backup": "design/archives/2026-10-09-before-design-sync.zip",
+  "assetPacks": [
+    {
+      "id": "player-r5-v1",
+      "pixelRevision": "r2-shorter-narrower-legs",
+      "manifest": "assets/characters/player-r5/v1/manifest.json",
+      "guide": "assets/characters/player-r5/v1/README.md",
+      "frames": 18,
+      "worldCanvas": [
+        24,
+        32
+      ],
+      "storyCanvas": [
+        40,
+        32
+      ],
+      "nativeExportValidated": true,
+      "previewUIValidated": true,
+      "installedInGame": true,
+      "gameplayValidated": true,
+      "finalSpriteArtApproved": true,
+      "installationScope": "index_new.html CH00 only; index.html unchanged",
+      "gameplayValidationScope": "Previous CH00 geometry UF-CH00-2026-10-09-r1; R00 v1b movement/collision validation pending"
+    },
+    {
+      "id": "hooded-stranger-v1",
+      "manifest": "assets/characters/hooded-stranger/v1/manifest.json",
+      "frames": 4,
+      "worldCanvas": [
+        52,
+        40
+      ],
+      "nativeExportValidated": true,
+      "installedInGame": true,
+      "gameplayValidated": true,
+      "installationScope": "CH00 unknown stranger; face/name hidden",
+      "gameplayValidationScope": "Previous CH00 geometry UF-CH00-2026-10-09-r1; R00 v1b encounter/path validation pending",
+      "finalSpriteArtApproved": false
+    }
+  ],
+  "interface": {
+    "layoutRevision": "overworld-panels-r2",
+    "preview": "design/interface/v1/preview.html",
+    "gallery": "design/interface/v1/gallery.html",
+    "screenCatalog": "design/interface/v1/screen-catalog.json",
+    "screens": 56,
+    "status": "interactive-design-not-game",
+    "desktopAndMobilePreviewTested": true,
+    "liveGameModified": false,
+    "gameplayIntegrated": false,
+    "realSaveConnected": false,
+    "futureSystemsMustStayLocked": true,
+    "statArtwork": {
+      "path": "assets/characters/player-stat/v1/player-stat-star-64x112.png",
+      "nativeCanvas": [
+        64,
+        112
+      ],
+      "onlyStat": true,
+      "changesWorldSprite": false,
+      "changesEquipment": false
+    },
+    "runtimeInstallations": [
+      {
+        "file": "index_new.html",
+        "scope": "CH00 exploration menus, STAT, SAVE, settings, history",
+        "layoutRevision": "overworld-panels-r2",
+        "realSaveConnected": true,
+        "prototypeStorageUntouched": true,
+        "futureTemplatesNotInstalled": true
+      }
+    ]
+  }
+}
